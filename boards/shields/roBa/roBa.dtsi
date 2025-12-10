@@ -1,5 +1,16 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
+#include <input/processors.dtsi>
+
+&zip_temp_layer {
+    require-prior-idle-ms = <200>;
+    excluded-positions = <
+        19
+        20
+        21
+        22
+    >;
+};
 
 / {
     chosen {
@@ -115,6 +126,15 @@
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         status = "disabled";
+
+        scroller {
+            layers = <5 2>;
+            input-processors = <
+                &zip_xy_to_scroll_mapper
+                &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
+            >;
+            process-next;
+        };
     };
 };
 
