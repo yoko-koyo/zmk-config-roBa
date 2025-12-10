@@ -94,16 +94,6 @@
             require-prior-idle-ms = <0>;
             tapping-term-ms = <180>;
         };
-
-        behaviorHoldTap150: behaviorHoldTap150 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "BEHAVIORHOLDTAP150";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            require-prior-idle-ms = <0>;
-        };
     };
 
     keymap {
@@ -111,10 +101,10 @@
 
         default_layer {
             bindings = <
-&kp Q                             &kp W                           &kp E             &kp R  &kp T                                             &kp Y                             &kp U  &kp I      &kp O       &kp P
-&behaviorHoldTap150 LEFT_SHIFT A  &behaviorHoldTap150 LEFT_ALT S  &kp D             &kp F  &kp G                   &trans         &kp MINUS  &kp H                             &kp J  &kp K      &kp L       &kp BACKSPACE
-&kp Z                             &kp X                           &kp C             &kp V  &kp B                   &mo 6          &kp EQUAL  &kp N                             &kp M  &kp COMMA  &kp PERIOD  &kp TAB
-&kp LEFT_SHIFT                    &kp LEFT_ALT                    &kp LEFT_CONTROL  &mo 2  &mt LEFT_COMMAND LANG2  &kp SPACE      &kp ENTER  &behaviorHoldTap180 1 LANGUAGE_1                                &mt LEFT_SHIFT ESCAPE
+&kp Q           &kp W         &kp E             &kp R  &kp T                                             &kp Y                             &kp U  &kp I      &kp O       &kp P
+&kp A           &kp S         &kp D             &kp F  &kp G                   &trans         &kp MINUS  &kp H                             &kp J  &kp K      &kp L       &kp BACKSPACE
+&kp Z           &kp X         &kp C             &kp V  &kp B                   &mo 6          &kp EQUAL  &kp N                             &kp M  &kp COMMA  &kp PERIOD  &kp TAB
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &mt LEFT_COMMAND LANG2  &kp SPACE      &kp ENTER  &behaviorHoldTap180 1 LANGUAGE_1                                &mt LEFT_SHIFT ESCAPE
             >;
         };
 
