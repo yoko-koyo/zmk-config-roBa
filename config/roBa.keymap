@@ -67,7 +67,7 @@
 
         gesture {
             bindings = <&mo 6>;
-            key-positions = <13 38>;
+            key-positions = <13 12>;
         };
     };
 
@@ -146,7 +146,7 @@
         FUNCTION {
             bindings = <
 &kp F1  &kp F2   &kp F3   &kp F4   &trans                                    &kp PIPE   &kp BACKSLASH       &kp LA(UP_ARROW)    &kp TILDE            &kp PIPE
-&kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LG(NUMBER_4))  &trans      &trans  &trans     &kp LA(LEFT_ARROW)  &kp LA(DOWN_ARROW)  &kp LA(RIGHT_ARROW)  &kp LA(BACKSPACE)
+&kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LG(NUMBER_4))  &trans      &trans  &trans     &kp LA(LEFT_ARROW)  &kp LA(DOWN_ARROW)  &kp LA(RIGHT_ARROW)  &kp RIGHT_SHIFT
 &kp F9  &kp F10  &kp F11  &kp F12  &kp LS(LG(N5))        &trans      &trans  &kp GRAVE  &kp TILDE           &trans              &trans               &trans
 &trans  &trans   &trans   &trans   &trans                &trans      &trans  &trans                                                                  &trans
             >;
