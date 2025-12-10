@@ -102,7 +102,7 @@
         default_layer {
             bindings = <
 &kp Q           &kp W         &kp E             &kp R  &kp T                                             &kp Y                             &kp U  &kp I      &kp O       &kp P
-&kp A           &kp S         &kp D             &kp F  &kp G                   &trans         &kp MINUS  &kp H                             &kp J  &kp K      &kp L       &kp BACKSPACE
+&kp A           &kp S         &kp D             &kp F  &kp G                   &kp DEL        &kp MINUS  &kp H                             &kp J  &kp K      &kp L       &kp BACKSPACE
 &kp Z           &kp X         &kp C             &kp V  &kp B                   &mo 6          &kp EQUAL  &kp N                             &kp M  &kp COMMA  &kp PERIOD  &kp TAB
 &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &mt LEFT_COMMAND LANG2  &kp SPACE      &kp ENTER  &behaviorHoldTap180 1 LANGUAGE_1                                &mt LEFT_SHIFT ESCAPE
             >;
@@ -137,10 +137,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                         &trans              &trans    &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans              &mkp MB2  &mkp MB1  &mo 5   &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans              &trans    &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &mo 5   &trans      &kp LG(W)  &kp LG(LEFT_ARROW)                              &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB2  &mkp MB1  &mo 5   &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &mo 5   &trans      &trans  &trans                              &trans
             >;
         };
 
@@ -158,7 +158,7 @@
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&bootloader   &trans        &trans        &trans  &trans  &trans      &trans  &trans                          &sys_reset
+&trans        &trans        &trans        &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
