@@ -1,6 +1,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
 #include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
 
 &zip_temp_layer {
     require-prior-idle-ms = <200>;
@@ -136,7 +137,7 @@
             input-processors = <
                 &zip_xy_to_scroll_mapper
                 &zip_scroll_scaler 1 14
-            //     &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
+                &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
             >;
             process-next;
         };
