@@ -15,10 +15,10 @@
     arrows {
         layers = <6>;
         bindings =
-                <&kp LC(RIGHT_ARROW)>,
-                <&kp LC(LEFT_ARROW)>,
-                <&kp LC(UP_ARROW)>,
-                <&kp LC(DOWN_ARROW)>;
+            <&kp LC(RIGHT_ARROW)>,
+            <&kp LC(LEFT_ARROW)>,
+            <&kp LC(UP_ARROW)>,
+            <&kp LC(DOWN_ARROW)>;
 
         tick = <10>;
         wait-ms = <5>;
@@ -140,7 +140,7 @@
 &trans  &trans  &trans  &trans  &trans                         &trans              &trans    &trans    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans              &mkp MB2  &mkp MB1  &mo 5   &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans              &trans    &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &mo 5   &trans      &kp LG(W)  &kp LG(LEFT_ARROW)                              &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LG(W)  &kp LG(LEFT_ARROW)                              &trans
             >;
         };
 
