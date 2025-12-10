@@ -83,6 +83,7 @@
             #binding-cells = <2>;
             require-prior-idle-ms = <0>;
             tapping-term-ms = <180>;
+            hold-while-undecided;
         };
 
         b150: b150 {
@@ -92,8 +93,8 @@
 
             #binding-cells = <2>;
             require-prior-idle-ms = <0>;
-            tapping-term-ms = <150>;
-            hold-while-undecided;
+            tapping-term-ms = <180>;
+            flavor = "tap-preferred";
         };
     };
 
