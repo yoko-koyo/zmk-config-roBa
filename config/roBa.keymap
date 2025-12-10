@@ -30,7 +30,7 @@
     combos {
         compatible = "zmk,combos";
 
-        shift_back {
+        alt_back {
             bindings = <&kp LA(BACKSPACE)>;
             key-positions = <6 7>;
         };
@@ -63,6 +63,11 @@
         boot {
             bindings = <&bootloader>;
             key-positions = <34 42>;
+        };
+
+        gesture {
+            bindings = <&mo 6>;
+            key-positions = <13 38>;
         };
     };
 
