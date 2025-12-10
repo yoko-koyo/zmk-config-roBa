@@ -31,12 +31,12 @@
         compatible = "zmk,combos";
 
         shift_back {
-            bindings = <&kp LEFT_SHIFT>;
+            bindings = <&kp LA(BACKSPACE)>;
             key-positions = <6 7>;
         };
 
         tab {
-            bindings = <&kp LA(LG(LEFT_ARROW))>;
+            bindings = <&kp TAB>;
             key-positions = <30 31>;
         };
 
@@ -53,6 +53,16 @@
         boot {
             bindings = <&bootloader>;
             key-positions = <34 42>;
+        };
+
+        tabL {
+            bindings = <&kp LA(LG(LEFT_ARROW))>;
+            key-positions = <11 12>;
+        };
+
+        tabR {
+            bindings = <&kp LA(LG(RIGHT_ARROW))>;
+            key-positions = <20 19>;
         };
     };
 
@@ -103,10 +113,10 @@
 
         default_layer {
             bindings = <
-&kp Q               &kp W         &kp E             &kp R  &kp T                                                   &kp Y                             &kp U  &kp I      &kp O       &kp P
-&b150 LEFT_SHIFT A  &kp S         &kp D             &kp F  &kp G                     &kp DEL        &kp BACKSPACE  &kp H                             &kp J  &kp K      &kp L       &b150 RSHIFT MINUS
-&b150 LEFT_ALT Z    &kp X         &kp C             &kp V  &kp B                     &mo 6          &kp TAB        &kp N                             &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
-&kp LEFT_SHIFT      &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &b150 LEFT_COMMAND LANG2  &kp SPACE      &kp ENTER      &behaviorHoldTap180 1 LANGUAGE_1                                &mt LEFT_SHIFT ESCAPE
+&kp Q           &kp W         &kp E             &kp R  &kp T                                                   &kp Y                             &kp U  &kp I      &kp O       &kp P
+&kp A           &kp S         &kp D             &kp F  &kp G                     &kp DEL        &kp BACKSPACE  &kp H                             &kp J  &kp K      &kp L       &b150 RSHIFT MINUS
+&kp Z           &kp X         &kp C             &kp V  &kp B                     &mo 6          &kp TAB        &kp N                             &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &b150 LEFT_COMMAND LANG2  &kp SPACE      &kp ENTER      &behaviorHoldTap180 1 LANGUAGE_1                                &mt LEFT_SHIFT ESCAPE
             >;
         };
 
