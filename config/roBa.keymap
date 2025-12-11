@@ -47,7 +47,7 @@
 
         search {
             bindings = <&kp LA(F)>;
-            key-positions = <13 18>;
+            key-positions = <34 42>;
         };
 
         tabL {
@@ -62,7 +62,7 @@
 
         boot {
             bindings = <&bootloader>;
-            key-positions = <34 42>;
+            key-positions = <27 15 16 28>;
         };
 
         gesture {
