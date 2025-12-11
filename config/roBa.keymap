@@ -71,7 +71,7 @@
         };
 
         six {
-            bindings = <&mo 5>;
+            bindings = <&kp LCTRL>;
             key-positions = <38 39>;
         };
     };
