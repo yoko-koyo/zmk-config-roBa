@@ -142,7 +142,6 @@
             require-prior-idle-ms = <0>;
             tapping-term-ms = <170>;
             flavor = "balanced";
-            hold-while-undecided;
         };
     };
 
