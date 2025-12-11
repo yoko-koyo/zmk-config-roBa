@@ -122,15 +122,16 @@
             hold-while-undecided;
         };
 
-        b150: b150 {
+        b175: b175 {
             compatible = "zmk,behavior-hold-tap";
-            label = "B150";
+            label = "B175";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             require-prior-idle-ms = <0>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <175>;
             flavor = "tap-preferred";
+            hold-while-undecided;
         };
 
         bn170: bn170 {
@@ -166,7 +167,7 @@
 &kp Q           &kp W         &kp E             &kp R  &kp T                                                   &kp Y                             &kp U  &kp I      &kp O       &kp P
 &kp A           &kp S         &kp D             &kp F  &kp G                     &kp DEL        &kp BACKSPACE  &kp H                             &kp J  &kp K      &kp L       &bn170 RSHIFT MINUS
 &kp Z           &kp X         &kp C             &kp V  &kp B                     &mo 6          &kp TAB        &kp N                             &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &b150 LEFT_COMMAND LANG2  &kp SPACE      &kp ENTER      &behaviorHoldTap180 1 LANGUAGE_1                                &mt LEFT_SHIFT ESCAPE
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &b175 LEFT_COMMAND LANG2  &kp SPACE      &kp ENTER      &behaviorHoldTap180 1 LANGUAGE_1                                &mt LEFT_SHIFT ESCAPE
             >;
         };
 
