@@ -12,31 +12,31 @@
     // automouse-layer = <4>;
     // scroll-layers = <5>;
 
-    arrows {
-        layers = <6>;
-        bindings =
-            <&kp LS(RIGHT_ARROW)>,
-            <&kp LS(LEFT_ARROW)>,
-            <&kp LS(UP_ARROW)>,
-            <&kp LS(DOWN_ARROW)>;
-
-        tick = <10>;
-        wait-ms = <5>;
-        tap-ms = <5>;
-    };
-
     // arrows {
     //     layers = <6>;
     //     bindings =
-    //         <&kp LC(LEFT_ARROW)>,
-    //         <&kp LC(RIGHT_ARROW)>,
-    //         <&kp LC(UP_ARROW)>,
-    //         <&kp LC(DOWN_ARROW)>;
+    //         <&kp LS(RIGHT_ARROW)>,
+    //         <&kp LS(LEFT_ARROW)>,
+    //         <&kp LS(UP_ARROW)>,
+    //         <&kp LS(DOWN_ARROW)>;
 
-    //     tick = <160>;
-    //     wait-ms = <90>;
+    //     tick = <10>;
+    //     wait-ms = <5>;
     //     tap-ms = <5>;
     // };
+
+    arrows {
+        layers = <6>;
+        bindings =
+            <&kp LC(LEFT_ARROW)>,
+            <&kp LC(RIGHT_ARROW)>,
+            <&kp LC(UP_ARROW)>,
+            <&kp LC(DOWN_ARROW)>;
+
+        tick = <160>;
+        wait-ms = <90>;
+        tap-ms = <5>;
+    };
 };
 
 / {
