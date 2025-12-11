@@ -31,9 +31,9 @@
             <&kp LC(UP_ARROW)>,
             <&kp LC(DOWN_ARROW)>;
 
-        tick = <160>;
-        wait-ms = <90>;
-        tap-ms = <5>;
+        tick = <120>;
+        wait-ms = <80>;
+        tap-ms = <3>;
     };
 };
 
