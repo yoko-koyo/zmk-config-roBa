@@ -69,6 +69,11 @@
             bindings = <&mo 6>;
             key-positions = <13 12>;
         };
+
+        six {
+            bindings = <&mo 5>;
+            key-positions = <38 39>;
+        };
     };
 
     macros {
