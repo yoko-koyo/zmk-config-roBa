@@ -63,12 +63,12 @@
 
         tabL {
             bindings = <&kp LA(LG(LEFT_ARROW))>;
-            key-positions = <13 25>;
+            key-positions = <13 3>;
         };
 
         tabR {
             bindings = <&kp LA(LG(RIGHT_ARROW))>;
-            key-positions = <18 30>;
+            key-positions = <18 6>;
         };
 
         boot {
@@ -137,6 +137,7 @@
             tapping-term-ms = <175>;
             flavor = "tap-preferred";
             hold-while-undecided;
+            hold-while-undecided-linger;
         };
 
         bn170: bn170 {
