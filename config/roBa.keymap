@@ -58,17 +58,17 @@
 
         search {
             bindings = <&kp LA(F)>;
-            key-positions = <34 42>;
+            key-positions = <13 18>;
         };
 
         tabL {
             bindings = <&kp LA(LG(LEFT_ARROW))>;
-            key-positions = <12 11>;
+            key-positions = <12 13>;
         };
 
         tabR {
             bindings = <&kp LA(LG(RIGHT_ARROW))>;
-            key-positions = <19 20>;
+            key-positions = <19 18>;
         };
 
         boot {
@@ -88,7 +88,7 @@
 
         sft {
             bindings = <&kp LEFT_SHIFT>;
-            key-positions = <12 13>;
+            key-positions = <13 14>;
         };
     };
 
