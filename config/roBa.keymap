@@ -43,7 +43,7 @@
 
         alt_back {
             bindings = <&kp LA(BACKSPACE)>;
-            key-positions = <7 8>;
+            key-positions = <7 6>;
         };
 
         tab {
@@ -89,6 +89,11 @@
         sft {
             bindings = <&kp LEFT_SHIFT>;
             key-positions = <12 13>;
+        };
+
+        bk2 {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <17 18>;
         };
     };
 
