@@ -63,12 +63,12 @@
 
         tabL {
             bindings = <&kp LA(LG(LEFT_ARROW))>;
-            key-positions = <12 13>;
+            key-positions = <12 24>;
         };
 
         tabR {
             bindings = <&kp LA(LG(RIGHT_ARROW))>;
-            key-positions = <19 18>;
+            key-positions = <18 30>;
         };
 
         boot {
@@ -88,7 +88,7 @@
 
         sft {
             bindings = <&kp LEFT_SHIFT>;
-            key-positions = <13 14>;
+            key-positions = <13 12>;
         };
     };
 
