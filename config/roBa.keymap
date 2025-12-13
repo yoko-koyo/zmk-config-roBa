@@ -63,7 +63,7 @@
 
         tabL {
             bindings = <&kp LA(LG(LEFT_ARROW))>;
-            key-positions = <12 24>;
+            key-positions = <13 25>;
         };
 
         tabR {
