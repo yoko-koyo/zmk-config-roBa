@@ -90,6 +90,11 @@
             bindings = <&kp LEFT_SHIFT>;
             key-positions = <13 12>;
         };
+
+        back2 {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <18 19>;
+        };
     };
 
     macros {
