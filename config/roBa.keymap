@@ -170,10 +170,10 @@
 
         default_layer {
             bindings = <
-&kp Q                 &kp W         &kp E             &kp R  &kp T                                               &kp Y                             &kp U  &kp I      &kp O       &kp P
-&kp A                 &kp S         &kp D             &kp F  &kp G                     &kp DEL        &kp MINUS  &kp H                             &kp J  &kp K      &kp L       &kp Z
-&mt LEFT_SHIFT EQUAL  &kp X         &kp C             &kp V  &kp B                     &mo 6          &kp EQUAL  &kp N                             &kp M  &kp COMMA  &kp PERIOD  &mt RIGHT_SHIFT MINUS
-&kp LEFT_SHIFT        &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &b175 LEFT_COMMAND LANG2  &kp SPACE      &kp ENTER  &behaviorHoldTap180 1 LANGUAGE_1                                &kp ESCAPE
+&kp Q           &kp W         &kp E             &kp R  &kp T                                                    &kp Y                             &kp U  &kp I      &kp O       &kp P
+&kp A           &kp S         &kp D             &kp F  &kp G                      &kp DEL        &kp BACKSPACE  &kp H                             &kp J  &kp K      &kp L       &kp MINUS
+&kp Z           &kp X         &kp C             &kp V  &kp B                      &mo 6          &kp TAB        &kp N                             &kp M  &kp COMMA  &kp PERIOD  &mt RIGHT_SHIFT EQUAL
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &bn170 LEFT_COMMAND LANG2  &kp SPACE      &kp ENTER      &behaviorHoldTap180 1 LANGUAGE_1                                &kp ESCAPE
             >;
         };
 
