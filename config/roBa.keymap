@@ -43,17 +43,17 @@
 
         alt_back {
             bindings = <&kp LA(BACKSPACE)>;
-            key-positions = <7 6>;
+            key-positions = <6 5>;
         };
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <31 30>;
+            key-positions = <30 29>;
         };
 
         back {
             bindings = <&kp BACKSPACE>;
-            key-positions = <19 18>;
+            key-positions = <18 17>;
         };
 
         search {
@@ -89,11 +89,6 @@
         sft {
             bindings = <&kp LEFT_SHIFT>;
             key-positions = <12 13>;
-        };
-
-        bk2 {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <17 18>;
         };
     };
 
