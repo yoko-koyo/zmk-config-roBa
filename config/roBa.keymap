@@ -175,19 +175,19 @@
 
         default_layer {
             bindings = <
-&kp Q           &kp W         &kp E             &kp R  &kp T                                                             &kp Y                        &kp U  &kp I      &kp O       &kp P
-&kp A           &kp S         &kp D             &kp F  &kp G                           &kp DEL        &kp LA(BACKSPACE)  &kp H                        &kp J  &kp K      &kp L       &kp BACKSPACE
-&kp Z           &kp X         &kp C             &kp V  &kp B                           &mo 6          &kp LS(TAB)        &kp N                        &kp M  &kp COMMA  &kp PERIOD  &mt RIGHT_SHIFT TAB
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &bn170 LEFT_COMMAND LANGUAGE_2  &kp SPACE      &kp ENTER          &behaviorHoldTap180 1 LANG1                                &kp ESCAPE
+&kp Q           &kp W         &kp E             &kp R     &kp T                                                               &kp Y                        &kp U  &kp I      &kp O       &kp P
+&kp A           &kp S         &kp D             &kp F     &kp G                             &kp DEL        &kp LA(BACKSPACE)  &kp H                        &kp J  &kp K      &kp L       &kp BACKSPACE
+&kp Z           &kp X         &kp C             &kp V     &kp B                             &mo 6          &kp LS(TAB)        &kp N                        &kp M  &kp COMMA  &kp PERIOD  &mt RIGHT_SHIFT TAB
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LGUI  &behaviorHoldTap180 2 LANGUAGE_2  &kp SPACE      &kp ENTER          &behaviorHoldTap180 1 LANG1                                &kp ESCAPE
             >;
         };
 
         ARROW {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN  &kp HASH              &kp DOLLAR             &kp ASTRK                         &kp BACKSLASH  &kp GRAVE         &kp UP_ARROW      &kp MINUS          &kp EQUAL
-&kp AMPERSAND    &kp CARET    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION  &trans      &trans  &kp SLASH      &kp LEFT_ARROW    &kp DOWN_ARROW    &kp RIGHT_ARROW    &trans
-&kp PIPE         &kp PIPE     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp CARET     &trans      &trans  &kp SEMICOLON  &kp SINGLE_QUOTE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-&trans           &trans       &trans                &trans                 &trans        &trans      &trans  &trans                                                                &trans
+&kp EXCLAMATION   &kp AT_SIGN        &kp HASH              &kp DOLLAR             &kp ASTRK                      &kp BACKSLASH  &kp GRAVE         &kp UP_ARROW      &kp MINUS          &kp EQUAL
+&kp QUESTION      &kp CARET          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPS   &trans      &trans  &kp SLASH      &kp LEFT_ARROW    &kp DOWN_ARROW    &kp RIGHT_ARROW    &trans
+&kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE   &trans      &trans  &kp SEMICOLON  &kp SINGLE_QUOTE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&trans            &trans             &trans                &trans                 &trans     &trans      &trans  &trans                                                                &trans
             >;
         };
 
