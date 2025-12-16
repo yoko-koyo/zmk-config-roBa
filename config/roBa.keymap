@@ -184,17 +184,17 @@
 
         ARROW {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT                        &kp BACKSLASH      &kp GRAVE       &kp UP_ARROW    &kp MINUS         &kp EQUAL
-&kp QUESTION     &kp HASH      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR     &trans      &trans  &kp SQT            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &kp SEMICOLON
-&kp CARET        &kp ASTERISK  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND  &trans      &trans  &kp DOUBLE_QUOTES  &kp SLASH       &kp LESS_THAN   &kp GREATER_THAN  &kp COLON
-&trans           &trans        &trans                &trans                 &trans         &trans      &trans  &trans                                                               &trans
+&kp EXCLAMATION  &kp AT_SIGN   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT                        &kp BACKSLASH  &kp GRAVE       &kp UP_ARROW    &kp MINUS         &kp EQUAL
+&kp QUESTION     &kp HASH      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOLLAR     &trans      &trans  &kp SQT        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &trans
+&kp CARET        &kp ASTERISK  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND  &trans      &trans  &kp SEMICOLON  &kp SLASH       &kp LESS_THAN   &kp GREATER_THAN  &trans
+&trans           &trans        &trans                &trans                 &trans         &trans      &trans  &trans                                                           &trans
             >;
         };
 
         NUM {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &trans                                    &kp SLASH   &kp N7  &kp N8  &kp N9  &trans
-&kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LG(NUMBER_4))  &trans      &trans  &kp PERIOD  &kp N4  &kp N5  &kp N6  &kp N0
+&kp F1  &kp F2   &kp F3   &kp F4   &trans                                    &kp SLASH   &kp N7  &kp N8  &kp N9  &kp NUMBER_0
+&kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LG(NUMBER_4))  &trans      &trans  &kp PERIOD  &kp N4  &kp N5  &kp N6  &trans
 &kp F9  &kp F10  &kp F11  &kp F12  &kp LS(LG(N5))        &trans      &trans  &kp COMMA   &kp N1  &kp N2  &kp N3  &trans
 &trans  &trans   &trans   &trans   &trans                &trans      &trans  &trans                              &trans
             >;
@@ -202,10 +202,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &kp PIPE           &kp TILDE           &kp LA(UP_ARROW)    &kp UNDER            &kp PLUS
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp DOUBLE_QUOTES  &kp LA(LEFT_ARROW)  &kp LA(DOWN_ARROW)  &kp LA(RIGHT_ARROW)  &kp COLON
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans             &trans              &trans              &trans               &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                                          &trans
+&trans         &trans              &kp LC(UP_ARROW)    &trans               &trans                      &kp PIPE           &kp TILDE           &kp LA(UP_ARROW)    &kp UNDER            &kp PLUS
+&kp LG(LA(O))  &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)  &trans  &trans      &trans  &kp DOUBLE_QUOTES  &kp LA(LEFT_ARROW)  &kp LA(DOWN_ARROW)  &kp LA(RIGHT_ARROW)  &kp LA(BACKSPACE)
+&trans         &trans              &trans              &trans               &trans  &trans      &trans  &kp COLON          &trans              &trans              &trans               &kp LS(TAB)
+&trans         &trans              &trans              &trans               &trans  &trans      &trans  &trans                                                                          &trans
             >;
         };
 
@@ -221,7 +221,7 @@
         SCROLL {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                         &trans              &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans              &trans  &trans  &tog 5  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans              &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans              &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &kp LG(W)  &kp LG(LEFT_ARROW)                          &trans
             >;
