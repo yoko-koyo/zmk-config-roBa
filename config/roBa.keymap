@@ -85,11 +85,6 @@
             bindings = <&kp LCTRL>;
             key-positions = <38 39>;
         };
-
-        sft {
-            bindings = <&kp LEFT_SHIFT>;
-            key-positions = <13 12>;
-        };
     };
 
     macros {
