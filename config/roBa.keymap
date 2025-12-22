@@ -192,7 +192,7 @@
 
         FUNCTION {
             bindings = <
-&trans          &trans              &kp LC(UP_ARROW)    &trans               &trans                             &kp PIPE  &kp TILDE           &kp LA(UP_ARROW)    &kp UNDER            &kp PLUS
+&trans          &trans              &kp LC(UP_ARROW)    &trans               &trans                             &kp PIPE  &kp TILDE           &kp LA(UP_ARROW)    &trans               &trans
 &kp LEFT_SHIFT  &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)  &kp LA(LG(O))  &trans      &trans  &trans    &kp LA(LEFT_ARROW)  &kp LA(DOWN_ARROW)  &kp LA(RIGHT_ARROW)  &kp LA(BACKSPACE)
 &trans          &trans              &trans              &trans               &trans         &trans      &trans  &trans    &trans              &trans              &trans               &kp LS(TAB)
 &trans          &trans              &trans              &trans               &trans         &trans      &trans  &trans                                                                 &trans
