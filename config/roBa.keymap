@@ -52,7 +52,7 @@
         };
 
         back {
-            bindings = <&kp MINUS>;
+            bindings = <&kp RIGHT_SHIFT>;
             key-positions = <19 20>;
         };
 
