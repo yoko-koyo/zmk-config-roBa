@@ -52,7 +52,7 @@
         };
 
         back {
-            bindings = <&kp RIGHT_SHIFT>;
+            bindings = <&kp BACKSPACE>;
             key-positions = <19 20>;
         };
 
