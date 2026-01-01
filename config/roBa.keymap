@@ -113,7 +113,7 @@
             tapping-term-ms = <180>; // ダブルタップ判定の時間
             bindings =
                 <&cmd_lang2 LEFT_WIN LANGUAGE_2>,
-                // 1タップ目: ホールドでWin、タップでLang2,,,,
+                // 1タップ目: ホールドでWin、タップでLang2,,,,,
                 <&kp LANGUAGE_1>;
 
             // 2タップ目: Lang1
@@ -158,10 +158,10 @@
 
         default_layer {
             bindings = <
-&kp Q           &kp W         &kp E             &kp R                          &kp T                                                           &kp Y                             &kp U  &kp I      &kp O       &kp P
-&kp A           &kp S         &kp D             &kp F                          &kp G                    &mt LEFT_SHIFT ESC      &kp TAB        &kp H                             &kp J  &kp K      &kp L       &kp MINUS
-&kp Z           &kp X         &kp C             &kp V                          &kp B                    &mo 6                   &kp BACKSPACE  &kp N                             &kp M  &kp COMMA  &kp PERIOD  &mt RIGHT_SHIFT EQUAL
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &behaviorHoldTap180 2 LA(ESC)  &mt LEFT_WIN LANGUAGE_2  &kp SPACE               &kp ENTER      &behaviorHoldTap180 1 LANGUAGE_1                                &kp BACKSPACE
+&kp Q           &kp W         &kp E             &kp R                          &kp T                                                              &kp Y                            &kp U  &kp I      &kp O       &kp P
+&kp A           &kp S         &kp D             &kp F                          &kp G                    &mt LEFT_SHIFT LANG2      &kp LANGUAGE_1  &kp H                            &kp J  &kp K      &kp L       &kp MINUS
+&kp Z           &kp X         &kp C             &kp V                          &kp B                    &mo 6                     &kp TAB         &kp N                            &kp M  &kp COMMA  &kp PERIOD  &mt RIGHT_SHIFT EQUAL
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &behaviorHoldTap180 2 LA(ESC)  &mt LEFT_WIN LANGUAGE_2  &kp SPACE                 &kp ENTER       &behaviorHoldTap180 1 BACKSPACE                                &kp LANGUAGE_1
             >;
         };
 
