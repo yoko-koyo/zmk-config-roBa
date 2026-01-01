@@ -92,6 +92,27 @@
     };
 
     behaviors {
+        // Command(Win)とLang2を切り替えるHold-Tap
+        cmd_lang2: cmd_lang2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CMD_LANG2";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <0>;
+            flavor = "hold-preferred"; // 他のキーが押されたら即座にHold(Command)判定
+            bindings = <&kp>, <&kp>;
+        };
+
+        hogeeeeee: hogeeeeee {
+            compatible = "zmk,behavior-tap-dance";
+            label = "HOGEEEEEE";
+            #binding-cells = <0>;
+            tapping-term-ms = <180>; // ダブルタップ判定の時間
+            bindings = 
+                <&cmd_lang2 LEFT_WIN LANGUAGE_2>, // 1タップ目: ホールドでWin、タップでLang2
+                <&kp LANGUAGE_1>;                // 2タップ目: Lang1
+        };
+        
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
