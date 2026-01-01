@@ -42,7 +42,7 @@
         compatible = "zmk,combos";
 
         alt_back {
-            bindings = <&kp SEMI>;
+            bindings = <&kp LA(BACKSPACE)>;
             key-positions = <8 7>;
         };
 
@@ -58,7 +58,7 @@
 
         search {
             bindings = <&kp LA(F)>;
-            key-positions = <18 13>;
+            key-positions = <34 42>;
         };
 
         tabL {
@@ -113,7 +113,7 @@
             tapping-term-ms = <180>; // ダブルタップ判定の時間
             bindings =
                 <&cmd_lang2 LEFT_WIN LANGUAGE_2>,
-                // 1タップ目: ホールドでWin、タップでLang2,,,,,,,,
+                // 1タップ目: ホールドでWin、タップでLang2,,,,,,,,,
                 <&kp LANGUAGE_1>;
 
             // 2タップ目: Lang1
