@@ -32,8 +32,8 @@
             <&kp LC(DOWN_ARROW)>;
 
         tick = <350>;
-        wait-ms = <15>;
-        tap-ms = <3>;
+        wait-ms = <5>;
+        tap-ms = <0>;
     };
 };
 
