@@ -113,7 +113,7 @@
             tapping-term-ms = <180>; // ダブルタップ判定の時間
             bindings =
                 <&cmd_lang2 LEFT_WIN LANGUAGE_2>,
-                // 1タップ目: ホールドでWin、タップでLang2,,,,,,,,,,
+                // 1タップ目: ホールドでWin、タップでLang2,,,,,,,,,,,
                 <&kp LANGUAGE_1>;
 
             // 2タップ目: Lang1
@@ -137,8 +137,7 @@
             require-prior-idle-ms = <0>;
             tapping-term-ms = <180>;
             hold-while-undecided;
-            quick-tap-ms = <180>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
         };
 
         b175: b175 {
