@@ -99,8 +99,9 @@
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             quick-tap-ms = <0>;
-            flavor = "hold-preferred"; // 他のキーが押されたら即座にHold(Command)判定
+            flavor = "hold-preferred"; // 他のキーが押されたら即Hold(Command)を優先
             bindings = <&kp>, <&kp>;
+            hold-while-undecided;      // 判定中に他のキーが来たらHoldとして扱う
         };
 
         hogeeeeee: hogeeeeee {
