@@ -145,6 +145,15 @@
 
             tapping-term-ms = <180>;
         };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR";
+            #binding-cells = <0>;
+            bindings = <&b175 LEFT_WIN LANGUAGE_2>, <&kp LANGUAGE_1>, <&none>;
+
+            tapping-term-ms = <170>;
+        };
     };
 
     keymap {
