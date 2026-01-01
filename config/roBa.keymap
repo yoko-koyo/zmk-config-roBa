@@ -76,9 +76,9 @@
             key-positions = <27 15 16 28>;
         };
 
-        ctrl {
-            bindings = <&kp LEFT_SHIFT>;
-            key-positions = <12 11>;
+        lang1 {
+            bindings = <&kp LANGUAGE_1>;
+            key-positions = <13 18>;
         };
     };
 
@@ -113,7 +113,7 @@
             tapping-term-ms = <180>; // ダブルタップ判定の時間
             bindings =
                 <&cmd_lang2 LEFT_WIN LANGUAGE_2>,
-                // 1タップ目: ホールドでWin、タップでLang2,,,,,,,,,,,,,
+                // 1タップ目: ホールドでWin、タップでLang2,,,,,,,,,,,,,,
                 <&kp LANGUAGE_1>;
 
             // 2タップ目: Lang1
