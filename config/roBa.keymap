@@ -157,15 +157,6 @@
             flavor = "balanced";
             quick-tap-ms = <90>;
         };
-
-        hogeeeeee: hogeeeeee {
-            compatible = "zmk,behavior-tap-dance";
-            label = "HOGEEEEEE";
-            #binding-cells = <0>;
-            bindings = <&bn170 LEFT_WIN LANGUAGE_2>, <&kp LANGUAGE_1>, <&none>;
-
-            tapping-term-ms = <130>;
-        };
     };
 
     keymap {
