@@ -121,7 +121,7 @@
             tapping-term-ms = <180>; // ダブルタップ判定の時間
             bindings =
                 <&cmd_lang2 LEFT_WIN LANGUAGE_2>,
-                // 1タップ目: ホールドでWin、タップでLang2,,,,,,,,,,,,,,,,,,,,,,,,
+                // 1タップ目: ホールドでWin、タップでLang2,,,,,,,,,,,,,,,,,,,,,,,,,
                 <&kp LANGUAGE_1>;
 
             // 2タップ目: Lang1
@@ -175,10 +175,10 @@
 
         ARROW {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN  &kp HASH          &kp DOLLAR         &kp ASTRK                                    &kp BACKSLASH      &kp GRAVE       &kp UP_ARROW    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp QUESTION     &kp PERCENT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COLON                &trans      &trans  &kp SLASH          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW       &kp UNDERSCORE
-&kp AMPERSAND    &kp CARET    &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp SEMICOLON            &trans      &trans  &kp DOUBLE_QUOTES  &kp SQT         &kp LESS_THAN   &kp GREATER_THAN      &kp PLUS
-&kp LS(LG(Z))    &trans       &trans            &trans             &mt LEFT_WIN LANGUAGE_1  &trans      &trans  &trans                                                                   &trans
+&kp EXCLAMATION  &kp AT_SIGN  &kp HASH          &kp DOLLAR         &kp ASTRK                          &kp BACKSLASH      &kp GRAVE       &kp UP_ARROW    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp QUESTION     &kp PERCENT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COLON      &trans      &trans  &kp SLASH          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW       &kp UNDERSCORE
+&kp AMPERSAND    &kp CARET    &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp SEMICOLON  &trans      &trans  &kp DOUBLE_QUOTES  &kp SQT         &kp LESS_THAN   &kp GREATER_THAN      &kp PLUS
+&trans           &trans       &trans            &trans             &trans         &trans      &trans  &trans                                                                   &trans
             >;
         };
 
