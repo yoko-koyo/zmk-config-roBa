@@ -89,6 +89,11 @@
             bindings = <&kp LANGUAGE_2>;
             key-positions = <12 19>;
         };
+
+        six {
+            bindings = <&mo 6>;
+            key-positions = <11 12>;
+        };
     };
 
     macros {
