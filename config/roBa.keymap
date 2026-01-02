@@ -114,28 +114,6 @@
             hold-while-undecided;      // 判定中に他のキーが来たらHoldとして扱う
         };
 
-        hogeeeeee: hogeeeeee {
-            compatible = "zmk,behavior-tap-dance";
-            label = "HOGEEEEEE";
-            #binding-cells = <0>;
-            tapping-term-ms = <180>; // ダブルタップ判定の時間
-            bindings =
-                <&cmd_lang2 LEFT_WIN LANGUAGE_2>,
-                // 1タップ目: ホールドでWin、タップでLang2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-                <&kp LANGUAGE_1>;
-
-            // 2タップ目: Lang1
-        };
-
-        lt_to_layer_0: lt_to_layer_0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
         behaviorHoldTap180: behaviorHoldTap180 {
             compatible = "zmk,behavior-hold-tap";
             label = "BEHAVIORHOLDTAP180";
@@ -145,19 +123,6 @@
             tapping-term-ms = <180>;
             hold-while-undecided;
             flavor = "hold-preferred";
-        };
-
-        b175: b175 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "B175";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            require-prior-idle-ms = <0>;
-            tapping-term-ms = <180>;
-            flavor = "tap-preferred";
-            hold-while-undecided;
-            hold-while-undecided-linger;
         };
     };
 
