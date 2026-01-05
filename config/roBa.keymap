@@ -135,10 +135,10 @@
 
         ARROW {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN  &kp HASH          &kp DOLLAR         &kp ASTRK                          &kp BACKSLASH      &kp GRAVE       &kp UP_ARROW    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp QUESTION     &kp PERCENT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COLON      &trans      &trans  &kp SLASH          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW       &kp UNDERSCORE
-&kp AMPERSAND    &kp CARET    &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp SEMICOLON  &trans      &trans  &kp DOUBLE_QUOTES  &kp SQT         &kp LESS_THAN   &kp GREATER_THAN      &kp PLUS
-&trans           &trans       &trans            &trans             &trans         &trans      &trans  &trans                                                                   &trans
+&kp EXCLAMATION  &kp AT_SIGN  &kp HASH          &kp DOLLAR         &kp ASTRK                               &kp BACKSLASH      &kp GRAVE       &kp UP_ARROW    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp QUESTION     &kp PERCENT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COLON           &trans      &trans  &kp SLASH          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW       &kp UNDERSCORE
+&kp AMPERSAND    &kp CARET    &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp SEMICOLON       &trans      &trans  &kp DOUBLE_QUOTES  &kp SQT         &kp LESS_THAN   &kp GREATER_THAN      &kp PLUS
+&trans           &trans       &trans            &trans             &mt LEFT_WIN LANG1  &trans      &trans  &trans                                                                   &trans
             >;
         };
 
