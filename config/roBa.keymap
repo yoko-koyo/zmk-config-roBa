@@ -47,7 +47,7 @@
         };
 
         tab {
-            bindings = <&kp SINGLE_QUOTE>;
+            bindings = <&kp TAB>;
             key-positions = <32 31>;
         };
 
@@ -127,18 +127,18 @@
         default_layer {
             bindings = <
 &kp Q           &kp W                       &kp E                          &kp R  &kp T                                                             &kp Y                        &kp U  &kp I      &kp O       &kp P
-&kp A           &kp S                       &kp D                          &kp F  &kp G                      &mt LEFT_CONTROL LA(F)      &kp MINUS  &kp H                        &kp J  &kp K      &kp L       &kp BACKSPACE
-&kp Z           &kp X                       &kp C                          &kp V  &kp B                      &mo 6                       &kp EQUAL  &kp N                        &kp M  &kp COMMA  &kp PERIOD  &kp MINUS
+&kp A           &kp S                       &kp D                          &kp F  &kp G                      &mt LEFT_CONTROL LA(F)      &kp MINUS  &kp H                        &kp J  &kp K      &kp L       &kp MINUS
+&kp Z           &kp X                       &kp C                          &kp V  &kp B                      &mo 6                       &kp EQUAL  &kp N                        &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
 &kp LEFT_SHIFT  &mt LEFT_ALT LA(BACKSPACE)  &mt LEFT_CONTROL LC(UP_ARROW)  &mo 2  &cmd_lang2 LEFT_WIN LANG2  &kp SPACE                   &kp ENTER  &behaviorHoldTap180 1 LANG1                                &mt RIGHT_SHIFT TAB
             >;
         };
 
         ARROW {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN  &kp HASH          &kp DOLLAR         &kp ASTRK                          &kp BACKSLASH  &kp GRAVE       &kp UP_ARROW    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp QUESTION     &kp PERCENT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COLON      &trans      &trans  &kp SLASH      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW       &kp BACKSPACE
-&kp AMPERSAND    &kp CARET    &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp SEMICOLON  &trans      &trans  &kp EQUAL      &kp SQT         &kp LESS_THAN   &kp GREATER_THAN      &kp UNDER
-&trans           &trans       &trans            &kp ESCAPE         &trans         &trans      &trans  &trans                                                               &trans
+&kp EXCLAMATION  &kp AT_SIGN  &kp HASH          &kp DOLLAR         &kp ASTRK                          &kp BACKSLASH      &kp GRAVE       &kp UP_ARROW    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp QUESTION     &kp PERCENT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COLON      &trans      &trans  &kp SLASH          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW       &kp UNDER
+&kp AMPERSAND    &kp CARET    &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp SEMICOLON  &trans      &trans  &kp DOUBLE_QUOTES  &kp SQT         &kp LESS_THAN   &kp GREATER_THAN      &kp PLUS
+&trans           &trans       &trans            &kp ESCAPE         &trans         &trans      &trans  &trans                                                                   &trans
             >;
         };
 
@@ -154,8 +154,8 @@
         FUNCTION {
             bindings = <
 &trans          &trans  &trans  &trans  &trans                             &kp PIPE  &kp TILDE           &kp LA(UP_ARROW)    &trans               &trans
-&kp LEFT_SHIFT  &trans  &trans  &trans  &kp LA(LG(O))  &trans      &trans  &trans    &kp LA(LEFT_ARROW)  &kp LA(DOWN_ARROW)  &kp LA(RIGHT_ARROW)  &kp LA(BACKSPACE)
-&trans          &trans  &trans  &trans  &trans         &trans      &trans  &kp PLUS  &kp UNDERSCORE      &trans              &trans               &trans
+&kp LEFT_SHIFT  &trans  &trans  &trans  &kp LA(LG(O))  &trans      &trans  &trans    &kp LA(LEFT_ARROW)  &kp LA(DOWN_ARROW)  &kp LA(RIGHT_ARROW)  &trans
+&trans          &trans  &trans  &trans  &trans         &trans      &trans  &kp PLUS  &trans              &trans              &trans               &trans
 &trans          &trans  &trans  &trans  &trans         &trans      &trans  &trans                                                                 &trans
             >;
         };
