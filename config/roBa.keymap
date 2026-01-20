@@ -63,14 +63,7 @@
 
         tabL {
             bindings = <&mo 2>;
-            key-positions = <13 12>;
-            timeout-ms = <25>;
-            require-prior-idle-ms = <150>;
-        };
-
-        tabR {
-            bindings = <&mo 2>;
-            key-positions = <18 19>;
+            key-positions = <12 11>;
             timeout-ms = <25>;
             require-prior-idle-ms = <150>;
         };
