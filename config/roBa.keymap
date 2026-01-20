@@ -74,8 +74,8 @@
         };
 
         six {
-            bindings = <&mo 2>;
-            key-positions = <11 12>;
+            bindings = <&mo 5>;
+            key-positions = <12 13>;
         };
 
         h {
