@@ -41,16 +41,6 @@
     combos {
         compatible = "zmk,combos";
 
-        function_left {
-            bindings = <&mo 3>;
-            key-positions = <12 13>;
-        };
-
-        function_right {
-            bindings = <&mo 3>;
-            key-positions = <19 18>;
-        };
-
         num_left {
             bindings = <&mo 2>;
             key-positions = <11 12>;
