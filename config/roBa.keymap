@@ -107,11 +107,11 @@
             compatible = "zmk,behavior-hold-tap";
             label = "CMD_LANG2";
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <180>;
             flavor = "hold-preferred"; // 他のキーが押されたら即Hold(Command)を優先
             bindings = <&kp>, <&kp>;
 
-            hold-while-undecided;      // 判定中に他のキーが来たらHoldとして扱う
+            // 判定中に他のキーが来たらHoldとして扱う
         };
 
         behaviorHoldTap180: behaviorHoldTap180 {
