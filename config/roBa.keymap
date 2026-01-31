@@ -24,7 +24,7 @@
     // };
 
     arrows {
-        layers = <6 2>;
+        layers = <6>;
         bindings =
             <&kp LC(LEFT_ARROW)>,
             <&kp LC(RIGHT_ARROW)>,
