@@ -59,7 +59,7 @@
         };
 
         scroll {
-            bindings = <&mo 5>;
+            bindings = <&mo 6>;
             key-positions = <13 12>;
         };
     };
