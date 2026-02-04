@@ -104,9 +104,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
+            quick-tap-ms = <1>;
+            flavor = "balanced";
             tapping-term-ms = <170>;
+            require-prior-idle-ms = <1>;
         };
     };
 
