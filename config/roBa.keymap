@@ -124,10 +124,10 @@
 
         ARROW {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN    &kp HASH   &kp DOLLAR    &kp PERCENT                                      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp UP                &kp MINUS              &kp EQUAL
-&kp CARET        &kp AMPERSAND  &kp ASTRK  &kp QUESTION  &kp COLON      &trans                    &trans  &kp BACKSLASH     &kp LEFT           &kp DOWN              &kp RIGHT              &trans
-&trans           &trans         &trans     &trans        &kp SEMICOLON  &trans                    &trans  &kp GRAVE         &kp SQT            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH
-&trans           &trans         &trans     &trans        &trans         &mt LEFT_SHIFT SPACE      &trans  &trans                                                                            &trans
+&kp EXCLAMATION  &kp AT_SIGN    &kp HASH   &kp DOLLAR  &kp PERCENT                        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp UP                &kp MINUS              &kp EQUAL
+&kp CARET        &kp AMPERSAND  &kp ASTRK  &kp SLASH   &kp COLON      &trans      &trans  &kp BACKSLASH     &kp LEFT           &kp DOWN              &kp RIGHT              &trans
+&trans           &trans         &trans     &trans      &kp SEMICOLON  &trans      &trans  &kp GRAVE         &kp SQT            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans           &trans         &trans     &trans      &trans         &trans      &trans  &trans                                                                            &trans
             >;
         };
 
