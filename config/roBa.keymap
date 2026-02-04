@@ -104,9 +104,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            quick-tap-ms = <20>;
+            quick-tap-ms = <160>;
             flavor = "balanced";
-            tapping-term-ms = <170>;
+            tapping-term-ms = <160>;
             require-prior-idle-ms = <0>;
             retro-tap;
         };
