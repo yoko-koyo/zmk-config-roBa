@@ -58,7 +58,7 @@
 
         down {
             bindings = <&kp DOWN>;
-            key-positions = <7 8>;
+            key-positions = <30 31>;
         };
 
         left {
