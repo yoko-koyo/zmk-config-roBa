@@ -63,7 +63,7 @@
 
         left {
             bindings = <&kp LEFT>;
-            key-positions = <17 18>;
+            key-positions = <18 19>;
         };
 
         right {
