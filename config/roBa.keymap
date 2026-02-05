@@ -41,6 +41,11 @@
     combos {
         compatible = "zmk,combos";
 
+        // --- ここから追加 ---
+        timeout-ms = <50>;          // 同時押しとみなす時間の猶予（少し長めの50msが安定）
+        key-positions-prior-idle-ms = <100>; // 他のキー入力から少し間が空いた時だけコンボを有効にする（誤爆防止）
+        // ------------------
+
         boot {
             bindings = <&bootloader>;
             key-positions = <27 15 16 28>;
