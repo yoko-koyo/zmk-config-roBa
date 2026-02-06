@@ -60,16 +60,19 @@
         up {
             bindings = <&kp LA(BACKSPACE)>;
             key-positions = <6 7>;
+            timeout-ms = <65>;
         };
 
         down {
             bindings = <&kp TAB>;
             key-positions = <30 31>;
+            timeout-ms = <65>;
         };
 
         left {
             bindings = <&kp BACKSPACE>;
             key-positions = <18 19>;
+            timeout-ms = <65>;
         };
 
         right {
