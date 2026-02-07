@@ -56,18 +56,6 @@
             key-positions = <10 38>;
             timeout-ms = <190>;
         };
-
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <18 19>;
-            timeout-ms = <190>;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <19 20>;
-            timeout-ms = <190>;
-        };
     };
 
     macros {
@@ -123,17 +111,17 @@
         default_layer {
             bindings = <
 &kp Q       &kp W         &kp E             &kp R         &kp T                                                           &kp Y         &kp U  &kp I      &kp O       &kp P
-&kp A       &kp S         &kp D             &kp F         &kp G            &mt LEFT_CONTROL LA(F)      &kp MINUS          &kp H         &kp J  &kp K      &kp L       &kp MINUS
-&kp Z       &kp X         &kp C             &kp V         &kp B            &mo 6                       &kp EQUAL          &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
+&kp A       &kp S         &kp D             &kp F         &kp G            &mt LEFT_CONTROL LA(F)      &kp MINUS          &kp H         &kp J  &kp K      &kp L       &kp BACKSPACE
+&kp Z       &kp X         &kp C             &kp V         &kp B            &mo 6                       &kp EQUAL          &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp TAB
 &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &lth 2 LA(F)  &kth LGUI LANG2  &kp SPACE                   &kth RSHIFT ENTER  &lth 1 LANG1                                &mt RSHIFT ESC
             >;
         };
 
         ARROW {
             bindings = <
-&kp EXCL   &kp AT    &kp HASH   &kp DLLR   &kp PRCNT                      &kp LBKT       &kp RBKT  &kp UP    &kp LPAR   &kp RIGHT_PARENTHESIS
+&kp EXCL   &kp AT    &kp HASH   &kp DLLR   &kp PRCNT                      &kp LBKT       &kp RBKT  &kp UP    &kp MINUS  &kp PLUS
 &kp CARET  &kp AMPS  &kp ASTRK  &kp SLASH  &kp COLON  &trans      &trans  &kp BACKSLASH  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
-&kp QMARK  &trans    &trans     &trans     &kp SEMI   &trans      &trans  &kp GRAVE      &kp SQT   &trans    &trans     &trans
+&kp QMARK  &trans    &trans     &trans     &kp SEMI   &trans      &trans  &kp GRAVE      &kp SQT   &kp LPAR  &kp RPAR   &trans
 &trans     &trans    &trans     &trans     &trans     &trans      &trans  &trans                                        &trans
             >;
         };
