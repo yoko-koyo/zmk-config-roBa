@@ -110,10 +110,10 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W         &kp E             &kp R  &kp T                                                           &kp Y         &kp U  &kp I      &kp O       &kp P
-&kp A       &kp S         &kp D             &kp F  &kp G            &mt LEFT_CONTROL LA(F)      &kp MINUS          &kp H         &kp J  &kp K      &kp L       &kp BACKSPACE
-&kp Z       &kp X         &kp C             &kp V  &kp B            &mo 6                       &kp EQUAL          &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp TAB
-&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &kth LGUI LANG2  &kp SPACE                   &kth RSHIFT ENTER  &lth 1 LANG1                                &mt RSHIFT ESC
+&kp Q       &kp W         &kp E             &kp R         &kp T                                                           &kp Y         &kp U  &kp I      &kp O       &kp P
+&kp A       &kp S         &kp D             &kp F         &kp G            &mt LEFT_CONTROL LA(F)      &kp MINUS          &kp H         &kp J  &kp K      &kp L       &kp BACKSPACE
+&kp Z       &kp X         &kp C             &kp V         &kp B            &mo 6                       &kp EQUAL          &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp TAB
+&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &lth 2 LA(F)  &kth LGUI LANG2  &kp SPACE                   &kth RSHIFT ENTER  &lth 1 LANG1                                &mt RSHIFT ESC
             >;
         };
 
