@@ -60,16 +60,19 @@
         up {
             bindings = <&kp LA(BACKSPACE)>;
             key-positions = <6 7>;
+            timeout-ms = <65>;
         };
 
         down {
             bindings = <&kp TAB>;
             key-positions = <30 31>;
+            timeout-ms = <65>
         };
 
         left {
             bindings = <&kp BACKSPACE>;
             key-positions = <18 19>;
+            timeout-ms = <65>;
         };
 
         right {
@@ -144,6 +147,7 @@
 &kp SLASH  &trans  &trans  &trans  &trans  &trans      &trans  &kp BSLH   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SEMICOLON  &trans
 &kp QMARK  &trans  &trans  &trans  &trans  &trans      &trans  &kp GRAVE  &kp SQT           &trans             &trans         &trans
 &trans     &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                         &trans
+
             >;
         };
 
