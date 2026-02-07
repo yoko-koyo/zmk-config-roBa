@@ -169,7 +169,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        f {
+        conditional_layers {
             if-layers = <1 2>;
             then-layer = <3>;
         };
