@@ -24,7 +24,7 @@
     // };
 
     arrows {
-        layers = <6 2>;
+        layers = <6>;
         bindings =
             <&kp LC(LEFT_ARROW)>,
             <&kp LC(RIGHT_ARROW)>,
@@ -41,17 +41,11 @@
     combos {
         compatible = "zmk,combos";
 
-        num_left {
-            bindings = <&mo 2>;
-            key-positions = <11 12>;
-        };
+        // --- ここから追加 ---
 
-        num_right {
-            bindings = <&mo 2>;
-            key-positions = <19 20>;
-            timeout-ms = <25>;
-            require-prior-idle-ms = <150>;
-        };
+        timeout-ms = <50>;          // 同時押しとみなす時間の猶予（少し長めの50msが安定）
+        key-positions-prior-idle-ms = <100>; // 他のキー入力から少し間が空いた時だけコンボを有効にする（誤爆防止）
+        // ------------------
 
         boot {
             bindings = <&bootloader>;
@@ -59,8 +53,31 @@
         };
 
         scroll {
-            bindings = <&mo 5>;
+            bindings = <&mo 6>;
             key-positions = <13 12>;
+        };
+
+        up {
+            bindings = <&kp LA(BACKSPACE)>;
+            key-positions = <6 7>;
+            timeout-ms = <65>;
+        };
+
+        down {
+            bindings = <&kp TAB>;
+            key-positions = <30 31>;
+            timeout-ms = <65>
+        };
+
+        left {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <18 19>;
+            timeout-ms = <65>;
+        };
+
+        right {
+            bindings = <&kp DELETE>;
+            key-positions = <19 20>;
         };
     };
 
@@ -97,6 +114,19 @@
             hold-while-undecided;
             flavor = "hold-preferred";
         };
+
+        space_shift: space_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SPACE_SHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            quick-tap-ms = <160>;
+            flavor = "balanced";
+            tapping-term-ms = <160>;
+            require-prior-idle-ms = <0>;
+            retro-tap;
+        };
     };
 
     keymap {
@@ -104,37 +134,38 @@
 
         default_layer {
             bindings = <
-&kp Q           &kp W         &kp E             &kp R  &kp T                                                             &kp Y                        &kp U  &kp I      &kp O       &kp P
-&kp A           &kp S         &kp D             &kp F  &kp G                      &mt LEFT_CONTROL LA(F)      &kp MINUS  &kp H                        &kp J  &kp K      &kp L       &kp BACKSPACE
-&kp Z           &kp X         &kp C             &kp V  &kp B                      &mo 6                       &kp EQUAL  &kp N                        &kp M  &kp COMMA  &kp PERIOD  &kp TAB
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &cmd_lang2 LEFT_WIN LANG2  &kp SPACE                   &kp ENTER  &behaviorHoldTap180 1 LANG1                                &mt RIGHT_SHIFT ESC
+&kp Q           &kp W         &kp E      &kp R         &kp T                                                                        &kp Y                        &kp U  &kp I      &kp O       &kp P
+&kp A           &kp S         &kp D      &kp F         &kp G                      &kp LC(LEFT)      &kp LC(RIGHT)                   &kp H                        &kp J  &kp K      &kp L       &behaviorHoldTap180 2 MINUS
+&kp Z           &kp X         &kp C      &kp V         &kp B                      &mo 6             &kp LC(UP)                      &kp N                        &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_ALT  &cmd_lang2 LEFT_WIN LANG2  &kp SPACE         &space_shift RIGHT_SHIFT ENTER  &behaviorHoldTap180 1 LANG1                                &mt RIGHT_SHIFT ESC
             >;
         };
 
         ARROW {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN    &kp HASH   &kp DOLLAR    &kp PERCENT                                      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp UP                &kp MINUS              &kp EQUAL
-&kp CARET        &kp AMPERSAND  &kp ASTRK  &kp QUESTION  &kp COLON      &trans                    &trans  &kp BACKSLASH     &kp LEFT           &kp DOWN              &kp RIGHT              &trans
-&trans           &trans         &trans     &trans        &kp SEMICOLON  &trans                    &trans  &kp GRAVE         &kp SQT            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH
-&trans           &trans         &trans     &trans        &trans         &mt LEFT_SHIFT SPACE      &trans  &trans                                                                            &trans
+&kp N1     &kp N2  &kp N3  &kp N4  &kp N5                      &kp N6     &kp N7            &kp N8             &kp N9         &kp N0
+&kp SLASH  &trans  &trans  &trans  &trans  &trans      &trans  &kp BSLH   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SEMICOLON  &trans
+&kp QMARK  &trans  &trans  &trans  &trans  &trans      &trans  &kp GRAVE  &kp SQT           &trans             &trans         &trans
+&trans     &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                         &trans
+
             >;
         };
 
         NUM {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &trans                                    &kp SLASH   &kp N7  &kp N8  &kp N9  &kp NUMBER_0
-&kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LG(NUMBER_4))  &trans      &trans  &kp PERIOD  &kp N4  &kp N5  &kp N6  &trans
-&kp F9  &kp F10  &kp F11  &kp F12  &kp LS(LG(N5))        &trans      &trans  &kp COMMA   &kp N1  &kp N2  &kp N3  &trans
-&trans  &trans   &trans   &trans   &trans                &trans      &trans  &trans                              &trans
+&kp F1  &kp F2   &kp F3   &kp F4   &trans                                    &trans  &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &trans
+&kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LG(NUMBER_4))  &trans      &trans  &trans  &kp LEFT      &kp DOWN  &kp RIGHT      &trans
+&kp F9  &kp F10  &kp F11  &kp F12  &kp LS(LG(N5))        &trans      &trans  &trans  &trans        &trans    &trans         &trans
+&trans  &trans   &trans   &trans   &trans                &trans      &trans  &trans                                         &trans
             >;
         };
 
         FUNCTION {
             bindings = <
-&trans          &trans              &kp LC(UP_ARROW)    &trans               &trans                             &trans  &kp LA(LG(LEFT_ARROW))  &kp LA(UP_ARROW)    &kp LA(LG(RIGHT))    &trans
-&kp LEFT_SHIFT  &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)  &kp LA(LG(O))  &trans      &trans  &trans  &kp LA(LEFT_ARROW)      &kp LA(DOWN_ARROW)  &kp LA(RIGHT_ARROW)  &kp LA(BACKSPACE)
-&trans          &trans              &trans              &trans               &trans         &trans      &trans  &trans  &trans                  &trans              &trans               &trans
-&trans          &trans              &trans              &trans               &trans         &trans      &trans  &trans                                                                   &trans
+&trans          &trans  &trans  &trans  &trans                             &trans  &kp LA(LG(LEFT_ARROW))  &kp LC(UP_ARROW)    &kp LA(LG(RIGHT))    &trans
+&kp LEFT_SHIFT  &trans  &trans  &trans  &kp LA(LG(O))  &trans      &trans  &trans  &kp LC(LEFT_ARROW)      &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)  &trans
+&trans          &trans  &trans  &trans  &trans         &trans      &trans  &trans  &trans                  &trans              &trans               &trans
+&trans          &trans  &trans  &trans  &trans         &trans      &trans  &trans                                                                   &trans
             >;
         };
 
@@ -149,10 +180,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans              &kp LA(LG(LEFT))  &kp UP    &kp LA(LG(RIGHT))  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans              &kp LEFT          &kp DOWN  &kp RIGHT          &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans              &trans            &trans    &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LG(LEFT_ARROW)                                                 &trans
+&trans  &trans  &trans  &trans  &trans                      &trans              &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans              &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans              &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LG(LEFT_ARROW)                          &trans
             >;
         };
 
