@@ -14,10 +14,10 @@
     // arrows {
     //     layers = <6>;
     //     bindings =
-    //         <&kp LS(RIGHT_ARROW)>,
-    //         <&kp LS(LEFT_ARROW)>,
-    //         <&kp LS(UP_ARROW)>,
-    //         <&kp LS(DOWN_ARROW)>;
+    //         <&kp LS(RIGHT)>,
+    //         <&kp LS(LEFT)>,
+    //         <&kp LS(UP)>,
+    //         <&kp LS(DOWN)>;
     //     tick = <10>;
     //     wait-ms = <5>;
     //     tap-ms = <5>;
@@ -26,10 +26,10 @@
     arrows {
         layers = <6>;
         bindings =
-            <&kp LC(LEFT_ARROW)>,
-            <&kp LC(RIGHT_ARROW)>,
-            <&kp LC(UP_ARROW)>,
-            <&kp LC(DOWN_ARROW)>;
+            <&kp LC(LEFT)>,
+            <&kp LC(RIGHT)>,
+            <&kp LC(UP)>,
+            <&kp LC(DOWN)>;
 
         tick = <230>;
         wait-ms = <5>;
@@ -122,19 +122,19 @@
 
         NUM {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &trans                                    &kp SLASH   &kp N7  &kp N8  &kp N9  &kp NUMBER_0
-&kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LG(NUMBER_4))  &trans      &trans  &kp PERIOD  &kp N4  &kp N5  &kp N6  &trans
-&kp F9  &kp F10  &kp F11  &kp F12  &kp LS(LG(N5))        &trans      &trans  &kp COMMA   &kp N1  &kp N2  &kp N3  &trans
-&trans  &trans   &trans   &trans   &trans                &trans      &trans  &trans                              &trans
+&kp N1  &kp N2   &kp M3   &kp N4   &kp N5                              &kp N6   &kp N7  &kp N8  &kp N9  &kp N0
+&kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LG(N4))  &trans      &trans  &trans   &trans  &trans  &trans  &trans
+&kp F9  &kp F10  &kp F11  &kp F12  &kp LS(LG(N5))  &trans      &trans  &trans   &trans  &trans  &trans  &trans
+&trans  &trans   &trans   &trans   &trans          &trans      &trans  &trans                           &trans
             >;
         };
 
         FUNCTION {
             bindings = <
-&trans          &trans              &kp LC(UP_ARROW)    &trans               &trans                             &trans  &kp LA(LG(LEFT_ARROW))  &kp LA(UP_ARROW)    &kp LA(LG(RIGHT))    &trans
-&kp LEFT_SHIFT  &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)  &kp LA(LG(O))  &trans      &trans  &trans  &kp LA(LEFT_ARROW)      &kp LA(DOWN_ARROW)  &kp LA(RIGHT_ARROW)  &kp LA(BACKSPACE)
-&trans          &trans              &trans              &trans               &trans         &trans      &trans  &trans  &trans                  &trans              &trans               &trans
-&trans          &trans              &trans              &trans               &trans         &trans      &trans  &trans                                                                   &trans
+&kp F1  &kp F2   &kp F3   &kp F4   &trans                             &trans  &kp LA(LG(LEFT))  &kp LA(UP)    &kp LA(LG(RIGHT))  &trans
+&kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LG(N4)) &trans      &trans  &trans  &kp LA(LEFT)      &kp LA(DOWN)  &kp LA(RIGHT)      &kp LA(BACKSPACE)
+&kp F9  &kp F10  &kp F11  &kp F12  &kp LS(LG(N5)) &trans      &trans  &trans  &trans            &trans        &trans             &trans
+&trans  &trans   &trans   &trans   &trans         &trans      &trans  &trans                                                     &trans
             >;
         };
 
@@ -149,10 +149,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans              &kp LA(LG(LEFT))  &kp UP    &kp LA(LG(RIGHT))  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans              &kp LEFT          &kp DOWN  &kp RIGHT          &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans              &trans            &trans    &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LG(LEFT_ARROW)                                                 &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &kp LA(LG(LEFT))  &kp UP    &kp LA(LG(RIGHT))  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LEFT          &kp DOWN  &kp RIGHT          &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans            &trans    &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LG(LEFT)                                           &trans
             >;
         };
 
