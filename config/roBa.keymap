@@ -55,6 +55,20 @@
             bindings = <&kp LCTRL>;
             key-positions = <10 38>;
         };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <18 19>;
+            timeout-ms = <200>;
+            slow-release;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <19 20>;
+            timeout-ms = <200>;
+            slow-release;
+        };
     };
 
     macros {
