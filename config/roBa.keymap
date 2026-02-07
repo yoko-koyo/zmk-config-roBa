@@ -68,6 +68,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             bindings = <&kp>, <&kp>;
+
             flavor = "hold-preferred";
         };
 
@@ -77,11 +78,14 @@
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             bindings = <&mo>, <&kp>;
+
             flavor = "hold-preferred";
+
             // hold-while-undecided;
         };
 
         // Space-Shift用：変換（タップ）の反応速度を最優先する仮説
+
         ssh: ssh {
             compatible = "zmk,behavior-hold-tap";
             label = "SSH"; // 仮説：スペースは即答すべき
@@ -89,6 +93,7 @@
             tapping-term-ms = <200>;    // 判定時間を少しだけ伸ばして誤爆を防ぐ
             quick-tap-ms = <200>;       // 連続スペースは即入力
             bindings = <&kp>, <&kp>;
+
             flavor = "balanced";        // 別のキーが押されたら即座に挙動を確定
             retro-tap;                  // 判定時間経過後に離しても、何も押してなければタップとみなす
         };
@@ -99,10 +104,10 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W         &kp E             &kp R  &kp T                                                         &kp Y  &kp U  &kp I      &kp O       &kp P
-&kp A       &kp S         &kp D             &kp F  &kp G                  &mt LEFT_CONTROL LA(F)      &kp MINUS  &kp H  &kp J  &kp K      &kp L       &kp BACKSPACE
-&kp Z       &kp X         &kp C             &kp V  &kp B                  &mo 6                       &kp EQUAL  &kp N  &kp M  &kp COMMA  &kp PERIOD  &kp TAB
-&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &kth LGUI LANG2  &kp SPACE                   &kp ENTER  &lth 1 LANG1                               &mt RSHIFT ESC
+&kp Q       &kp W         &kp E             &kp R  &kp T                                                           &kp Y         &kp U  &kp I      &kp O       &kp P
+&kp A       &kp S         &kp D             &kp F  &kp G            &mt LEFT_CONTROL LA(F)      &kp MINUS          &kp H         &kp J  &kp K      &kp L       &kp BACKSPACE
+&kp Z       &kp X         &kp C             &kp V  &kp B            &mo 6                       &kp EQUAL          &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp TAB
+&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &kth LGUI LANG2  &kth LSHIFT SPACE           &kth RSHIFT ENTER  &lth 1 LANG1                                &mt RSHIFT ESC
             >;
         };
 
@@ -144,10 +149,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LG(LEFT)                    &trans
+&trans  &trans  &trans  &trans  &trans                      &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LG(LEFT)                          &trans
             >;
         };
 
