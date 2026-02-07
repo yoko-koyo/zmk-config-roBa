@@ -62,28 +62,23 @@
     };
 
     behaviors {
-        // Command(Win)とLang2を切り替えるHold-Tap
-
         cmd_lang2: cmd_lang2 {
             compatible = "zmk,behavior-hold-tap";
             label = "CMD_LANG2";
             #binding-cells = <2>;
             tapping-term-ms = <180>;
-            flavor = "hold-preferred"; // 他のキーが押されたら即Hold(Command)を優先
             bindings = <&kp>, <&kp>;
-
-            // 判定中に他のキーが来たらHoldとして扱う
+            flavor = "hold-preferred";
         };
 
-        c_l: behaviorHoldTap180 {
+        c_l: c_l {
             compatible = "zmk,behavior-hold-tap";
             label = "BEHAVIORHOLDTAP180";
-            bindings = <&mo>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <180>;
-            hold-while-undecided;
+            bindings = <&mo>, <&kp>;
             flavor = "hold-preferred";
+            hold-while-undecided;
         };
     };
 
