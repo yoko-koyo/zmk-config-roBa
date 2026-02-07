@@ -54,20 +54,19 @@
         ctrl {
             bindings = <&kp LCTRL>;
             key-positions = <10 38>;
+            timeout-ms = <190>;
         };
 
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <18 19>;
-            timeout-ms = <200>;
-            slow-release;
+            timeout-ms = <190>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <19 20>;
-            timeout-ms = <200>;
-            slow-release;
+            timeout-ms = <190>;
         };
     };
 
