@@ -62,23 +62,23 @@
     };
 
     behaviors {
-        cmd_lang2: cmd_lang2 {
+        kth: kth {
             compatible = "zmk,behavior-hold-tap";
-            label = "CMD_LANG2";
+            label = "KTH";
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <170>;
             bindings = <&kp>, <&kp>;
             flavor = "hold-preferred";
         };
 
-        c_l: c_l {
+        lth: lth {
             compatible = "zmk,behavior-hold-tap";
-            label = "BEHAVIORHOLDTAP180";
+            label = "LTH";
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <170>;
             bindings = <&mo>, <&kp>;
             flavor = "hold-preferred";
-            hold-while-undecided;
+            // hold-while-undecided;
         };
     };
 
@@ -87,10 +87,10 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W         &kp E             &kp R  &kp T                                                         &kp Y         &kp U  &kp I      &kp O       &kp P
-&kp A       &kp S         &kp D             &kp F  &kp G                  &mt LEFT_CONTROL LA(F)      &kp MINUS  &kp H         &kp J  &kp K      &kp L       &kp BACKSPACE
-&kp Z       &kp X         &kp C             &kp V  &kp B                  &mo 6                       &kp EQUAL  &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp TAB
-&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &cmd_lang2 LGUI LANG2  &kp SPACE                   &kp ENTER  &c_l 1 LANG1                                &mt RSHIFT ESC
+&kp Q       &kp W         &kp E             &kp R  &kp T                                                         &kp Y  &kp U  &kp I      &kp O       &kp P
+&kp A       &kp S         &kp D             &kp F  &kp G                  &mt LEFT_CONTROL LA(F)      &kp MINUS  &kp H  &kp J  &kp K      &kp L       &kp BACKSPACE
+&kp Z       &kp X         &kp C             &kp V  &kp B                  &mo 6                       &kp EQUAL  &kp N  &kp M  &kp COMMA  &kp PERIOD  &kp TAB
+&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &kth LGUI LANG2  &kp SPACE                   &kp ENTER  &lth 1 LANG1                               &mt RSHIFT ESC
             >;
         };
 

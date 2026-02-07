@@ -134,7 +134,6 @@
             &zip_x_scaler 1 2
             &zip_y_scaler 1 2
         >;
-                // &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
 
         scroller {
             layers = <5 2>;
