@@ -75,7 +75,7 @@
             // 判定中に他のキーが来たらHoldとして扱う
         };
 
-        behaviorHoldTap180: behaviorHoldTap180 {
+        c_l: behaviorHoldTap180 {
             compatible = "zmk,behavior-hold-tap";
             label = "BEHAVIORHOLDTAP180";
             bindings = <&mo>, <&kp>;
@@ -92,37 +92,37 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W         &kp E             &kp R  &kp T                                                         &kp Y                        &kp U  &kp I      &kp O       &kp P
-&kp A       &kp S         &kp D             &kp F  &kp G                  &mt LEFT_CONTROL LA(F)      &kp MINUS  &kp H                        &kp J  &kp K      &kp L       &kp BACKSPACE
-&kp Z       &kp X         &kp C             &kp V  &kp B                  &mo 6                       &kp EQUAL  &kp N                        &kp M  &kp COMMA  &kp PERIOD  &kp TAB
-&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &cmd_lang2 LGUI LANG2  &kp SPACE                   &kp ENTER  &behaviorHoldTap180 1 LANG1                                &mt RSHIFT ESC
+&kp Q       &kp W         &kp E             &kp R  &kp T                                                         &kp Y  &kp U  &kp I      &kp O       &kp P
+&kp A       &kp S         &kp D             &kp F  &kp G                  &mt LEFT_CONTROL LA(F)      &kp MINUS  &kp H  &kp J  &kp K      &kp L       &kp BACKSPACE
+&kp Z       &kp X         &kp C             &kp V  &kp B                  &mo 6                       &kp EQUAL  &kp N  &kp M  &kp COMMA  &kp PERIOD  &kp TAB
+&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &cmd_lang2 LGUI LANG2  &kp SPACE                   &kp ENTER  &c_l 1 LANG1          &mt RSHIFT ESC
             >;
         };
 
         ARROW {
             bindings = <
-&kp EXCL   &kp AT    &kp HASH   &kp DLLR   &kp PRCNT                                    &kp LBKT       &kp RBKT  &kp UP    &kp MINUS  &kp EQUAL
-&kp CARET  &kp AMPS  &kp ASTRK  &kp SLASH  &kp COLON      &trans                &trans  &kp BACKSLASH  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
-&kp QMARK  &trans    &trans     &trans     &kp SEMICOLON  &trans                &trans  &kp GRAVE      &kp SQT   &kp LPAR  &kp RPAR   &trans
-&trans     &trans    &trans     &trans     &trans         &mt LSHIFT SPACE      &trans  &trans                                        &trans
+&kp EXCL   &kp AT    &kp HASH   &kp DLLR   &kp PRCNT                                &kp LBKT   &kp RBKT  &kp UP    &kp MINUS  &kp EQUAL
+&kp CARET  &kp AMPS  &kp ASTRK  &kp SLASH  &kp COLON  &trans                &trans  &kp SLASH  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+&kp QMARK  &trans    &trans     &trans     &kp SEMI   &trans                &trans  &kp GRAVE  &kp SQT   &kp LPAR  &kp RPAR   &trans
+&trans     &trans    &trans     &trans     &trans     &mt LSHIFT SPACE      &trans  &trans                                    &trans
             >;
         };
 
         NUM {
             bindings = <
-&kp N1  &kp N2   &kp N3   &kp N4   &kp N5                      &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
-&trans  &trans   &trans   &trans   &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans   &trans   &trans   &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans   &trans   &trans   &trans  &trans      &trans  &trans                          &trans
+&kp F1  &kp F2   &kp F3   &kp F4   &trans                              &kp SLASH  &kp N7  &kp N8  &kp N9  &kp N0
+&kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LG(N4))  &trans      &trans  &kp PERIOD &kp N4  &kp N5  &kp N6  &trans
+&kp F9  &kp F10  &kp F11  &kp F12  &kp LS(LG(N5))  &trans      &trans  &kp COMMA  &kp N1  &kp N2  &kp N3  &trans
+&trans  &trans   &trans   &trans   &trans          &trans      &trans  &trans                             &trans
             >;
         };
 
         FUNCTION {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &trans                              &trans  &kp LA(LG(LEFT))  &kp LA(UP)    &kp LA(LG(RIGHT))  &trans
-&kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LG(N4))  &trans      &trans  &trans  &kp LA(LEFT)      &kp LA(DOWN)  &kp LA(RIGHT)      &kp LA(BACKSPACE)
-&kp F9  &kp F10  &kp F11  &kp F12  &kp LS(LG(N5))  &trans      &trans  &trans  &trans            &trans        &trans             &trans
-&trans  &trans   &trans   &trans   &trans          &trans      &trans  &trans                                                     &trans
+&trans  &trans  &trans  &trans  &trans                        &trans  &kp LA(LG(LEFT)) &kp LA(UP)   &kp LA(LG(RIGHT)) &trans
+&trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &kp LA(LEFT)     &kp LA(DOWN) &kp LA(RIGHT)     &kp LA(BACKSPACE)
+&trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans           &trans       &trans            &trans
+&trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans                                                  &trans
             >;
         };
 
@@ -137,10 +137,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans        &kp LA(LG(LEFT))  &kp UP    &kp LA(LG(RIGHT))  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &kp LEFT          &kp DOWN  &kp RIGHT          &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans            &trans    &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LG(LEFT)                                                 &trans
+&trans  &trans  &trans  &trans  &trans                        &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp LG(LEFT)                    &trans
             >;
         };
 
@@ -157,7 +157,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        f {
+        function {
             if-layers = <1 2>;
             then-layer = <3>;
         };
