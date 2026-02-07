@@ -54,7 +54,6 @@
         ctrl {
             bindings = <&kp LCTRL>;
             key-positions = <10 38>;
-            timeout-ms = <300>;
         };
     };
 
