@@ -123,10 +123,10 @@
 
         ARROW {
             bindings = <
-&trans     &trans        &kp LC(UP)    &kp ESC        &trans                      &kp LS(TAB)        &kp TAB        &kp UP             &kp LA(LG(LEFT))  &kp LA(LG(RIGHT))
-&kp LA(F)  &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &trans  &trans      &trans  &trans             &kp LEFT       &kp DOWN           &kp RIGHT         &kp ESC
-&trans     &trans        &trans        &trans         &trans  &trans      &trans  &kp LG(BACKSPACE)  &kp BACKSPACE  &kp LA(BACKSPACE)  &kp DEL           &trans
-&trans     &trans        &trans        &trans         &trans  &trans      &trans  &trans                                                                 &trans
+&trans     &trans        &kp LC(UP)    &kp ESC        &trans                      &kp LS(TAB)        &kp TAB   &kp UP    &kp BACKSPACE  &kp LA(BACKSPACE)
+&kp LA(F)  &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &trans  &trans      &trans  &kp LA(LG(LEFT))   &kp LEFT  &kp DOWN  &kp RIGHT      &kp ESC
+&trans     &trans        &kp LBRC      &kp RBRC       &trans  &trans      &trans  &kp LG(LA(RIGHT))  &kp LPAR  &kp RPAR  &kp DEL        &trans
+&trans     &trans        &trans        &trans         &trans  &trans      &trans  &trans                                                &trans
             >;
         };
 
@@ -177,10 +177,10 @@
 
         layer_7 {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans                      &trans  &kp LPAR  &kp RPAR   &kp LBRC  &kp RBRC
-&trans        &trans        &trans  &trans  &trans  &trans      &trans  &trans  &kp LPAR  &kp RPAR   &kp LBRC  &kp RBRC
-&trans        &trans        &trans  &trans  &trans  &trans      &trans  &trans  &kp DQT   &kp COLON  &trans    &trans
-&trans        &trans        &trans  &trans  &trans  &trans      &trans  &trans                                 &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
