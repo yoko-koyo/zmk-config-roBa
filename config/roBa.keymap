@@ -114,19 +114,19 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W         &kp E             &kp R  &kp T                                                      &kp Y         &kp U  &kp I      &kp O       &kp P
-&kp A       &kp S         &kp D             &kp F  &kp G            &mt LEFT_CONTROL LA(F)      &kp MINUS     &kp H         &kp J  &kp K      &kp L       &kp MINUS
-&kp Z       &kp X         &kp C             &kp V  &kp B            &mo 6                       &kp EQUAL     &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
-&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &kth LGUI LANG2  &kp SPACE                   &lth 6 ENTER  &lth 1 LANG1                                &mt RSHIFT GRAVE
+&kp Q       &kp W         &kp E             &kp R         &kp T                                                          &kp Y         &kp U  &kp I      &kp O       &kp P
+&kp A       &kp S         &kp D             &kp F         &kp G            &mt LEFT_CONTROL LA(F)      &kp MINUS         &kp H         &kp J  &kp K      &kp L       &kp BACKSPACE
+&kp Z       &kp X         &kp C             &kp V         &kp B            &mo 6                       &kp EQUAL         &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp TAB
+&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &lth 2 LA(F)  &kth LGUI LANG2  &kp SPACE                   &lth 6 BACKSPACE  &lth 1 LANG1                                &mt RSHIFT ESC
             >;
         };
 
         ARROW {
             bindings = <
-&trans     &trans        &kp LC(UP)    &kp ESC        &trans                      &kp LS(TAB)        &kp TAB        &kp UP             &kp LA(LG(LEFT))  &kp LA(LG(RIGHT))
-&kp LA(F)  &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &trans  &trans      &trans  &trans             &kp LEFT       &kp DOWN           &kp RIGHT         &kp ESC
-&trans     &trans        &trans        &trans         &trans  &trans      &trans  &kp LG(BACKSPACE)  &kp BACKSPACE  &kp LA(BACKSPACE)  &kp DEL           &trans
-&trans     &trans        &trans        &trans         &trans  &trans      &trans  &trans                                                                 &trans
+&kp EXCL   &kp AT    &kp HASH   &kp DLLR   &kp PRCNT                      &kp LBKT       &kp RBKT  &kp UP    &kp MINUS  &kp EQUAL
+&kp CARET  &kp AMPS  &kp ASTRK  &kp SLASH  &kp COLON  &trans      &trans  &kp BACKSLASH  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+&kp QMARK  &trans    &trans     &trans     &kp SEMI   &trans      &trans  &kp GRAVE      &kp SQT  &kp LPAR   &kp RPAR   &trans
+&trans     &trans    &trans     &trans     &trans     &trans      &trans  &trans                                        &trans
             >;
         };
 
@@ -141,15 +141,15 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &kp LS(TAB)    &kp LA(UP)    &kp LA(BACKSPACE)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LA(LEFT)   &kp LA(DOWN)  &kp LA(RIGHT)      &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LS(ENTER)  &trans        &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                  &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &kp LA(LG(LEFT))  &kp LA(UP)    &kp LA(LG(RIGHT))  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LA(LEFT)      &kp LA(DOWN)  &kp LA(RIGHT)      &kp LA(BACKSPACE)
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans            &trans        &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                     &trans
             >;
         };
 
         MOUSE {
-            bindings = <ｎ
+            bindings = <
 &trans  &trans  &trans  &trans  &trans                        &trans  &trans  &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &mo 5   &mkp MB1  &mkp MB2  &trans
 &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans    &trans    &trans
@@ -168,19 +168,10 @@
 
         layer_6 {
             bindings = <
-&kp N1        &kp N2    &kp N3     &kp N4    &kp N5                             &kp N6     &kp N7    &kp N8         &kp N9    &kp N0
-&kp EXCL      &kp AT    &kp HASH   &kp DLLR  &kp PRCNT      &trans      &trans  &kp CARET  &kp AMPS  &kp ASTRK      &kp LBKT  &kp RBKT
-&kp QUESTION  &kp PIPE  &kp COLON  &kp DQT   &kp BACKSLASH  &trans      &trans  &kp SLASH  &kp SQT   &kp SEMICOLON  &kp LBKT  &kp RBKT
-&trans        &trans    &trans     &trans    &trans         &trans      &trans  &trans                                        &trans
-            >;
-        };
-
-        layer_7 {
-            bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans                      &trans        &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans  &trans  &trans      &trans  &trans        &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans  &trans  &trans      &trans  &trans        &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans  &trans  &trans      &trans  &trans                                &trans
             >;
         };
     };
