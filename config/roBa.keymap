@@ -123,10 +123,10 @@
 
         ARROW {
             bindings = <
-&trans     &trans        &kp LC(UP)    &kp ESC        &trans                      &kp LS(TAB)        &kp TAB        &kp UP     &kp ENTER  &kp LS(ENTER)
-&kp LA(F)  &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &trans  &trans      &trans  &kp LA(LG(LEFT))   &kp LEFT       &kp DOWN   &kp RIGHT  &kp LA(LG(RIGHT))
-&trans     &trans        &trans        &trans         &trans  &trans      &trans  &kp LA(BACKSPACE)  &kp BACKSPACE  &kp LANG2  &kp LANG1  &trans
-&trans     &trans        &trans        &trans         &trans  &trans      &trans  &trans                                                  &trans
+&trans     &trans        &kp LC(UP)    &kp ESC        &trans                      &kp LS(TAB)        &kp TAB        &kp UP     &kp LA(LG(LEFT))  &kp LA(LG(RIGHT))
+&kp LA(F)  &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &trans  &trans      &trans  &trans             &kp LEFT       &kp DOWN   &kp RIGHT         &kp ESC
+&trans     &trans        &trans        &trans         &trans  &trans      &trans  &kp LA(BACKSPACE)  &kp BACKSPACE  &kp LANG2  &kp LANG1         &trans
+&trans     &trans        &trans        &trans         &trans  &trans      &trans  &trans                                                         &trans
             >;
         };
 
