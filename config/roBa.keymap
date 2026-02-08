@@ -168,10 +168,10 @@
 
         layer_6 {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans                      &trans   &trans         &trans     &trans  &trans
-&trans        &trans        &trans        &trans  &trans  &trans      &trans  &kp DEL  &kp BACKSPACE  &kp ENTER  &trans  &trans
-&trans        &trans        &trans        &trans  &trans  &trans      &trans  &trans   &kp TAB        &trans     &trans  &trans
-&trans        &trans        &trans        &trans  &trans  &trans      &trans  &trans                                     &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans                      &kp LA(DEL)  &kp LA(BACKSPACE)  &kp LS(TAB)  &kp LS(ENTER)  &kp ESC
+&trans        &trans        &trans        &trans  &trans  &trans      &trans  &kp DEL      &kp BACKSPACE      &kp TAB      &kp ENTER      &trans
+&trans        &trans        &trans        &trans  &trans  &trans      &trans  &trans       &trans             &trans       &trans         &trans
+&trans        &trans        &trans        &trans  &trans  &trans      &trans  &trans                                                      &trans
             >;
         };
     };
