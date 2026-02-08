@@ -123,10 +123,10 @@
 
         ARROW {
             bindings = <
-&kp EXCL   &kp AT    &kp HASH   &kp DLLR   &kp PRCNT                      &kp LBKT       &kp RBKT  &kp UP    &kp LPAR   &kp RIGHT_PARENTHESIS
-&kp CARET  &kp AMPS  &kp ASTRK  &kp SLASH  &kp COLON  &trans      &trans  &kp BACKSLASH  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
-&kp QMARK  &trans    &trans     &trans     &kp SEMI   &trans      &trans  &kp GRAVE      &kp SQT   &trans    &trans     &trans
-&trans     &trans    &trans     &trans     &trans     &trans      &trans  &trans                                        &trans
+&trans  &trans        &kp LC(UP)    &kp ESC        &trans                      &kp LS(TAB)       &kp TAB    &kp UP     &kp BACKSPACE  &kp LA(BACKSPACE)
+&trans  &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &trans  &trans      &trans  &kp LA(LC(LEFT))  &kp LEFT   &kp DOWN   &kp RIGHT      &kp LA(LG(RIGHT))
+&trans  &trans        &trans        &trans         &trans  &trans      &trans  &kp LS(ENTER)     &kp ENTER  &kp LANG2  &kp LANG1      &trans
+&trans  &trans        &trans        &trans         &trans  &trans      &trans  &trans                                                 &trans
             >;
         };
 
@@ -141,10 +141,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &kp LA(LG(LEFT))  &kp LA(UP)    &kp LA(LG(RIGHT))  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LA(LEFT)      &kp LA(DOWN)  &kp LA(RIGHT)      &kp LA(BACKSPACE)
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans            &trans        &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                     &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &kp LS(TAB)    &kp LA(UP)    &kp LA(BACKSPACE)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LA(LEFT)   &kp LA(DOWN)  &kp LA(RIGHT)      &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LS(ENTER)  &trans        &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                  &trans
             >;
         };
 
