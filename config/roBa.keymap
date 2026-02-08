@@ -114,8 +114,8 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W         &kp E             &kp R  &kp T                                                &kp Y         &kp U  &kp I      &kp O       &kp MINUS
-&kp A       &kp S         &kp D             &kp F  &kp G            &kp LEFT_CONTROL      &kp MINUS     &kp H         &kp J  &kp K      &kp L       &kp P
+&kp Q       &kp W         &kp E             &kp R  &kp T                                                &kp Y         &kp U  &kp I      &kp O       &kp P
+&kp A       &kp S         &kp D             &kp F  &kp G            &kp LEFT_CONTROL      &kp MINUS     &kp H         &kp J  &kp K      &kp L       &kp MINUS
 &kp Z       &kp X         &kp C             &kp V  &kp B            &mo 7                 &kp EQUAL     &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
 &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &kth LGUI LANG2  &kp SPACE             &lth 6 ENTER  &lth 1 LANG1                                &mt RSHIFT GRAVE
             >;
@@ -125,7 +125,7 @@
             bindings = <
 &trans        &kp LA(LG(LEFT))  &kp LC(UP)    &kp LA(LG(RIGHT))  &trans                      &kp LS(TAB)       &kp TAB   &kp UP    &kp BACKSPACE  &kp ESC
 &kp LA(F)     &kp LC(LEFT)      &kp LC(DOWN)  &kp LC(RIGHT)      &trans  &trans      &trans  &kp SEMI          &kp LEFT  &kp DOWN  &kp RIGHT      &kp SLASH
-&kp QUESTION  &trans            &kp LBRC      &kp RBRC           &trans  &trans      &trans  &kp SINGLE_QUOTE  &kp LPAR  &kp RPAR  &kp LBKT       &kp RBKT
+&kp QUESTION  &kp EXCL          &kp LBRC      &kp RBRC           &trans  &trans      &trans  &kp SINGLE_QUOTE  &kp LPAR  &kp RPAR  &kp LBKT       &kp RBKT
 &trans        &trans            &trans        &trans             &trans  &trans      &trans  &trans                                               &trans
             >;
         };
