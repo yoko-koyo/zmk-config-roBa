@@ -192,5 +192,10 @@
             if-layers = <1 2>;
             then-layer = <3>;
         };
+
+        sp {
+            if-layers = <2 6>;
+            then-layer = <7>;
+        };
     };
 };
