@@ -114,8 +114,8 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W         &kp E             &kp R  &kp T                                                &kp Y         &kp U  &kp I      &kp O       &kp P
-&kp A       &kp S         &kp D             &kp F  &kp G            &kp LEFT_CONTROL      &kp MINUS     &kp H         &kp J  &kp K      &kp L       &kp MINUS
+&kp Q       &kp W         &kp E             &kp R  &kp T                                                &kp Y         &kp U  &kp I      &kp O       &kp MINUS
+&kp A       &kp S         &kp D             &kp F  &kp G            &kp LEFT_CONTROL      &kp MINUS     &kp H         &kp J  &kp K      &kp L       &kp P
 &kp Z       &kp X         &kp C             &kp V  &kp B            &mo 7                 &kp EQUAL     &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
 &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &kth LGUI LANG2  &kp SPACE             &lth 6 ENTER  &lth 1 LANG1                                &mt RSHIFT GRAVE
             >;
@@ -123,10 +123,10 @@
 
         ARROW {
             bindings = <
-&trans     &trans        &kp LC(UP)    &trans         &trans                      &kp LS(TAB)        &kp TAB   &kp UP    &kp BACKSPACE  &kp ESC
-&kp LA(F)  &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &trans  &trans      &trans  &kp LA(LG(LEFT))   &kp LEFT  &kp DOWN  &kp RIGHT      &kp LA(LG(RIGHT))
-&trans     &trans        &trans        &trans         &trans  &trans      &trans  &kp LG(LA(RIGHT))  &kp LPAR  &kp RPAR  &kp LBKT       &kp RBKT
-&trans     &trans        &trans        &trans         &trans  &trans      &trans  &trans                                                &trans
+&trans        &kp LA(LG(LEFT))  &kp LC(UP)    &kp LA(LG(RIGHT))  &trans                      &kp LS(TAB)       &kp TAB   &kp UP    &kp BACKSPACE  &kp ESC
+&kp LA(F)     &kp LC(LEFT)      &kp LC(DOWN)  &kp LC(RIGHT)      &trans  &trans      &trans  &kp SEMI          &kp LEFT  &kp DOWN  &kp RIGHT      &kp SLASH
+&kp QUESTION  &trans            &kp LBRC      &kp RBRC           &trans  &trans      &trans  &kp SINGLE_QUOTE  &kp LPAR  &kp RPAR  &kp LBKT       &kp RBKT
+&trans        &trans            &trans        &trans             &trans  &trans      &trans  &trans                                               &trans
             >;
         };
 
@@ -168,10 +168,10 @@
 
         layer_6 {
             bindings = <
-&kp N1        &kp N2  &kp N3    &kp N4    &kp N5                         &kp N6         &kp N7     &kp N8     &kp N9    &kp N0
-&kp EXCL      &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &trans      &trans  &kp CARET      &kp AMPS   &kp ASTRK  &kp SEMI  &kp SINGLE_QUOTE
-&kp QUESTION  &trans  &trans    &trans    &trans     &trans      &trans  &kp BACKSLASH  &kp SLASH  &trans     &trans    &trans
-&trans        &trans  &trans    &trans    &trans     &trans      &trans  &trans                                         &trans
+&kp N1    &kp N2  &kp N3    &kp N4    &kp N5                         &kp N6         &kp N7     &kp N8     &kp N9    &kp N0
+&kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &trans      &trans  &kp CARET      &kp AMPS   &kp ASTRK  &kp SEMI  &kp SINGLE_QUOTE
+&trans    &trans  &trans    &trans    &trans     &trans      &trans  &kp BACKSLASH  &kp SLASH  &trans     &trans    &trans
+&trans    &trans  &trans    &trans    &trans     &trans      &trans  &trans                                         &trans
             >;
         };
 
