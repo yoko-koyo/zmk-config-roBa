@@ -114,19 +114,19 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W         &kp E             &kp R         &kp T                                                   &kp Y         &kp U  &kp I      &kp O       &kp P
-&kp A       &kp S         &kp D             &kp F         &kp G            &mt LEFT_CONTROL LA(F)      &kp MINUS  &kp H         &kp J  &kp K      &kp L       &kp MINUS
-&kp Z       &kp X         &kp C             &kp V         &kp B            &mo 6                       &kp EQUAL  &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
-&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &lth 2 LA(F)  &kth LGUI LANG2  &kp SPACE                   &mo 6      &lth 1 LANG1                                &mt RSHIFT ESC
+&kp Q       &kp W         &kp E             &kp R         &kp T                                                      &kp Y         &kp U  &kp I      &kp O       &kp P
+&kp A       &kp S         &kp D             &kp F         &kp G            &mt LEFT_CONTROL LA(F)      &kp MINUS     &kp H         &kp J  &kp K      &kp L       &kp MINUS
+&kp Z       &kp X         &kp C             &kp V         &kp B            &mo 6                       &kp EQUAL     &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
+&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &lth 2 LA(F)  &kth LGUI LANG2  &kp SPACE                   &lth 6 ENTER  &lth 1 LANG1                                &mt RSHIFT ESC
             >;
         };
 
         ARROW {
             bindings = <
-&trans  &trans        &kp LC(UP)    &kp ESC        &trans                      &kp LS(TAB)        &kp TAB        &kp UP     &kp ENTER  &kp LS(ENTER)
-&trans  &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &trans  &trans      &trans  &kp LA(LG(LEFT))   &kp LEFT       &kp DOWN   &kp RIGHT  &kp LA(LG(RIGHT))
-&trans  &trans        &trans        &trans         &trans  &trans      &trans  &kp LA(BACKSPACE)  &kp BACKSPACE  &kp LANG2  &kp LANG1  &trans
-&trans  &trans        &trans        &trans         &trans  &trans      &trans  &trans                                                  &trans
+&trans     &trans        &kp LC(UP)    &kp ESC        &trans                      &kp LS(TAB)        &kp TAB        &kp UP     &kp ENTER  &kp LS(ENTER)
+&kp LA(F)  &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &trans  &trans      &trans  &kp LA(LG(LEFT))   &kp LEFT       &kp DOWN   &kp RIGHT  &kp LA(LG(RIGHT))
+&trans     &trans        &trans        &trans         &trans  &trans      &trans  &kp LA(BACKSPACE)  &kp BACKSPACE  &kp LANG2  &kp LANG1  &trans
+&trans     &trans        &trans        &trans         &trans  &trans      &trans  &trans                                                  &trans
             >;
         };
 
