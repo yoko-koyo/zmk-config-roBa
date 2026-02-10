@@ -123,10 +123,10 @@
 
         ARROW {
             bindings = <
-&kp EXCL   &kp AT    &kp HASH   &kp DLLR  &kp PRCNT                      &kp LBKT       &kp RBKT  &kp UP     &kp MINUS  &kp EQUAL
-&kp CARET  &kp AMPS  &kp ASTRK  &kp SEMI  &kp COLON  &trans      &trans  &kp BACKSLASH  &kp LEFT  &kp DOWN   &kp RIGHT  &trans
-&kp LA(F)  &kp ESC   &kp LPAR   &kp RPAR  &kp ESC    &trans      &trans  &kp GRAVE      &kp SQT   &kp SLASH  &trans     &trans
-&trans     &trans    &trans     &trans    &trans     &trans      &trans  &trans                                         &trans
+&kp EXCL   &kp AT    &kp HASH   &kp DLLR  &kp PRCNT                         &kp LBKT       &kp RBKT  &kp UP     &kp MINUS  &kp EQUAL
+&kp CARET  &kp AMPS  &kp ASTRK  &kp SEMI  &kp COLON     &trans      &trans  &kp BACKSLASH  &kp LEFT  &kp DOWN   &kp RIGHT  &trans
+&kp LA(F)  &kp ESC   &kp LPAR   &kp RPAR  &kp LEFT_ALT  &trans      &trans  &kp GRAVE      &kp SQT   &kp SLASH  &trans     &trans
+&trans     &trans    &trans     &trans    &trans        &trans      &trans  &trans                                         &trans
             >;
         };
 
@@ -168,10 +168,10 @@
 
         layer_6 {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &trans  &trans  &trans      &trans  &trans                          &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans                      &trans  &trans        &kp LC(UP)    &trans         &trans
+&trans        &trans        &trans        &trans  &trans  &trans      &trans  &trans  &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &trans
+&trans        &trans        &trans        &trans  &trans  &trans      &trans  &trans  &trans        &trans        &trans         &trans
+&trans        &trans        &trans        &trans  &trans  &trans      &trans  &trans                                             &trans
             >;
         };
     };
