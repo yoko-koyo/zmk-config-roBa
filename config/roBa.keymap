@@ -60,6 +60,11 @@
             bindings = <&kp RSHIFT>;
             key-positions = <18 19>;
         };
+
+        alt {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <24 25>;
+        };
     };
 
     macros {
@@ -141,7 +146,7 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &kp LBRC   &kp LEFT           &kp LA(UP)    &kp UNDER      &kp PLUS
+&trans  &trans  &trans  &trans  &trans                      &kp LBRC   &kp RBRC           &kp LA(UP)    &kp UNDER      &kp PLUS
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp PIPE   &kp LA(LEFT)       &kp LA(DOWN)  &kp LA(RIGHT)  &kp LA(BACKSPACE)
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp TILDE  &kp DOUBLE_QUOTES  &trans        &trans         &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                     &trans
