@@ -63,7 +63,7 @@
 
         alt {
             bindings = <&kp LEFT_ALT>;
-            key-positions = <24 25>;
+            key-positions = <11 12>;
         };
     };
 
