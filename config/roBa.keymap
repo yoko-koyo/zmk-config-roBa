@@ -57,7 +57,7 @@
         };
 
         rshift {
-            bindings = <&kp N2>;
+            bindings = <&mo 2>;
             key-positions = <18 19>;
         };
 
