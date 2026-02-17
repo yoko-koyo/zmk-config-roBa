@@ -60,6 +60,16 @@
             bindings = <&kp RSHIFT>;
             key-positions = <18 19>;
         };
+
+        ls {
+            bindings = <&kp LSHFT>;
+            key-positions = <11 12>;
+        };
+
+        rs {
+            bindings = <&kp RSHFT>;
+            key-positions = <20 19>;
+        };
     };
 
     macros {
