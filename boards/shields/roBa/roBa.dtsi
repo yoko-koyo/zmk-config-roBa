@@ -4,10 +4,10 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 &zip_temp_layer {
-    require-prior-idle-ms = <200>;
+    require-prior-idle-ms = <150>;
     excluded-positions = <
         // 18
-        // 19
+        19
         20
         22
         39
