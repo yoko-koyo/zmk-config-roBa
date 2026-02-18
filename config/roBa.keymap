@@ -46,11 +46,6 @@
             key-positions = <27 15 16 28>;
         };
 
-        lshift {
-            bindings = <&mkp MB1>;
-            key-positions = <18 19>;
-        };
-
         rshift {
             bindings = <&mkp MB2>;
             key-positions = <19 20>;
@@ -63,12 +58,12 @@
 
         num1 {
             bindings = <&mo 2>;
-            key-positions = <10 11>;
+            key-positions = <12 13>;
         };
 
         num2 {
             bindings = <&mo 2>;
-            key-positions = <20 21>;
+            key-positions = <18 19>;
         };
 
         sh {
