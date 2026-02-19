@@ -73,7 +73,7 @@
 
         ls {
             bindings = <&kp RSHFT>;
-            key-positions = <19 20>;
+            key-positions = <11 12>;
         };
     };
 
