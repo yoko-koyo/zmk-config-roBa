@@ -75,6 +75,11 @@
             bindings = <&kp RSHFT>;
             key-positions = <11 12>;
         };
+
+        mb2 {
+            bindings = <&mkp MB2>;
+            key-positions = <31 32>;
+        };
     };
 
     macros {
@@ -165,10 +170,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                        &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &mkp MB1  &mo 5   &trans
-&trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &mkp MB2      &trans  &trans                            &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp MB1  &mo 5   &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                            &trans
             >;
         };
 
