@@ -140,6 +140,8 @@
             label = "TAP_DANCE_MY";
             #binding-cells = <0>;
             bindings = <&mt LEFT_GUI LANG1>, <&kp LANG1>;
+
+            tapping-term-ms = <250>;
         };
     };
 
