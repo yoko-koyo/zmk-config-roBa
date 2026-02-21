@@ -11,6 +11,7 @@
 &trackball {
     automouse-layer = <4>;
     scroll-layers = <5>;
+
     arrows {
         layers = <2>;
         bindings =
@@ -18,6 +19,7 @@
             <&kp LS(LEFT)>,
             <&kp LS(UP)>,
             <&kp LS(DOWN)>;
+
         tick = <10>;
         wait-ms = <5>;
         tap-ms = <5>;
@@ -30,7 +32,6 @@
     //         <&kp LC(RIGHT)>,
     //         <&kp LC(UP)>,
     //         <&kp LC(DOWN)>;
-
     //     tick = <230>;
     //     wait-ms = <5>;
     //     tap-ms = <0>;
@@ -62,7 +63,7 @@
 
         shift {
             bindings = <&kp LSHIFT>;
-            key-positions = <38 41>;
+            key-positions = <39 40>;
         };
 
         bs {
@@ -98,6 +99,7 @@
             tapping-term-ms = <180>;
             quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
+
             flavor = "hold-preferred";
         };
 
@@ -108,6 +110,7 @@
             tapping-term-ms = <170>;
             quick-tap-ms = <200>;
             bindings = <&mo>, <&kp>;
+
             flavor = "hold-preferred";
         };
 
