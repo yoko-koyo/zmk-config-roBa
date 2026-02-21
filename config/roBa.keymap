@@ -219,17 +219,17 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W         &kp E             &kp R     &kp T                                                &kp Y         &kp U     &kp I      &kp O       &kp P
-&kp A       &kp S         &kp D             &hml 2 F  &kp G            &kp LEFT_CONTROL      &kp MINUS     &kp H         &hml 2 J  &kp K      &kp L       &kp BACKSPACE
-&kp Z       &kp X         &kp C             &kp V     &kp B            &mo 7                 &kp EQUAL     &kp N         &kp M     &kp COMMA  &kp PERIOD  &kp TAB
-&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2     &kth LGUI LANG2  &ssh LALT SPACE       &lth 6 ENTER  &lth 1 LANG1                                   &mt RSHIFT ESC
+&kp Q         &kp W         &kp E             &kp R     &kp T                                                         &kp Y         &kp U     &kp I      &kp O       &kp P
+&ssh LSHIFT A &kp S         &kp D             &hml 2 F  &kp G            &kp LEFT_CONTROL               &kp MINUS     &kp H         &hml 2 J  &kp K      &kp L       &kp BACKSPACE
+&kp Z         &kp X         &kp C             &kp V     &kp B            &mo 7                          &kp EQUAL     &kp N         &kp M     &kp COMMA  &kp PERIOD  &kp TAB
+&kp LSHIFT    &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_CONTROL   &kth LGUI LANG2  &ssh LALT SPACE       &lth 6 ENTER  &lth 1 LANG1                        &mt RSHIFT ESC
             >;
         };
 
         ARROW {
             bindings = <
 &kp EXCL      &kp AT    &kp HASH   &kp DLLR               &kp PRCNT                      &kp LBKT       &kp RBKT  &kp UP    &kp MINUS  &kp EQUAL
-&kp CARET     &kp AMPS  &kp ASTRK  &kp SLASH              &kp COLON  &trans      &trans  &kp BACKSLASH  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+&ssh LSHIFT CARET     &kp AMPS  &kp ASTRK  &kp SLASH              &kp COLON  &trans      &trans  &kp BACKSLASH  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
 &kp QUESTION  &kp PIPE  &kp LPAR   &kp RIGHT_PARENTHESIS  &kp SEMI   &trans      &trans  &kp GRAVE      &kp SQT   &kp LPAR  &kp RPAR   &trans
 &trans        &trans    &trans     &trans                 &trans     &trans      &trans  &trans                                        &trans
             >;
