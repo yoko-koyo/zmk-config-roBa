@@ -119,6 +119,7 @@
             require-prior-idle-ms = <10>;
             flavor = "tap-preferred";      // 変更なし
             retro-tap;
+            hold-trigger-key-positions = <18 19 20 7>;
         };
 
         hhs: hhs {
@@ -139,7 +140,7 @@
             label = "TAP_DANCE_MY";
             #binding-cells = <0>;
             tapping-term-ms = <190>;
-            bindings = <&kth LEFT_GUI LANG1>, <&kp LANG1>;
+            bindings = <&mt LEFT_GUI LANG1>, <&kp LANG1>;
         };
     };
 
