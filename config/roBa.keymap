@@ -131,6 +131,33 @@
             flavor = "tap-preferred";      // 変更なし
             retro-tap;
         };
+
+                td_lang: td_lang {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_LANG";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+
+            bindings = <
+                &kp LANG2     // 1tap → 英数
+                &kp LANG1     // 2tap → かな
+            >;
+        };
+
+        lgui_lang: lgui_lang {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LGUI_LANG";
+            #binding-cells = <0>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            retro-tap;
+
+            bindings = <
+                &td_lang      // tap / double tap
+                &kp LGUI      // hold → Command
+            >;
+        };
     };
 
     // behaviors {
@@ -186,7 +213,7 @@
 &kp Q       &kp W         &kp E             &kp R  &kp T                                                   &kp Y         &kp U  &kp I      &kp O       &kp P
 &kp A       &kp S         &kp D             &kp F  &kp G            &kp LEFT_CONTROL         &kp MINUS     &kp H         &kp J  &kp K      &kp L       &kp BACKSPACE
 &kp Z       &kp X         &kp C             &kp V  &kp B            &mo 7                    &kp EQUAL     &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp TAB
-&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &kth LGUI LANG2  &ssh LEFT_ALT SPACE      &lth 6 ENTER  &lth 1 LANG1                                &mt RSHIFT ESC
+&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &lgui_lang  &ssh LEFT_ALT SPACE      &lth 6 ENTER  &lth 1 LANG1                                &mt RSHIFT ESC
             >;
         };
 
