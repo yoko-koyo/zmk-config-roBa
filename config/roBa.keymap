@@ -124,11 +124,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HHS";
             #binding-cells = <2>;
-            tapping-term-ms = <70>;       // 140から短縮
+            tapping-term-ms = <170>;       // 140から短縮
             quick-tap-ms = <200>;
             require-prior-idle-ms = <0>;   // ★0に変更：スペースの「変換」や「決定」の遅延を解消
             bindings = <&mo>, <&kp>;
-
             flavor = "tap-preferred";      // 変更なし
             retro-tap;
         };
