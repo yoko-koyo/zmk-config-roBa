@@ -82,17 +82,24 @@
     };
 
     behaviors {
-        // ホーム行や修飾キー用（現在 kth/lth は hold-preferred）
+        hml: home_row_layer_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+        };
 
         kth: kth {
             compatible = "zmk,behavior-hold-tap";
             label = "KTH";
             #binding-cells = <2>;
-            tapping-term-ms = <180>;       // 170から微増。hold-preferredでの誤判定を抑制
+            tapping-term-ms = <180>;
             quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
-
-            flavor = "hold-preferred";     // 変更なし
+            flavor = "hold-preferred";
         };
 
         lth: lth {
@@ -102,8 +109,7 @@
             tapping-term-ms = <170>;
             quick-tap-ms = <200>;
             bindings = <&mo>, <&kp>;
-
-            flavor = "hold-preferred";     // 変更なし
+            flavor = "hold-preferred";
         };
 
         // 親指スペース・シフト用（ssh/hhs は tap-preferred）
@@ -112,14 +118,12 @@
             compatible = "zmk,behavior-hold-tap";
             label = "SSH";
             #binding-cells = <2>;
-            tapping-term-ms = <75>;       // 140からさらに短縮。親指の反応を爆速に
+            tapping-term-ms = <200>; // 通常のスペースに近い挙動に変更
             quick-tap-ms = <200>;
-            bindings = <&kp>, <&kp>;
-
-            require-prior-idle-ms = <10>;
-            flavor = "tap-preferred";      // 変更なし
+            require-prior-idle-ms = <125>;
+            flavor = "tap-preferred";
             retro-tap;
-            hold-trigger-key-positions = <18 19 20 7>;
+            bindings = <&kp>, <&kp>;
         };
 
         hhs: hhs {
