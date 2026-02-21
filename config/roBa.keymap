@@ -141,7 +141,7 @@
             #binding-cells = <0>;
             bindings = <&kth LEFT_GUI LANG2>, <&kp LANG1>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <100>;
         };
     };
 
