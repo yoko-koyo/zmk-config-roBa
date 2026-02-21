@@ -85,6 +85,7 @@
             bindings = <&kp>, <&kp>;
 
             flavor = "hold-preferred";
+            quick-tap-ms = <200>;
         };
 
         lth: lth {
@@ -97,6 +98,8 @@
             flavor = "hold-preferred";
 
             // hold-while-undecided;
+
+            quick-tap-ms = <200>;
         };
 
         // Space-Shift用：変換（タップ）の反応速度を最優先する仮説
