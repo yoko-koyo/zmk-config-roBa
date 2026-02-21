@@ -116,7 +116,6 @@
             quick-tap-ms = <200>;
             require-prior-idle-ms = <145>;
             flavor = "balanced";
-
             bindings = <&kp>, <&kp>;
         };
 
@@ -228,7 +227,7 @@
 &kp Q       &kp W     &kp E      &kp R             &kp T                                               &kp Y         &kp U  &kp I      &kp O       &kp P
 &kp A       &kp S     &kp D      &kp F             &kp G            &kp LCTRL            &kp DEL       &kp H         &kp J  &kp K      &kp L       &kp BACKSPACE
 &kp Z       &kp X     &kp C      &kp V             &kp B            &mo 6                &kp EQUAL     &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp TAB
-&kp LSHIFT  &kp LALT  &kp LCTRL  &kth LCTRL LANG1  &kth LGUI LANG2  &ssh LALT SPACE      &lth 2 ENTER  &lth 1 MINUS                                &mt RSHIFT ESC
+&kp LSHIFT  &kp LALT  &kp LCTRL  &kth LCTRL LANG1  &kth LGUI LANG2  &ssh LALT SPACE      &lth 2 ENTER  &lth 1 LANG1                                &mt RSHIFT ESC
             >;
         };
 
