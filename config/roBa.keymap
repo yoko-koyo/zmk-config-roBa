@@ -83,6 +83,7 @@
 
     behaviors {
         // ホーム行や修飾キー用（現在 kth/lth は hold-preferred）
+
         kth: kth {
             compatible = "zmk,behavior-hold-tap";
             label = "KTH";
@@ -90,6 +91,7 @@
             tapping-term-ms = <180>;       // 170から微増。hold-preferredでの誤判定を抑制
             quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
+
             flavor = "hold-preferred";     // 変更なし
         };
 
@@ -100,19 +102,22 @@
             tapping-term-ms = <170>;
             quick-tap-ms = <200>;
             bindings = <&mo>, <&kp>;
+
             flavor = "hold-preferred";     // 変更なし
         };
 
         // 親指スペース・シフト用（ssh/hhs は tap-preferred）
+
         ssh: ssh {
             compatible = "zmk,behavior-hold-tap";
             label = "SSH";
             #binding-cells = <2>;
             tapping-term-ms = <100>;       // 140からさらに短縮。親指の反応を爆速に
-            quick-tap-ms = <200>;       
+            quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
+
             flavor = "balanced";      // 変更なし
-            retro-tap;                  
+            retro-tap;
         };
 
         hhs: hhs {
@@ -123,6 +128,7 @@
             quick-tap-ms = <200>;
             require-prior-idle-ms = <0>;   // ★0に変更：スペースの「変換」や「決定」の遅延を解消
             bindings = <&mo>, <&kp>;
+
             flavor = "tap-preferred";      // 変更なし
             retro-tap;
         };
@@ -135,27 +141,20 @@
     //         #binding-cells = <2>;
     //         tapping-term-ms = <170>;
     //         bindings = <&kp>, <&kp>;
-
     //         flavor = "hold-preferred";
     //         quick-tap-ms = <200>;
     //     };
-
     //     lth: lth {
     //         compatible = "zmk,behavior-hold-tap";
     //         label = "LTH";
     //         #binding-cells = <2>;
     //         tapping-term-ms = <170>;
     //         bindings = <&mo>, <&kp>;
-
     //         flavor = "hold-preferred";
-
     //         // hold-while-undecided;
-
     //         quick-tap-ms = <200>;
     //     };
-
     //     // Space-Shift用：変換（タップ）の反応速度を最優先する仮説
-
     //     ssh: ssh {
     //         compatible = "zmk,behavior-hold-tap";
     //         label = "SSH";
@@ -167,7 +166,6 @@
     //         flavor = "tap-preferred";   
     //         retro-tap;                  
     //     };
-
     //     hhs: hhs {
     //         compatible = "zmk,behavior-hold-tap";
     //         label = "HHS";
@@ -186,10 +184,10 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W         &kp E             &kp R              &kp T                                                &kp Y         &kp U  &kp I      &kp O       &kp P
-&kp A       &kp S         &kp D             &kp F              &kp G            &kp LEFT_CONTROL      &kp MINUS     &kp H         &kp J  &kp K      &kp L       &kp BACKSPACE
-&kp Z       &kp X         &kp C             &kp V              &kp B            &mo 7                 &kp EQUAL     &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp TAB
-&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &kth LEFT_ALT ESC  &kth LGUI LANG2  &hhs 2 SPACE          &lth 6 ENTER  &lth 1 LANG1                                &mt RSHIFT ESC
+&kp Q       &kp W         &kp E             &kp R  &kp T                                                   &kp Y         &kp U  &kp I      &kp O       &kp P
+&kp A       &kp S         &kp D             &kp F  &kp G            &kp LEFT_CONTROL         &kp MINUS     &kp H         &kp J  &kp K      &kp L       &kp BACKSPACE
+&kp Z       &kp X         &kp C             &kp V  &kp B            &mo 7                    &kp EQUAL     &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp TAB
+&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &kth LGUI LANG2  &ssh LEFT_ALT SPACE      &lth 6 ENTER  &lth 1 LANG1                                &mt RSHIFT ESC
             >;
         };
 
