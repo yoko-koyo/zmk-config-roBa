@@ -67,7 +67,7 @@
         };
 
         bs {
-            bindings = <&kp BACKSPACE>;
+            bindings = <&kp MINUS>;
             key-positions = <19 20>;
         };
     };
