@@ -60,6 +60,11 @@
             bindings = <&mkp MB2>;
             key-positions = <31 32>;
         };
+
+        shift {
+            bindings = <&kp LSHIFT>;
+            key-positions = <39 40>;
+        };
     };
 
     macros {
