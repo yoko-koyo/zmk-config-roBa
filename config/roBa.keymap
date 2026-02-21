@@ -48,32 +48,12 @@
 
         rshift {
             bindings = <&kp LSHIFT>;
-            key-positions = <19 20>;
+            key-positions = <19 18>;
         };
 
-        alt {
-            bindings = <&kp LEFT_ALT>;
-            key-positions = <13 11>;
-        };
-
-        num1 {
-            bindings = <&mo 2>;
-            key-positions = <12 13>;
-        };
-
-        num2 {
-            bindings = <&mo 2>;
-            key-positions = <18 19>;
-        };
-
-        sh {
-            bindings = <&kp LSHFT>;
-            key-positions = <39 40>;
-        };
-
-        ls {
+        lshift {
             bindings = <&kp RSHFT>;
-            key-positions = <11 12>;
+            key-positions = <12 13>;
         };
 
         mb2 {
