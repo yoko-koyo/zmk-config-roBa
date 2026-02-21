@@ -9,32 +9,32 @@
 // };
 
 &trackball {
-    // automouse-layer = <4>;
-    // scroll-layers = <5>;
+    automouse-layer = <4>;
+    scroll-layers = <5>;
+    arrows {
+        layers = <2>;
+        bindings =
+            <&kp LS(RIGHT)>,
+            <&kp LS(LEFT)>,
+            <&kp LS(UP)>,
+            <&kp LS(DOWN)>;
+        tick = <10>;
+        wait-ms = <5>;
+        tap-ms = <5>;
+    };
+
     // arrows {
     //     layers = <6>;
     //     bindings =
-    //         <&kp LS(RIGHT)>,
-    //         <&kp LS(LEFT)>,
-    //         <&kp LS(UP)>,
-    //         <&kp LS(DOWN)>;
-    //     tick = <10>;
+    //         <&kp LC(LEFT)>,
+    //         <&kp LC(RIGHT)>,
+    //         <&kp LC(UP)>,
+    //         <&kp LC(DOWN)>;
+
+    //     tick = <230>;
     //     wait-ms = <5>;
-    //     tap-ms = <5>;
+    //     tap-ms = <0>;
     // };
-
-    arrows {
-        layers = <6>;
-        bindings =
-            <&kp LC(LEFT)>,
-            <&kp LC(RIGHT)>,
-            <&kp LC(UP)>,
-            <&kp LC(DOWN)>;
-
-        tick = <230>;
-        wait-ms = <5>;
-        tap-ms = <0>;
-    };
 };
 
 / {
@@ -98,7 +98,6 @@
             tapping-term-ms = <180>;
             quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
-
             flavor = "hold-preferred";
         };
 
@@ -109,7 +108,6 @@
             tapping-term-ms = <170>;
             quick-tap-ms = <200>;
             bindings = <&mo>, <&kp>;
-
             flavor = "hold-preferred";
         };
 
