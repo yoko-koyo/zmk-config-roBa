@@ -46,15 +46,11 @@
         rshift {
             bindings = <&kp LSHIFT>;
             key-positions = <19 18>;
-            slow-release;
-            timeout-ms = <40>;
         };
 
         lshift {
             bindings = <&kp RSHFT>;
             key-positions = <12 13>;
-            slow-release;
-            timeout-ms = <40>;
         };
 
         shift {
