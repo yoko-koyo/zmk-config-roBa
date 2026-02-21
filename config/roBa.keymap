@@ -8,35 +8,35 @@
 //     quick-tap-ms = <0>;
 // };
 
-&trackball {
-    automouse-layer = <4>;
-    scroll-layers = <5>;
+// &trackball {
+//     automouse-layer = <4>;
+//     scroll-layers = <5>;
 
-    arrows {
-        layers = <2>;
-        bindings =
-            <&kp LS(RIGHT)>,
-            <&kp LS(LEFT)>,
-            <&kp LS(UP)>,
-            <&kp LS(DOWN)>;
+//     arrows {
+//         layers = <2>;
+//         bindings =
+//             <&kp LS(RIGHT)>,
+//             <&kp LS(LEFT)>,
+//             <&kp LS(UP)>,
+//             <&kp LS(DOWN)>;
 
-        tick = <10>;
-        wait-ms = <5>;
-        tap-ms = <5>;
-    };
+//         tick = <10>;
+//         wait-ms = <5>;
+//         tap-ms = <5>;
+//     };
 
-    // arrows {
-    //     layers = <6>;
-    //     bindings =
-    //         <&kp LC(LEFT)>,
-    //         <&kp LC(RIGHT)>,
-    //         <&kp LC(UP)>,
-    //         <&kp LC(DOWN)>;
-    //     tick = <230>;
-    //     wait-ms = <5>;
-    //     tap-ms = <0>;
-    // };
-};
+//     // arrows {
+//     //     layers = <6>;
+//     //     bindings =
+//     //         <&kp LC(LEFT)>,
+//     //         <&kp LC(RIGHT)>,
+//     //         <&kp LC(UP)>,
+//     //         <&kp LC(DOWN)>;
+//     //     tick = <230>;
+//     //     wait-ms = <5>;
+//     //     tap-ms = <0>;
+//     // };
+// };
 
 / {
     combos {
