@@ -122,7 +122,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>; // 通常のスペースに近い挙動に変更
             quick-tap-ms = <200>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <145>;
             flavor = "tap-preferred";
             // retro-tap;
             bindings = <&kp>, <&kp>;
