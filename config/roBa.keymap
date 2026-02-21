@@ -226,8 +226,8 @@
             bindings = <
 &kp Q       &kp W     &kp E      &kp R             &kp T                                              &kp Y         &kp U     &kp I      &kp O       &kp P
 &kp A       &kp S     &kp D      &hhs 2 F          &kp G            &kp LCTRL            &kp DEL      &kp H         &hhs 2 J  &kp K      &kp L       &kp RET
-&kp Z       &kp X     &kp C      &kp V             &kp B            &mo 6                &kp EQUAL    &kp N         &kp M     &kp COMMA  &kp PERIOD  &kp TAB
-&kp LSHIFT  &kp LALT  &kp LCTRL  &kth LCTRL LANG1  &kth LGUI LANG2  &ssh LALT SPACE      &lth 6 BSPC  &lth 1 LANG1                                   &mt RSHIFT ESC
+&kp Z       &kp X     &kp C      &kp V             &kp B            &mo 5                &kp EQUAL    &kp N         &kp M     &kp COMMA  &kp PERIOD  &kp TAB
+&kp LSHIFT  &kp LALT  &kp LCTRL  &kth LCTRL LANG1  &kth LGUI LANG2  &ssh LALT SPACE      &lth 5 BSPC  &lth 1 LANG1                                   &mt RSHIFT ESC
             >;
         };
 
@@ -249,19 +249,10 @@
             >;
         };
 
-        FUNCTION {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &kp LBRC   &kp RBRC           &kp LA(UP)    &kp UNDER      &kp PLUS
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp PIPE   &kp LA(LEFT)       &kp LA(DOWN)  &kp LA(RIGHT)  &kp LA(BSPC)
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp TILDE  &kp DOUBLE_QUOTES  &trans        &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                     &trans
-            >;
-        };
-
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp MB1  &mo 5   &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp MB1  &mo 4   &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                            &trans
             >;
