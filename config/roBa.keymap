@@ -141,6 +141,18 @@
             retro-tap;
         };
 
+        // 中指Shift専用：タイピング中の誤爆を徹底的に防ぐ
+        ms_l: middle_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MIDDLE_SHIFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;    // 快適さと正確さのバランス
+            quick-tap-ms = <200>;
+            flavor = "balanced";       // 反対の手と組み合わせた瞬間にShiftになる
+            bindings = <&kp>, <&kp>;
+            require-prior-idle-ms = <125>; // 前の打鍵から少し間を置かないとShiftにならない（誤爆防止）
+        };
+
         td_mytd: tap_dance_my {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MY";
@@ -220,7 +232,7 @@
         default_layer {
             bindings = <
 &kp Q         &kp W         &kp E             &kp R     &kp T                                                         &kp Y         &kp U     &kp I      &kp O       &kp P
-&ssh LSHIFT A &kp S         &kp D             &hml 2 F  &kp G            &kp LEFT_CONTROL               &kp MINUS     &kp H         &hml 2 J  &kp K      &kp L       &kp BACKSPACE
+&kp A         &kp S         &middle_shift LSHIFT D             &hml 2 F  &kp G            &kp LEFT_CONTROL               &kp MINUS     &kp H         &hml 2 J  &middle_shift LSHIFT K      &kp L       &kp BACKSPACE
 &kp Z         &kp X         &kp C             &kp V     &kp B            &mo 7                          &kp EQUAL     &kp N         &kp M     &kp COMMA  &kp PERIOD  &kp TAB
 &kp LSHIFT    &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_CONTROL   &kth LGUI LANG2  &ssh LALT SPACE       &lth 6 ENTER  &lth 1 LANG1                        &mt RSHIFT ESC
             >;
@@ -229,7 +241,7 @@
         ARROW {
             bindings = <
 &kp EXCL      &kp AT    &kp HASH   &kp DLLR               &kp PRCNT                      &kp LBKT       &kp RBKT  &kp UP    &kp MINUS  &kp EQUAL
-&ssh LSHIFT CARET     &kp AMPS  &kp ASTRK  &kp SLASH              &kp COLON  &trans      &trans  &kp BACKSLASH  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+&kp CARET     &kp AMPS  &kp ASTRK  &kp SLASH              &kp COLON  &trans      &trans  &kp BACKSLASH  &kp LEFT  &middle_shift LSHIFT DOWN  &kp RIGHT  &trans
 &kp QUESTION  &kp PIPE  &kp LPAR   &kp RIGHT_PARENTHESIS  &kp SEMI   &trans      &trans  &kp GRAVE      &kp SQT   &kp LPAR  &kp RPAR   &trans
 &trans        &trans    &trans     &trans                 &trans     &trans      &trans  &trans                                        &trans
             >;
