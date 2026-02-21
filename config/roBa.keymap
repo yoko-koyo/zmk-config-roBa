@@ -152,6 +152,14 @@
 
             tapping-term-ms = <200>;
         };
+        td_sp_alt: tap_dance_bspc_enter {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_BSPC_ENTER";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&kp LEFT_ALT>;
+
+            tapping-term-ms = <200>;
+        };
     };
 
     // behaviors {
@@ -207,7 +215,7 @@
 &kp Q       &kp W         &kp E             &kp R  &kp T                                                   &kp Y         &kp U      &kp I      &kp O       &kp P
 &kp A       &kp S         &kp D             &kp F  &kp G            &kp LEFT_CONTROL         &kp MINUS     &kp H         &td_j_etr  &kp K      &kp L       &kp BACKSPACE
 &kp Z       &kp X         &kp C             &kp V  &kp B            &mo 7                    &kp EQUAL     &kp N         &kp M      &kp COMMA  &kp PERIOD  &kp TAB
-&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &kth LGUI LANG2  &ssh LEFT_ALT SPACE      &lth 6 ENTER  &lth 1 LANG1                                    &mt RSHIFT ESC
+&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &kth LGUI LANG2  &td_sp_alt      &lth 6 ENTER  &lth 1 LANG1                                    &mt RSHIFT ESC
             >;
         };
 
