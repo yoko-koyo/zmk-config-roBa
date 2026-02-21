@@ -53,7 +53,7 @@
             key-positions = <12 13>;
         };
 
-        shift {
+        ashift {
             bindings = <&kp LSHIFT>;
             key-positions = <39 40>;
         };
