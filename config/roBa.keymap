@@ -111,24 +111,24 @@
 
         ssh: ssh {
             compatible = "zmk,behavior-hold-tap";
-            label = "SSH"; // 仮説：スペースは即答すべき
+            label = "SSH";
             #binding-cells = <2>;
-            tapping-term-ms = <170>;    // 判定時間を少しだけ伸ばして誤爆を防ぐ
-            quick-tap-ms = <200>;       // 連続スペースは即入力
+            tapping-term-ms = <140>;    // 20%ほど高速化
+            quick-tap-ms = <200>;       
+            require-prior-idle-ms = <125>; // 【追加】タイピング中のTap反応を爆速にする
             bindings = <&kp>, <&kp>;
-
-            flavor = "tap-preferred";        // 別のキーが押されたら即座に挙動を確定
-            retro-tap;                  // 判定時間経過後に離しても、何も押してなければタップとみなす
+            flavor = "tap-preferred";   
+            retro-tap;                  
         };
 
         hhs: hhs {
             compatible = "zmk,behavior-hold-tap";
             label = "HHS";
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <140>;    // 同様に高速化
             quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>; // 【追加】
             bindings = <&mo>, <&kp>;
-
             flavor = "tap-preferred";
             retro-tap;
         };
