@@ -150,9 +150,10 @@
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp ENTER>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
         };
     };
+
 
     // behaviors {
     //     kth: kth {
