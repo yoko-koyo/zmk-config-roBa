@@ -132,31 +132,14 @@
             retro-tap;
         };
 
-                td_lang: td_lang {
+        td_mytd: tap_dance_my {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_LANG";
+            label = "TAP_DANCE_MY";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-
-            bindings = <
-                &kp LANG2     // 1tap → 英数
-                &kp LANG1     // 2tap → かな
-            >;
-        };
-
-        lgui_lang: lgui_lang {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LGUI_LANG";
-            #binding-cells = <0>;
-            tapping-term-ms = <180>;
-            quick-tap-ms = <200>;
-            flavor = "tap-preferred";
-            retro-tap;
-
-            bindings = <
-                &td_lang      // tap / double tap
-                &kp LGUI      // hold → Command
-            >;
+            bindings =
+            <&mt LSHFT SPACE>,
+            <&mo 2>;
         };
     };
 
