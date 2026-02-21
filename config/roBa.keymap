@@ -112,10 +112,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "SSH";
             #binding-cells = <2>;
-            tapping-term-ms = <70>;       // 140からさらに短縮。親指の反応を爆速に
+            tapping-term-ms = <75>;       // 140からさらに短縮。親指の反応を爆速に
             quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
-            require-prior-idle-ms = <0>;
+            require-prior-idle-ms = <10>;
             flavor = "tap-preferred";      // 変更なし
             retro-tap;
         };
