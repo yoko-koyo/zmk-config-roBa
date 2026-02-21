@@ -49,21 +49,20 @@
         rshift {
             bindings = <&kp LSHIFT>;
             key-positions = <19 18>;
+            slow-release;
+            timeout-ms = <40>;
         };
 
         lshift {
             bindings = <&kp RSHFT>;
             key-positions = <12 13>;
-        };
-
-        mb2 {
-            bindings = <&mkp MB2>;
-            key-positions = <31 32>;
+            slow-release;
+            timeout-ms = <40>;
         };
 
         shift {
             bindings = <&kp LSHIFT>;
-            key-positions = <39 40>;
+            key-positions = <38 41>;
         };
 
         bs {
@@ -167,6 +166,13 @@
 
             tapping-term-ms = <180>;
         };
+
+        td_m1_m2: td_m1_m2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_M1_M2";
+            #binding-cells = <0>;
+            bindings = <&mkp MB1>, <&mkp MB2>;
+        };
     };
 
     // behaviors {
@@ -219,10 +225,10 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W         &kp E             &kp R  &kp T                                                &kp Y         &kp U  &kp I      &kp O       &kp P
-&kp A       &kp S         &kp D             &kp F  &kp G            &kp LEFT_CONTROL      &kp MINUS     &kp H         &kp J  &kp K      &kp L       &kp BACKSPACE
-&kp Z       &kp X         &kp C             &kp V  &kp B            &mo 7                 &kp EQUAL     &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp TAB
-&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &kth LGUI LANG2  &ssh LALT SPACE       &lth 6 ENTER  &lth 1 LANG1                                &mt RSHIFT ESC
+&kp Q       &kp W         &kp E             &kp R     &kp T                                                &kp Y         &kp U     &kp I      &kp O       &kp P
+&kp A       &kp S         &kp D             &hml 2 F  &kp G            &kp LEFT_CONTROL      &kp MINUS     &kp H         &hml 2 J  &kp K      &kp L       &kp BACKSPACE
+&kp Z       &kp X         &kp C             &kp V     &kp B            &mo 7                 &kp EQUAL     &kp N         &kp M     &kp COMMA  &kp PERIOD  &kp TAB
+&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2     &kth LGUI LANG2  &ssh LALT SPACE       &lth 6 ENTER  &lth 1 LANG1                                   &mt RSHIFT ESC
             >;
         };
 
@@ -255,10 +261,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp MB1  &mo 5   &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                            &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &td_m1_m2  &mo 5   &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                             &trans
             >;
         };
 
