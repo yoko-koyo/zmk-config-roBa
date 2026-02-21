@@ -143,6 +143,15 @@
 
             tapping-term-ms = <100>;
         };
+
+        tap_dance_bspc_enter: tap_dance_bspc_enter {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_BSPC_ENTER";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp ENTER>;
+
+            tapping-term-ms = <150>;
+        };
     };
 
     // behaviors {
