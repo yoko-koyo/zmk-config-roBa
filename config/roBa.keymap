@@ -115,9 +115,8 @@
             tapping-term-ms = <200>; // 通常のスペースに近い挙動に変更
             quick-tap-ms = <200>;
             require-prior-idle-ms = <145>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
 
-            // retro-tap;
 
             bindings = <&kp>, <&kp>;
 
