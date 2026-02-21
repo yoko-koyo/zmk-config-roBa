@@ -139,7 +139,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MY";
             #binding-cells = <0>;
-            bindings = <&mt LEFT_GUI LANG1>, <&kp LANG1>;
+            bindings = <&kth LEFT_GUI LANG2>, <&kp LANG1>;
 
             tapping-term-ms = <250>;
         };
