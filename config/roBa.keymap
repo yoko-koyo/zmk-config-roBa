@@ -3,26 +3,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-// &mt {
-//     flavor = "balanced";
-//     quick-tap-ms = <0>;
-// };
-
 &trackball {
-    // automouse-layer = <4>;
-    // scroll-layers = <5>;
-    // arrows {
-    //     layers = <6>;
-    //     bindings =
-    //         <&kp LS(RIGHT)>,
-    //         <&kp LS(LEFT)>,
-    //         <&kp LS(UP)>,
-    //         <&kp LS(DOWN)>;
-    //     tick = <10>;
-    //     wait-ms = <5>;
-    //     tap-ms = <5>;
-    // };
-
     arrows {
         layers = <6>;
         bindings =
@@ -40,30 +21,24 @@
 / {
     combos {
         compatible = "zmk,combos";
+        timeout-ms = <50>; // コンボの判定時間（ラグを抑えつつ成功させる絶妙なライン）
+
+        // ホームポジションでのEnterコンボ（J + K）
+        jk_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <17 18>; 
+            layers = <0>;
+            slow-release;
+        };
 
         boot {
             bindings = <&bootloader>;
             key-positions = <27 15 16 28>;
         };
 
-        rshift {
-            bindings = <&kp LSHIFT>;
-            key-positions = <19 18>;
-        };
-
-        lshift {
-            bindings = <&kp RSHFT>;
-            key-positions = <12 13>;
-        };
-
         mb2 {
             bindings = <&mkp MB2>;
             key-positions = <31 32>;
-        };
-
-        shift {
-            bindings = <&kp LSHIFT>;
-            key-positions = <39 40>;
         };
 
         bs {
@@ -72,27 +47,38 @@
         };
     };
 
-    macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
-        };
-    };
-
     behaviors {
-        // ホーム行や修飾キー用（現在 kth/lth は hold-preferred）
+        // ホーム行のHold-Tap（DとFに割り当てて、記号と数字へのアクセスを高速化）
+        hml: home_row_layer_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+        };
 
+        // 親指用：Command/LANG2切り替え（Tap Danceを廃止してCommand+Cを安定化）
+        gui_lang: gui_lang {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GUI_LANG";
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <200>;
+            flavor = "hold-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+        // 既存のbehaviorを維持・微調整
         kth: kth {
             compatible = "zmk,behavior-hold-tap";
             label = "KTH";
             #binding-cells = <2>;
-            tapping-term-ms = <180>;       // 170から微増。hold-preferredでの誤判定を抑制
+            tapping-term-ms = <180>;
             quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
-
-            flavor = "hold-preferred";     // 変更なし
+            flavor = "hold-preferred";
         };
 
         lth: lth {
@@ -102,129 +88,39 @@
             tapping-term-ms = <170>;
             quick-tap-ms = <200>;
             bindings = <&mo>, <&kp>;
-
-            flavor = "hold-preferred";     // 変更なし
+            flavor = "hold-preferred";
         };
-
-        // 親指スペース・シフト用（ssh/hhs は tap-preferred）
 
         ssh: ssh {
             compatible = "zmk,behavior-hold-tap";
             label = "SSH";
             #binding-cells = <2>;
-            tapping-term-ms = <75>;       // 140からさらに短縮。親指の反応を爆速に
+            tapping-term-ms = <200>; // 通常のスペースに近い挙動に変更
             quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            flavor = "tap-preferred";
+            retro-tap;
             bindings = <&kp>, <&kp>;
-
-            require-prior-idle-ms = <10>;
-            flavor = "tap-preferred";      // 変更なし
-            retro-tap;
-            hold-trigger-key-positions = <18 19 20 7>;
-        };
-
-        hhs: hhs {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HHS";
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;       // 140から短縮
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <0>;   // ★0に変更：スペースの「変換」や「決定」の遅延を解消
-            bindings = <&mo>, <&kp>;
-
-            flavor = "tap-preferred";      // 変更なし
-            retro-tap;
-        };
-
-        td_mytd: tap_dance_my {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_MY";
-            #binding-cells = <0>;
-            bindings = <&kth LEFT_GUI LANG2>, <&kp LANG1>;
-
-            tapping-term-ms = <100>;
-        };
-
-        td_j_etr: tap_dance_j_enter {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_J_ENTER";
-            #binding-cells = <0>;
-            bindings = <&kp J>, <&kp ENTER>;
-
-            tapping-term-ms = <180>;
-        };
-
-        td_sp_alt: tap_dance_spc_alt {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_SPC_ALT";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp LEFT_ALT>;
-
-            tapping-term-ms = <180>;
         };
     };
-
-    // behaviors {
-    //     kth: kth {
-    //         compatible = "zmk,behavior-hold-tap";
-    //         label = "KTH";
-    //         #binding-cells = <2>;
-    //         tapping-term-ms = <170>;
-    //         bindings = <&kp>, <&kp>;
-    //         flavor = "hold-preferred";
-    //         quick-tap-ms = <200>;
-    //     };
-    //     lth: lth {
-    //         compatible = "zmk,behavior-hold-tap";
-    //         label = "LTH";
-    //         #binding-cells = <2>;
-    //         tapping-term-ms = <170>;
-    //         bindings = <&mo>, <&kp>;
-    //         flavor = "hold-preferred";
-    //         // hold-while-undecided;
-    //         quick-tap-ms = <200>;
-    //     };
-    //     // Space-Shift用：変換（タップ）の反応速度を最優先する仮説
-    //     ssh: ssh {
-    //         compatible = "zmk,behavior-hold-tap";
-    //         label = "SSH";
-    //         #binding-cells = <2>;
-    //         tapping-term-ms = <140>;    // 20%ほど高速化
-    //         quick-tap-ms = <200>;       
-    //         require-prior-idle-ms = <125>; // 【追加】タイピング中のTap反応を爆速にする
-    //         bindings = <&kp>, <&kp>;
-    //         flavor = "tap-preferred";   
-    //         retro-tap;                  
-    //     };
-    //     hhs: hhs {
-    //         compatible = "zmk,behavior-hold-tap";
-    //         label = "HHS";
-    //         #binding-cells = <2>;
-    //         tapping-term-ms = <140>;    // 同様に高速化
-    //         quick-tap-ms = <200>;
-    //         require-prior-idle-ms = <125>; // 【追加】
-    //         bindings = <&mo>, <&kp>;
-    //         flavor = "tap-preferred";
-    //         retro-tap;
-    //     };
-    // };
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp Q       &kp W         &kp E             &kp R  &kp T                                                &kp Y         &kp U      &kp I      &kp O       &kp P
-&kp A       &kp S         &kp D             &kp F  &kp G            &kp LEFT_CONTROL      &kp MINUS     &kp H         &td_j_etr  &kp K      &kp L       &kp BACKSPACE
-&kp Z       &kp X         &kp C             &kp V  &kp B            &mo 7                 &kp EQUAL     &kp N         &kp M      &kp COMMA  &kp PERIOD  &kp TAB
-&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2  &kth LGUI LANG2  &td_sp_alt            &lth 6 ENTER  &lth 1 LANG1                                    &mt RSHIFT ESC
+&kp Q       &kp W         &kp E             &kp R          &kp T                                                &kp Y         &kp U      &kp I      &kp O       &kp P
+&kp A       &kp S         &hml 1 D          &hml 2 F       &kp G            &kp LEFT_CONTROL      &kp MINUS     &kp H         &kp J      &kp K      &kp L       &kp BACKSPACE
+&kp Z       &kp X         &kp C             &kp V          &kp B            &mo 7                 &kp EQUAL     &kp N         &kp M      &kp COMMA  &kp PERIOD  &kp TAB
+&kp LSHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 2          &gui_lang LGUI LANG2  &ssh LEFT_ALT SPACE   &lth 6 ENTER  &lth 1 LANG1                                    &mt RSHIFT ESC
             >;
         };
 
         ARROW {
             bindings = <
-&kp EXCL      &kp AT    &kp HASH   &kp DLLR   &kp PRCNT                          &kp LBKT       &kp RBKT  &kp UP    &kp MINUS  &kp EQUAL
-&kp CARET     &kp AMPS  &kp ASTRK  &kp SLASH  &kp SEMICOLON  &trans      &trans  &kp BACKSLASH  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
-&kp QUESTION  &kp LBRC  &kp RBRC   &kp QMARK  &kp COLON      &trans      &trans  &kp GRAVE      &kp SQT   &kp LPAR  &kp RPAR   &trans
+&kp EXCL      &kp AT    &kp HASH   &kp DLLR   &kp PRCNT                          &kp LBRC       &kp RBRC  &kp LPAR  &kp RPAR   &kp EQUAL
+&kp CARET     &kp AMPS  &kp ASTRK  &kp SLASH  &kp SEMICOLON  &trans      &trans  &kp MINUS      &kp LEFT  &kp DOWN  &kp RIGHT  &kp SQT
+&kp QUESTION  &kp LBRC  &kp RBRC   &kp QMARK  &kp COLON      &trans      &trans  &kp GRAVE      &kp BSLH  &kp LBKT  &kp RBKT   &trans
 &trans        &trans    &trans     &trans     &trans         &trans      &trans  &trans                                        &trans
             >;
         };
@@ -232,8 +128,8 @@
         NUM {
             bindings = <
 &kp F1  &kp F2   &kp F3   &kp F4   &trans                              &kp SLASH   &kp N7  &kp N8  &kp N9  &kp N0
-&kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LG(N4))  &trans      &trans  &kp PERIOD  &kp N4  &kp N5  &kp N6  &trans
-&kp F9  &kp F10  &kp F11  &kp F12  &kp LS(LG(N5))  &trans      &trans  &kp COMMA   &kp N1  &kp N2  &kp N3  &trans
+&kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LG(N4))  &trans      &trans  &kp PERIOD  &kp N4  &kp N5  &kp N6  &kp PLUS
+&kp F9  &kp F10  &kp F11  &kp F12  &kp LS(LG(N5))  &trans      &trans  &kp COMMA   &kp N1  &kp N2  &kp N3  &kp ASTRK
 &trans  &trans   &trans   &trans   &trans          &trans      &trans  &trans                              &trans
             >;
         };
