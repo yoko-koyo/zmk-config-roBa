@@ -66,8 +66,8 @@
             key-positions = <39 40>;
         };
 
-        bs {
-            bindings = <&kp MINUS>;
+        mb2 {
+            bindings = <&mkp MB2>;
             key-positions = <19 20>;
         };
     };
@@ -167,15 +167,6 @@
 
             tapping-term-ms = <180>;
         };
-
-        td_m1_m2: td_m1_m2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_M1_M2";
-            #binding-cells = <0>;
-            bindings = <&mkp MB1>, <&mkp MB2>;
-
-            tapping-term-ms = <170>;
-        };
     };
 
     // behaviors {
@@ -264,10 +255,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &td_m1_m2  &mo 5   &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                             &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp MB1  &mo 5   &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                            &trans
             >;
         };
 
