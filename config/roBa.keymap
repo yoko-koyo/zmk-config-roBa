@@ -115,12 +115,9 @@
             tapping-term-ms = <200>; // 通常のスペースに近い挙動に変更
             quick-tap-ms = <200>;
             require-prior-idle-ms = <145>;
-            flavor = "tap-preferred";
-
+            flavor = "balanced";
 
             bindings = <&kp>, <&kp>;
-
-            hold-trigger-key-positions = <38 19 18 20 7>;
         };
 
         hhs: hhs {
