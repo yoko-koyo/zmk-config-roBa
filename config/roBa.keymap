@@ -46,40 +46,35 @@
         rshift {
             bindings = <&kp LSHIFT>;
             key-positions = <19 18>;
-            timeout-ms = <70>;
-            require-prior-idle-ms = <10>;
+            timeout-ms = <90>;
             slow-release;
         };
 
         lshift {
             bindings = <&kp RSHFT>;
             key-positions = <12 13>;
-            timeout-ms = <70>;
-            require-prior-idle-ms = <10>;
+            timeout-ms = <90>;
             slow-release;
         };
 
         ashift {
             bindings = <&kp LSHIFT>;
             key-positions = <39 40>;
-            timeout-ms = <70>;
-            require-prior-idle-ms = <10>;
+            timeout-ms = <90>;
             slow-release;
         };
 
         num1 {
             bindings = <&mo 2>;
             key-positions = <11 12>;
-            timeout-ms = <70>;
-            require-prior-idle-ms = <10>;
+            timeout-ms = <90>;
             slow-release;
         };
 
         num2 {
             bindings = <&mo 2>;
             key-positions = <19 20>;
-            timeout-ms = <70>;
-            require-prior-idle-ms = <10>;
+            timeout-ms = <90>;
             slow-release;
         };
     };
