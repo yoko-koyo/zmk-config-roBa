@@ -114,13 +114,19 @@
             compatible = "zmk,behavior-hold-tap";
             label = "SSH";
             #binding-cells = <2>;
+            /* 長押し判定までの時間。200msが「溜め」を感じない限界値 */
             tapping-term-ms = <200>;
+            /* 200ms以内の連打は100%タップ（スペース）にする */
             quick-tap-ms = <200>;
-            require-prior-idle-ms = <110>;
+            /* 前のキーから100ms空いていない＝タイピング中ならタップを優先 */
+            require-prior-idle-ms = <100>;
+            /* 離した瞬間の判定を最も正確にするモード */
             flavor = "balanced";
+            /* もし判定時間を過ぎて押しっぱなしにしても、他キーと組み合わせなければ離した時にタップを出す */
+            retro-tap;
             bindings = <&kp>, <&kp>;
         };
-
+        
         hhs: hhs {
             compatible = "zmk,behavior-hold-tap";
             label = "HHS";
