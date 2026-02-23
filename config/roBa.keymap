@@ -78,7 +78,7 @@
         num2 {
             bindings = <&mo 2>;
             key-positions = <30 31>;
-            timeout-ms = <70>;
+            timeout-ms = <150>;
         };
 
         ctrl {
@@ -87,28 +87,28 @@
             timeout-ms = <90>;
         };
 
-        up {
-            bindings = <&kp UP>;
-            key-positions = <6 7>;
-            timeout-ms = <90>;
-        };
+        // up {
+        //     bindings = <&kp UP>;
+        //     key-positions = <6 7>;
+        //     timeout-ms = <90>;
+        // };
 
-        down {
-            bindings = <&kp DOWN>;
-            key-positions = <18 19>;
-            timeout-ms = <90>;
-        };
+        // down {
+        //     bindings = <&kp DOWN>;
+        //     key-positions = <18 19>;
+        //     timeout-ms = <90>;
+        // };
 
-        left {
-            bindings = <&kp LEFT>;
-            key-positions = <17 18>;
-            timeout-ms = <90>;
-        };
+        // left {
+        //     bindings = <&kp LEFT>;
+        //     key-positions = <17 18>;
+        //     timeout-ms = <90>;
+        // };
 
-        right {
-            bindings = <&kp RIGHT>;
-            key-positions = <19 20>;
-        };
+        // right {
+        //     bindings = <&kp RIGHT>;
+        //     key-positions = <19 20>;
+        // };
     };
 
     behaviors {
