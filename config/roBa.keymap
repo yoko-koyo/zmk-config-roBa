@@ -61,6 +61,12 @@
         num1 {
             bindings = <&mo 2>;
             key-positions = <12 13>;
+            /* 判定時間を少し長めにして、指のズレを許容する */
+            timeout-ms = <60>; 
+            /* 直前にタイピングしていない時（手が止まっている時）だけ発動させる */
+            require-prior-idle-ms = <150>; 
+            /* 指を離すのが多少ズレてもレイヤーを維持する */
+            slow-release;
         };
 
         num2 {
