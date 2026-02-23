@@ -47,7 +47,7 @@
             bindings = <&kp LSHIFT>;
             key-positions = <19 18>;
             timeout-ms = <70>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <10>;
             slow-release;
         };
 
@@ -55,33 +55,31 @@
             bindings = <&kp RSHFT>;
             key-positions = <12 13>;
             timeout-ms = <70>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <10>;
             slow-release;
-
         };
 
         ashift {
             bindings = <&kp LSHIFT>;
             key-positions = <39 40>;
             timeout-ms = <70>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <10>;
             slow-release;
-
         };
 
         num1 {
             bindings = <&mo 2>;
             key-positions = <11 12>;
             timeout-ms = <70>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <10>;
             slow-release;
         };
 
         num2 {
             bindings = <&mo 2>;
             key-positions = <19 20>;
-            eout-ms = <70>;
-            require-prior-idle-ms = <150>;
+            tieout-ms = <70>;
+            require-prior-idle-ms = <10>;
             slow-release;
         };
     };
