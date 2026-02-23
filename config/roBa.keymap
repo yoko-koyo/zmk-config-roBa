@@ -84,25 +84,25 @@
         ctrl {
             bindings = <&kp LCTRL>;
             key-positions = <38 39>;
-            timeout-ms = <70>;
+            timeout-ms = <90>;
         };
 
         up {
             bindings = <&kp UP>;
             key-positions = <6 7>;
-            timeout-ms = <70>;
+            timeout-ms = <90>;
         };
 
         down {
             bindings = <&kp DOWN>;
             key-positions = <18 19>;
-            timeout-ms = <70>;
+            timeout-ms = <90>;
         };
 
         left {
             bindings = <&kp LEFT>;
             key-positions = <17 18>;
-            timeout-ms = <70>;
+            timeout-ms = <90>;
         };
 
         right {
