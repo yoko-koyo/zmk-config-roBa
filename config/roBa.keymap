@@ -78,7 +78,7 @@
         num2 {
             bindings = <&mo 2>;
             key-positions = <19 20>;
-            tieout-ms = <70>;
+            timeout-ms = <70>;
             require-prior-idle-ms = <10>;
             slow-release;
         };
