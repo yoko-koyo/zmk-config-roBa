@@ -46,13 +46,11 @@
         rshift {
             bindings = <&kp LSHIFT>;
             key-positions = <19 18>;
-            timeout-ms = <60>;
         };
 
         lshift {
             bindings = <&kp RSHFT>;
             key-positions = <12 13>;
-            timeout-ms = <60>;
         };
 
         ashift {
@@ -64,13 +62,11 @@
         num1 {
             bindings = <&mo 2>;
             key-positions = <11 12>;
-            timeout-ms = <60>;
         };
 
         num2 {
             bindings = <&mo 2>;
             key-positions = <19 20>;
-            timeout-ms = <60>;
         };
     };
 
