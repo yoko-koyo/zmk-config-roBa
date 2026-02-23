@@ -78,26 +78,31 @@
         num2 {
             bindings = <&mo 2>;
             key-positions = <30 31>;
+            timeout-ms = <70>;
         };
 
         ctrl {
             bindings = <&kp LCTRL>;
             key-positions = <38 39>;
+            timeout-ms = <70>;
         };
 
         up {
             bindings = <&kp UP>;
             key-positions = <6 7>;
+            timeout-ms = <70>;
         };
 
         down {
             bindings = <&kp DOWN>;
             key-positions = <18 19>;
+            timeout-ms = <70>;
         };
 
         left {
             bindings = <&kp LEFT>;
             key-positions = <17 18>;
+            timeout-ms = <70>;
         };
 
         right {
