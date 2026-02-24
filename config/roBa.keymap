@@ -46,13 +46,11 @@
         rshift {
             bindings = <&kp LSHIFT>;
             key-positions = <19 18>;
-            timeout-ms = <60>;
         };
 
         lshift {
             bindings = <&kp RSHFT>;
             key-positions = <12 13>;
-            timeout-ms = <60>;
         };
 
         ashift {
@@ -64,13 +62,11 @@
         num1 {
             bindings = <&mo 2>;
             key-positions = <11 12>;
-            timeout-ms = <60>;
         };
 
         num2 {
             bindings = <&mo 2>;
             key-positions = <19 20>;
-            timeout-ms = <60>;
         };
     };
 
@@ -227,7 +223,7 @@
             bindings = <
 &kp Q       &kp W     &kp E      &kp R             &kp T                                             &kp Y         &kp U  &kp I      &kp O       &kp P
 &kp A       &kp S     &kp D      &kp F             &kp G            &kp LCTRL            &kp DEL     &kp H         &kp J  &kp K      &kp L       &kp BSPC
-&kp Z       &kp X     &kp C      &kp V             &kp B            &mo 5                &kp EQUAL   &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp TAB
+&kp Z       &kp X     &kp C      &kp V             &kp B            &mo 6                &kp EQUAL   &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp TAB
 &kp LSHIFT  &kp LALT  &kp LCTRL  &kth LCTRL LANG1  &kth LGUI LANG2  &ssh LALT SPACE      &lth 5 RET  &lth 1 LANG1                                &mt RSHIFT ESC
             >;
         };
