@@ -108,17 +108,6 @@
 
         // 親指スペース・シフト用（ssh/hhs は tap-preferred）
 
-        // ssh: ssh {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     label = "SSH";
-        //     #binding-cells = <2>;
-        //     tapping-term-ms = <200>;
-        //     quick-tap-ms = <200>;
-        //     require-prior-idle-ms = <145>;
-        //     flavor = "balanced";
-        //     bindings = <&kp>, <&kp>;
-        // };
-
         ssh: ssh {
             compatible = "zmk,behavior-hold-tap";
             label = "SSH";
@@ -189,51 +178,6 @@
             tapping-term-ms = <180>;
         };
     };
-
-    // behaviors {
-    //     kth: kth {
-    //         compatible = "zmk,behavior-hold-tap";
-    //         label = "KTH";
-    //         #binding-cells = <2>;
-    //         tapping-term-ms = <170>;
-    //         bindings = <&kp>, <&kp>;
-    //         flavor = "hold-preferred";
-    //         quick-tap-ms = <200>;
-    //     };
-    //     lth: lth {
-    //         compatible = "zmk,behavior-hold-tap";
-    //         label = "LTH";
-    //         #binding-cells = <2>;
-    //         tapping-term-ms = <170>;
-    //         bindings = <&mo>, <&kp>;
-    //         flavor = "hold-preferred";
-    //         // hold-while-undecided;
-    //         quick-tap-ms = <200>;
-    //     };
-    //     // Space-Shift用：変換（タップ）の反応速度を最優先する仮説
-    //     ssh: ssh {
-    //         compatible = "zmk,behavior-hold-tap";
-    //         label = "SSH";
-    //         #binding-cells = <2>;
-    //         tapping-term-ms = <140>;    // 20%ほど高速化
-    //         quick-tap-ms = <200>;       
-    //         require-prior-idle-ms = <125>; // 【追加】タイピング中のTap反応を爆速にする
-    //         bindings = <&kp>, <&kp>;
-    //         flavor = "tap-preferred";   
-    //         retro-tap;                  
-    //     };
-    //     hhs: hhs {
-    //         compatible = "zmk,behavior-hold-tap";
-    //         label = "HHS";
-    //         #binding-cells = <2>;
-    //         tapping-term-ms = <140>;    // 同様に高速化
-    //         quick-tap-ms = <200>;
-    //         require-prior-idle-ms = <125>; // 【追加】
-    //         bindings = <&mo>, <&kp>;
-    //         flavor = "tap-preferred";
-    //         retro-tap;
-    //     };
-    // };
 
     keymap {
         compatible = "zmk,keymap";
