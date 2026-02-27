@@ -140,7 +140,7 @@
             flavor = "tap-preferred";       // 反対の手と組み合わせた瞬間にShiftになる
             bindings = <&kp>, <&kp>;
 
-            require-prior-idle-ms = <18>; // 前の打鍵から少し間を置かないとShiftにならない（誤爆防止）
+            require-prior-idle-ms = <120>; // 前の打鍵から少し間を置かないとShiftにならない（誤爆防止）
         };
 
         td_mytd: tap_dance_my {
