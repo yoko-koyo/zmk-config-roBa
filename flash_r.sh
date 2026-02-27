@@ -1,10 +1,20 @@
 #!/bin/bash
-# 1. 右手だけを高速ビルド
 INCREMENTAL=true ./build_local.sh build seeeduino_xiao_ble_roBa_R
-
-# 2. ビルドが成功したら書き込みスクリプトを自動起動
-if [ $? -eq 0 ]; then
-    ./flash.sh
-else
-    echo "ビルドに失敗したため、書き込みを中止しました。"
+if [ $? -ne 0 ]; then
+    echo "[ERROR] ビルド失敗"
+    exit 1
 fi
+
+DRIVE_NAME="NO NAME"
+UF2_PATH="./build/seeeduino_xiao_ble_roBa_R/zephyr/zmk.uf2"
+
+echo "右手ダブルクリック待ち..."
+while [ ! -d "/Volumes/$DRIVE_NAME" ]; do sleep 1; done
+
+echo "書き込み中..."
+# エラーを無視しつつコピー
+cp -X "$UF2_PATH" "/Volumes/$DRIVE_NAME/" 2>/dev/null || true
+
+# 書き込み完了まで少し待つ
+sleep 2
+echo "【完了】キーボードを確認してください。"

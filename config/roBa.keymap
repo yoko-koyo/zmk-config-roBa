@@ -46,11 +46,17 @@
         rshift {
             bindings = <&kp LSHIFT>;
             key-positions = <19 20>;
+            /* 判定時間を少し伸ばして、指のズレを許容する */
+            timeout-ms = <71>; 
+            /* 離すタイミングが多少ズレても、Shiftを維持して次のキーを打てるようにする */
+            slow-release;
         };
 
         lshift {
             bindings = <&kp RSHFT>;
-            key-positions = <12 11>;
+            key-positions = <11 12>;
+            timeout-ms = <71>;
+            slow-release;
         };
 
         ashift {
@@ -240,9 +246,9 @@
 
         NUM {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &trans                              &kp ASTRK  &kp N7  &kp N8  &kp N9  &kp MINUS
-&kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LG(N4))  &trans      &trans  &kp DOT    &kp N4  &kp N5  &kp N6  &kp N0
-&kp F9  &kp F10  &kp F11  &kp F12  &kp LS(LG(N5))  &trans      &trans  &kp SLASH  &kp N1  &kp N2  &kp N3  &kp PLUS
+&kp F1  &kp F2   &kp F3   &kp F4   &trans                              &kp ASTRK  &kp N7  &kp N8  &kp N9  &kp N0
+&kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LG(N4))  &trans      &trans  &kp DOT    &kp N4  &kp N5  &kp N6  &trans
+&kp F9  &kp F10  &kp F11  &kp F12  &kp LS(LG(N5))  &trans      &trans  &kp SLASH  &kp N1  &kp N2  &kp N3  &trans
 &trans  &trans   &trans   &trans   &trans          &trans      &trans  &trans                             &trans
             >;
         };
@@ -262,15 +268,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans        &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans        &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &kp LG(W)  &kp LG(LEFT)                          &trans
-            >;
-        };
-
-        layer_6 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans    &trans     &trans  &kp MINUS  &kp EQUAL
-&kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans      &trans  &kp N6    &kp N7     &kp N8  &kp N9     &kp N0
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp STAR  &kp SLASH  &trans  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                  &trans
             >;
         };
 
