@@ -70,6 +70,11 @@
             bindings = <&mo 2>;
             key-positions = <>;
         };
+
+        backspace {
+            bindings = <&kp BSPC>;
+            key-positions = <18 19>;
+        };
     };
 
     behaviors {
