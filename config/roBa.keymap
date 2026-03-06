@@ -63,7 +63,7 @@
 
         num1 {
             bindings = <&mo 2>;
-            key-positions = <>;
+            key-positions = <12 13>;
         };
 
         num2 {
