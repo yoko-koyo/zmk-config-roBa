@@ -44,13 +44,13 @@
         };
 
         rshift {
-            bindings = <&kp LSHIFT>;
+            bindings = <&kp BSPC>;
             key-positions = <19 20>;
             slow-release;
         };
 
         lshift {
-            bindings = <&kp RSHFT>;
+            bindings = <&kp LCTRL>;
             key-positions = <11 12>;
             slow-release;
         };
@@ -62,7 +62,7 @@
         };
 
         num1 {
-            bindings = <&mo 2>;
+            bindings = <&kp TAB>;
             key-positions = <12 13>;
         };
 
