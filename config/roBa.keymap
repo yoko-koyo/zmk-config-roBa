@@ -67,8 +67,8 @@
         };
 
         num2 {
-            bindings = <&mo 2>;
-            key-positions = <>;
+            bindings = <&kp LCTRL>;
+            key-positions = <20 21>;
         };
 
         backspace {
