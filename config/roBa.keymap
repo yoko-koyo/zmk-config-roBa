@@ -51,7 +51,7 @@
 
         lshift {
             bindings = <&kp LCTRL>;
-            key-positions = <13 14>;
+            key-positions = <13 12>;
             slow-release;
         };
 
@@ -63,17 +63,17 @@
 
         num1 {
             bindings = <&kp LALT>;
-            key-positions = <12 13>;
+            key-positions = <12 11>;
         };
 
         num2 {
             bindings = <&kp LCTRL>;
-            key-positions = <17 18>;
+            key-positions = <18 19>;
         };
 
         backspace {
             bindings = <&kp BSPC>;
-            key-positions = <18 19>;
+            key-positions = <19 20>;
         };
     };
 
