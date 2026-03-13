@@ -216,7 +216,7 @@
 
         ARROW {
             bindings = <
-&kp EXCL   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT                      &kp LPAR   &kp RPAR  &kp UP    &kp MINUS  &kp EQUAL
+&kp EXCL   &kp AT    &kp LPAR  &kp RPAR  &kp PRCNT                      &kp DLLR   &kp HASH  &kp UP    &kp MINUS  &kp EQUAL
 &kp STAR   &kp AMPS  &kp LBKT  &kp RBKT  &kp CARET  &trans      &trans  &kp BSLH   &kp LEFT  &kp DOWN  &kp RIGHT  &trans
 &kp QMARK  &kp PIPE  &kp LBRC  &kp RBRC  &kp ESC    &trans      &trans  &kp GRAVE  &kp SQT   &kp SEMI  &kp SLASH  &trans
 &trans     &trans    &trans    &trans    &trans     &trans      &trans  &trans                                    &trans
