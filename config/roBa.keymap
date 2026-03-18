@@ -43,12 +43,6 @@
             key-positions = <27 15 16 28>;
         };
 
-        rshift {
-            bindings = <&kp TAB>;
-            key-positions = <19 20>;
-            slow-release;
-        };
-
         lshift {
             bindings = <&kp LCTRL>;
             key-positions = <10 11>;
@@ -63,27 +57,7 @@
 
         num1 {
             bindings = <&kp LALT>;
-            key-positions = <12 11>;
-        };
-
-        num2 {
-            bindings = <&kp LCTRL>;
-            key-positions = <20 21>;
-        };
-
-        backspace {
-            bindings = <&kp BSPC>;
-            key-positions = <19 18>;
-        };
-
-        minus {
-            bindings = <&kp LA(BSPC)>;
-            key-positions = <7 6>;
-        };
-
-        plus {
-            bindings = <&kp RS(TAB)>;
-            key-positions = <7 8>;
+            key-positions = <12 13>;
         };
     };
 
@@ -218,18 +192,18 @@
         default_layer {
             bindings = <
 &kp Q       &kp W     &kp E      &kp R      &kp T                                          &kp Y         &kp U  &kp I      &kp O       &kp P
-&kp A       &kp S     &kp D      &kp F      &kp G            &mkp MB1          &kp DEL     &kp H         &kp J  &kp K      &kp L       &kp MINUS
-&kp Z       &kp X     &kp C      &kp V      &kp B            &mo 5             &kp TAB     &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
+&kp A       &kp S     &kp D      &kp F      &kp G            &mkp MB1          &kp DEL     &kp H         &kp J  &kp K      &kp L       &kp BSPC
+&kp Z       &kp X     &kp C      &kp V      &kp B            &mo 5             &kp TAB     &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp TAB
 &kp LSHIFT  &kp LALT  &kp LCTRL  &kp LCTRL  &kth LGUI LANG2  &ssh 2 SPACE      &lth 6 RET  &lth 1 LANG1                                &mt RSHIFT ESC
             >;
         };
 
         ARROW {
             bindings = <
-&kp EXCL   &kp AT    &kp LPAR  &kp RPAR  &kp PRCNT                      &kp DLLR   &kp HASH  &kp UP         &kp SEMICOLON  &kp SLASH
-&kp STAR   &kp AMPS  &kp LBKT  &kp RBKT  &kp CARET  &trans      &trans  &kp BSLH   &kp LEFT  &kp DOWN       &kp RIGHT      &trans
-&kp QMARK  &kp PIPE  &kp LBRC  &kp RBRC  &kp ESC    &trans      &trans  &kp GRAVE  &kp SQT   &kp BACKSPACE  &kp TAB        &trans
-&trans     &trans    &trans    &trans    &trans     &trans      &trans  &trans                                             &trans
+&kp EXCL   &kp AT    &kp LPAR  &kp RPAR  &kp PRCNT                      &kp DLLR   &kp HASH  &kp UP     &kp SEMICOLON  &kp SLASH
+&kp STAR   &kp AMPS  &kp LBKT  &kp RBKT  &kp CARET  &trans      &trans  &kp BSLH   &kp LEFT  &kp DOWN   &kp RIGHT      &trans
+&kp QMARK  &kp PIPE  &kp LBRC  &kp RBRC  &kp ESC    &trans      &trans  &kp GRAVE  &kp SQT   &kp MINUS  &kp EQUAL      &trans
+&trans     &trans    &trans    &trans    &trans     &trans      &trans  &trans                                         &trans
             >;
         };
 
