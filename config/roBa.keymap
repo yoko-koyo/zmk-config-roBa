@@ -45,7 +45,7 @@
 
         rshift {
             bindings = <&kp TAB>;
-            key-positions = <19 18>;
+            key-positions = <19 20>;
             slow-release;
         };
 
@@ -73,17 +73,17 @@
 
         backspace {
             bindings = <&kp BSPC>;
-            key-positions = <19 20>;
+            key-positions = <19 18>;
         };
 
         minus {
             bindings = <&kp LA(BSPC)>;
-            key-positions = <7 8>;
+            key-positions = <7 6>;
         };
 
         plus {
             bindings = <&kp RS(TAB)>;
-            key-positions = <6 7>;
+            key-positions = <7 8>;
         };
     };
 
