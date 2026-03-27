@@ -206,7 +206,7 @@
         default_layer {
             bindings = <
 &kp Q          &kp W        &kp E         &kp R      &kp T                                          &kp Y         &kp U  &kp I      &kp O       &kp P
-&msl LSHIFT A  &msl LALT S  &msl LCTRL D  &ssh 7 F   &kp G            &mkp MB1          &kp DEL     &kp H         &kp J  &kp K      &kp L       &msl RSHFT MINUS
+&msl LSHIFT A  &msl LALT S  &msl LCTRL D  &ssh 4 F   &kp G            &mkp MB1          &kp DEL     &kp H         &kp J  &kp K      &kp L       &msl RSHFT MINUS
 &msl LSHIFT Z  &kp X        &kp C         &kp V      &kp B            &mo 5             &kp TAB     &kp N         &kp M  &kp COMMA  &kp PERIOD  &msl RSHFT EQUAL
 &kp LSHFT      &kp LALT     &lth 2 ESC    &kp LCTRL  &kth LGUI LANG2  &ssh 2 SPACE      &lth 6 RET  &lth 1 LANG1                                &kp BSPC
             >;
@@ -241,10 +241,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                         &trans        &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans        &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans        &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp LG(W)  &kp LG(LEFT)                          &trans
+&trans  &trans  &trans  &trans  &trans                         &trans        &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans        &kp BSPC  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans        &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LG(W)  &kp LG(LEFT)                            &trans
             >;
         };
 
@@ -263,15 +263,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LC(LEFT)      &kp LC(DOWN)  &kp LC(RIGHT)      &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans            &trans        &trans             &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                     &trans
-            >;
-        };
-
-        layer_7 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp BSPC  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                            &trans
             >;
         };
     };
