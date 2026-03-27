@@ -61,7 +61,12 @@
         };
 
         tab {
-            bindings = <&none>;
+            bindings = <&kp TAB>;
+            key-positions = <19 20>;
+        };
+
+        bs {
+            bindings = <&kp BSPC>;
             key-positions = <18 19>;
         };
     };
