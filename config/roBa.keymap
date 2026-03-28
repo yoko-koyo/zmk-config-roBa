@@ -52,18 +52,13 @@
         tab {
             bindings = <&kp TAB>;
             key-positions = <19 20>;
-            timeout-ms = <80>;
+            timeout-ms = <90>;
         };
 
         bs {
             bindings = <&kp BSPC>;
             key-positions = <18 19>;
-            timeout-ms = <80>;
-        };
-
-        tabs {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <8 7>;
+            timeout-ms = <95>;
         };
     };
 
