@@ -198,6 +198,19 @@
 
             tapping-term-ms = <180>;
         };
+
+        backtablayer_scroll_layer: backtablayer_scroll_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BACKTABLAYER_SCROLL_LAYER";
+            #binding-cells = <2>;
+            tapping-term-ms = <190>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
+
+            hold-trigger-key-positions = <18 6 7 19 30>;
+        };
     };
 
     keymap {
@@ -241,19 +254,19 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                         &trans        &trans    &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans        &kp BSPC  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans        &trans    &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp LG(W)  &kp LG(LEFT)                            &trans
+&trans  &trans  &trans  &trans  &trans                         &trans        &kp LG(BSPC)  &kp LS(BSPC)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans        &kp BSPC      &kp TAB       &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans        &kp LA(BSPC)  &trans        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LG(W)  &kp LG(LEFT)                                      &trans
             >;
         };
 
         layer_5 {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 3  &trans  &trans                              &trans  &trans    &trans  &trans  &trans
-&trans        &trans        &trans        &trans  &trans  &bt BT_CLR_ALL      &trans  &trans  &kp BSPC  &trans  &trans  &trans
-&trans        &trans        &trans        &trans  &trans  &trans              &trans  &trans  &trans    &trans  &trans  &trans
-&trans        &trans        &trans        &trans  &trans  &trans              &trans  &trans                            &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 3  &trans  &trans                              &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans  &trans  &bt BT_CLR_ALL      &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans  &trans  &trans              &trans  &trans                          &trans
             >;
         };
 
