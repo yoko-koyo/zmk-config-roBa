@@ -96,6 +96,7 @@
         };
 
         // 親指スペース・シフト用（ssh/hhs は tap-preferred）
+
         ssh: ssh {
             compatible = "zmk,behavior-hold-tap";
             label = "SSH";
@@ -177,8 +178,8 @@
         default_layer {
             bindings = <
 &kp Q          &kp W        &kp E     &kp R           &kp T                                       &kp Y         &kp U  &kp I      &kp O       &kp P
-&ssh 2 A       &msl LALT S  &kp D     &kp F           &kp G            &mkp MB1       &kp DEL     &kp H         &kp J  &kp K      &kp L       &ssh 2 MINUS
-&msl LSHIFT Z  &kp X        &kp C     &kp V           &kp B            &mo 5          &kp TAB     &kp N         &kp M  &kp COMMA  &kp PERIOD  &msl RSHIFT EQUAL
+&ssh 2 A       &kp S        &kp D     &kp F           &kp G            &mkp MB1       &kp DEL     &kp H         &kp J  &kp K      &kp L       &ssh 2 MINUS
+&msl LSHIFT Z  &msl LALT X  &kp C     &kp V           &kp B            &mo 5          &kp TAB     &kp N         &kp M  &kp COMMA  &kp PERIOD  &msl RSHIFT EQUAL
 &kp LALT       &kp LALT     &kp CAPS  &kth LCTRL ESC  &kth LGUI LANG2  &kp SPACE      &lth 6 RET  &lth 1 LANG1                                &kp BSPC
             >;
         };
@@ -186,8 +187,8 @@
         ARROW {
             bindings = <
 &kp EXCL    &kp AT           &kp HASH   &kp DOLLAR  &kp LPAR                      &kp RPAR  &kp SEMI  &kp UP    &kp SLASH  &kp BSLH
-&mo 2       &msl LALT PRCNT  &kp AMPS   &kp STAR    &kp LBKT  &trans      &trans  &kp RBKT  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
-&kp LSHIFT  &kp CARET        &kp TILDE  &kp GRAVE   &kp LBRC  &trans      &trans  &kp RBRC  &kp SQT   &trans    &trans     &trans
+&mo 2       &kp PRCNT        &kp AMPS   &kp STAR    &kp LBKT  &trans      &trans  &kp RBKT  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+&kp LSHIFT  &msl LALT CARET  &kp TILDE  &kp GRAVE   &kp LBRC  &trans      &trans  &kp RBRC  &kp SQT   &trans    &trans     &trans
 &trans      &trans           &trans     &trans      &trans    &trans      &trans  &trans                                   &trans
             >;
         };
