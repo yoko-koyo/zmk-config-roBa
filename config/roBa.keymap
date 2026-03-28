@@ -43,21 +43,10 @@
             key-positions = <27 15 16 28>;
         };
 
-        lshift {
-            bindings = <&kp LCTRL>;
-            key-positions = <10 11>;
-            slow-release;
-        };
-
         ashift {
             bindings = <&kp LSHIFT>;
             key-positions = <39 40>;
             timeout-ms = <60>;
-        };
-
-        num1 {
-            bindings = <&kp LALT>;
-            key-positions = <12 13>;
         };
 
         tab {
