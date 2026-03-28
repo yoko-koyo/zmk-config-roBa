@@ -4,7 +4,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // git pull | ./flash_r.sh
-
 // &mt {
 //     flavor = "balanced";
 //     quick-tap-ms = <0>;
@@ -189,8 +188,8 @@
         ARROW {
             bindings = <
 &kp EXCL    &kp AT           &kp HASH   &kp DOLLAR  &kp LPAR                      &kp RPAR  &kp SEMI  &kp UP    &kp SLASH  &kp BSLH
-&mo 2       &kp PRCNT        &kp AMPS   &kp STAR    &kp LBKT  &trans      &trans  &kp RBKT  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
-&kp LSHIFT  &msl LALT CARET  &kp TILDE  &kp GRAVE   &kp LBRC  &trans      &trans  &kp RBRC  &kp SQT   &trans    &trans     &trans
+&kp LSHIFT  &msl LALT PRCNT  &kp AMPS   &kp STAR    &kp LBKT  &trans      &trans  &kp RBKT  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+&trans      &trans           &kp TILDE  &kp GRAVE   &kp LBRC  &trans      &trans  &kp RBRC  &kp SQT   &trans    &trans     &trans
 &trans      &trans           &trans     &trans      &trans    &trans      &trans  &trans                                   &trans
             >;
         };
