@@ -52,13 +52,13 @@
         tab {
             bindings = <&kp TAB>;
             key-positions = <19 20>;
-            timeout-ms = <90>;
+            timeout-ms = <80>;
         };
 
         bs {
             bindings = <&kp BSPC>;
             key-positions = <18 19>;
-            timeout-ms = <95>;
+            timeout-ms = <80>;
         };
     };
 
@@ -96,7 +96,6 @@
         };
 
         // 親指スペース・シフト用（ssh/hhs は tap-preferred）
-
         ssh: ssh {
             compatible = "zmk,behavior-hold-tap";
             label = "SSH";
