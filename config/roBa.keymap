@@ -3,6 +3,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+// git pull | ./flash_r.sh
+
 // &mt {
 //     flavor = "balanced";
 //     quick-tap-ms = <0>;
