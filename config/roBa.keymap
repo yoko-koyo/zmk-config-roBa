@@ -172,33 +172,6 @@
             require-prior-idle-ms = <110>; // 前の打鍵から少し間を置かないとShiftにならない（誤爆防止）
         };
 
-        td_mytd: tap_dance_my {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_MY";
-            #binding-cells = <0>;
-            bindings = <&kth LEFT_GUI LANG2>, <&kp LANG1>;
-
-            tapping-term-ms = <100>;
-        };
-
-        td_j_etr: tap_dance_j_enter {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_J_ENTER";
-            #binding-cells = <0>;
-            bindings = <&kp J>, <&kp ENTER>;
-
-            tapping-term-ms = <180>;
-        };
-
-        td_sp_alt: tap_dance_spc_alt {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_SPC_ALT";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&kp LEFT_ALT>;
-
-            tapping-term-ms = <180>;
-        };
-
         backtablayer_scroll_layer: backtablayer_scroll_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "BACKTABLAYER_SCROLL_LAYER";
@@ -218,10 +191,10 @@
 
         default_layer {
             bindings = <
-&kp Q          &kp W        &kp E     &kp R           &kp T                                          &kp Y         &kp U  &kp I      &kp O       &kp P
-&ssh 2 A       &kp S        &kp D     &kp F           &kp G            &mkp MB1          &kp DEL     &kp H         &kp J  &kp K      &kp L       &ssh 2 MINUS
-&msl LSHIFT Z  &msl LALT X  &kp C     &kp V           &kp B            &mo 5             &kp TAB     &kp N         &kp M  &kp COMMA  &kp PERIOD  &msl RSHIFT EQUAL
-&kp LALT       &kp LALT     &kp CAPS  &kth LCTRL ESC  &kth LGUI LANG2  &ssh 5 SPACE      &lth 6 RET  &lth 1 LANG1                                &kp BSPC
+&kp Q          &kp W        &kp E     &kp R           &kp T                                                                &kp Y         &kp U  &kp I      &kp O       &kp P
+&ssh 2 A       &kp S        &kp D     &kp F           &kp G            &mkp MB1                                &kp DEL     &kp H         &kp J  &kp K      &kp L       &ssh 2 MINUS
+&msl LSHIFT Z  &msl LALT X  &kp C     &kp V           &kp B            &mo 5                                   &kp TAB     &kp N         &kp M  &kp COMMA  &kp PERIOD  &msl RSHIFT EQUAL
+&kp LALT       &kp LALT     &kp CAPS  &kth LCTRL ESC  &kth LGUI LANG2  &backtablayer_scroll_layer 5 SPACE      &lth 6 RET  &lth 1 LANG1                                &kp BSPC
             >;
         };
 
