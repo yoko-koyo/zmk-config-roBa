@@ -63,11 +63,13 @@
         tab {
             bindings = <&kp TAB>;
             key-positions = <19 20>;
+            timeout-ms = <80>;
         };
 
         bs {
             bindings = <&kp BSPC>;
             key-positions = <18 19>;
+            timeout-ms = <80>;
         };
 
         tabs {
