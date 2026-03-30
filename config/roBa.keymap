@@ -52,7 +52,7 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <19 20>;
+            key-positions = <6 7>;
             timeout-ms = <80>;
         };
 
