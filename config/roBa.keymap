@@ -151,12 +151,12 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MIDDLE_SHIFT";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;    // 快適さと正確さのバランス
+            tapping-term-ms = <210>;    // 快適さと正確さのバランス
             quick-tap-ms = <190>;
             flavor = "tap-preferred";       // 反対の手と組み合わせた瞬間にShiftになる
             bindings = <&kp>, <&kp>;
 
-            require-prior-idle-ms = <80>; // 前の打鍵から少し間を置かないとShiftにならない（誤爆防止）
+            require-prior-idle-ms = <120>; // 前の打鍵から少し間を置かないとShiftにならない（誤爆防止）
         };
 
         backtablayer_scroll_layer: backtablayer_scroll_layer {
