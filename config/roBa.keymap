@@ -184,16 +184,16 @@
 &kp Q       &kp W     &kp E      &kp R                 &kp T                                       &kp Y         &kp U  &kp I      &kp O       &kp P
 &kp A       &kp S     &kp D      &kp F                 &kp G            &mkp MB1       &kp BSPC    &kp H         &kp J  &kp K      &kp L       &kp MINUS
 &kp Z       &kp X     &kp C      &kp V                 &kp B            &mo 5          &kp TAB     &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
-&kp LSHIFT  &kp LALT  &kp LCTRL  &kth LSHFT LC(LANG1)  &kth LCMD LANG2  &kp SPACE      &lth 6 RET  &lth 1 LANG1                                &kp ESC
+&kp LSHIFT  &kp LALT  &kp LCTRL  &kth LSHFT LC(LANG1)  &kth LCMD LANG2  &kp SPACE      &lth 2 RET  &lth 1 LANG1                                &kp ESC
             >;
         };
 
         ARROW {
             bindings = <
-&kp N1     &kp N2    &kp N3     &kp N4    &kp N5                         &kp N6    &kp N7    &kp N8  &kp N9     &kp N0
-&kp SLASH  &kp BSLH  &kp SQT    &kp SEMI  &kp GRAVE  &trans      &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
-&trans     &trans    &kp LCTRL  &kp LALT  &kp LSHFT  &trans      &trans  &kp TAB   &kp BSPC  &trans  &trans     &trans
-&trans     &trans    &trans     &trans    &trans     &trans      &trans  &trans                                 &trans
+&kp GRAVE  &kp N7  &kp N8  &kp N9  &kp N0                        &kp LPAR  &kp LBKT  &kp UP    &kp RBKT   &kp RPAR
+&kp SLASH  &kp N4  &kp N5  &kp N6  &kp SQT   &trans      &trans  &kp TAB   &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+&kp BSLH   &kp N1  &kp N2  &kp N3  &kp SEMI  &trans      &trans  &kp DEL   &kp BSPC  &trans    &trans     &trans
+&trans     &trans  &trans  &trans  &trans    &trans      &trans  &trans                                   &trans
             >;
         };
 
@@ -217,10 +217,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                         &trans        &kp LG(BSPC)  &kp LS(BSPC)  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans        &kp BSPC      &kp TAB       &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans        &kp LA(BSPC)  &trans        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp LG(W)  &kp LG(LEFT)                                      &trans
+&trans  &trans  &trans  &trans  &trans                         &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LG(W)  &kp LG(LEFT)                          &trans
             >;
         };
 
@@ -230,15 +230,6 @@
 &trans        &trans        &trans        &trans  &trans  &bt BT_CLR_ALL      &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans  &trans  &trans              &trans  &trans                          &trans
-            >;
-        };
-
-        layer_6 {
-            bindings = <
-&kp F1   &kp F2   &kp F3  &kp F4  &kp F5                       &kp F6  &kp F7        &kp F8        &kp F9         &kp F10
-&kp F11  &kp F12  &kp F8  &kp F9  &kp F11  &trans      &trans  &trans  &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &trans
-&trans   &trans   &trans  &trans  &trans   &trans      &trans  &trans  &trans        &trans        &trans         &trans
-&trans   &trans   &trans  &trans  &trans   &trans      &trans  &trans                                             &trans
             >;
         };
     };
