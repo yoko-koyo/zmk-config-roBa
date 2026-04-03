@@ -56,8 +56,13 @@
 
         bs {
             bindings = <&kp LALT>;
-            key-positions = <10 11>;
+            key-positions = <13 12>;
             timeout-ms = <80>;
+        };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <18 19>;
         };
     };
 
