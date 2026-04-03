@@ -12,6 +12,7 @@
 &trackball {
     // automouse-layer = <3>;
     // scroll-layers = <4>;
+
     arrows {
         layers = <2>;
         bindings =
@@ -19,10 +20,12 @@
             <&kp LS(LEFT)>,
             <&kp LS(UP)>,
             <&kp LS(DOWN)>;
+
         tick = <10>;
         wait-ms = <5>;
         tap-ms = <5>;
     };
+
     // arrows {
     //     layers = <6>;
     //     bindings =
@@ -51,15 +54,9 @@
             timeout-ms = <60>;
         };
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <6 7>;
-            timeout-ms = <80>;
-        };
-
         bs {
-            bindings = <&kp BSPC>;
-            key-positions = <18 19>;
+            bindings = <&kp LALT>;
+            key-positions = <10 11>;
             timeout-ms = <80>;
         };
     };
