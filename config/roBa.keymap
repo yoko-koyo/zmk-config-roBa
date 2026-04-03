@@ -161,7 +161,7 @@
             // ここが重要：
 
             global-quick-tap;           // 素早い入力をTapとして優先
-            require-prior-idle-ms = <110>; // 前の入力から150ms以内なら強制的にTap
+            require-prior-idle-ms = <140>; // 前の入力から150ms以内なら強制的にTap
             bindings = <&kp>, <&kp>;
         };
     };
