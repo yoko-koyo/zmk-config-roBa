@@ -69,6 +69,11 @@
             bindings = <&kp BSPC>;
             key-positions = <18 6>;
         };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <7 19>;
+        };
     };
 
     behaviors {
