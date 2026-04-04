@@ -74,6 +74,11 @@
             bindings = <&kp TAB>;
             key-positions = <7 19>;
         };
+
+        num {
+            bindings = <&mo 2>;
+            key-positions = <11 12>;
+        };
     };
 
     behaviors {
