@@ -75,7 +75,7 @@
             key-positions = <7 19>;
         };
 
-        l2 {
+        lang2 {
             bindings = <&kp LANG2>;
             key-positions = <18 19>;
         };
