@@ -5,10 +5,10 @@
 
 // git pull | ./flash_r.sh
 
-&mt {
-    flavor = "balanced";
-    quick-tap-ms = <0>;
-};
+// &mt {
+//     flavor = "balanced";
+//     quick-tap-ms = <0>;
+// };
 
 &trackball {
     // automouse-layer = <3>;
@@ -55,7 +55,7 @@
             timeout-ms = <60>;
         };
 
-        bs {
+        alt {
             bindings = <&kp LALT>;
             key-positions = <13 12>;
             timeout-ms = <80>;
