@@ -56,7 +56,7 @@
         };
 
         esc {
-            bindings = <&kp ESC>;
+            bindings = <&kp BSPC>;
             key-positions = <19 20>;
         };
 
