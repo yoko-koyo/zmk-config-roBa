@@ -67,14 +67,14 @@
 
         bs {
             bindings = <&kp BSPC>;
-            key-positions = <18 6>;
+            key-positions = <31 32>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <7 19>;
         };
-         
+
         lang2 {
             bindings = <&kp LANG2>;
             key-positions = <18 19>;
