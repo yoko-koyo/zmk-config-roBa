@@ -4,7 +4,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // git pull | ./flash_r.sh
-
 // &mt {
 //     flavor = "balanced";
 //     quick-tap-ms = <0>;
@@ -68,7 +67,7 @@
 
         bs {
             bindings = <&kp BSPC>;
-            key-positions = <18 20>;
+            key-positions = <18 6>;
         };
     };
 
