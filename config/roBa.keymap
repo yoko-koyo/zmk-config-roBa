@@ -15,11 +15,8 @@
 
     arrows {
         layers = <2>;
-        bindings =
-            <&kp DEL>,
-            <&kp BSPC>,
-            <&kp LS(UP)>,
-            <&kp LS(DOWN)>;
+        bindings = <&kp DEL>, <&kp BSPC>, <&kp LS(UP)>, <&kp LS(DOWN)>;
+
         wait-ms = <5>;
         tap-ms = <5>;
     };
@@ -65,7 +62,7 @@
 
         bs {
             bindings = <&kp BSPC>;
-            key-positions = <31 32>;
+            key-positions = <6 18>;
         };
 
         tab {
@@ -85,7 +82,7 @@
 
         l2 {
             bindings = <&mo 2>;
-            key-positions = <13 38>;
+            key-positions = <10 11>;
         };
     };
 
