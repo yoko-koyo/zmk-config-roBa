@@ -4,6 +4,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // git pull | ./flash_r.sh
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -63,6 +64,11 @@
         esc {
             bindings = <&kp ESC>;
             key-positions = <18 19>;
+        };
+
+        bs {
+            bindings = <&kp BSPC>;
+            key-positions = <18 20>;
         };
     };
 
