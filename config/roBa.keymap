@@ -51,7 +51,7 @@
 
         alt {
             bindings = <&kp LALT>;
-            key-positions = <12 11>;
+            key-positions = <12 13>;
             timeout-ms = <80>;
         };
 
@@ -77,7 +77,12 @@
 
         l2 {
             bindings = <&mo 2>;
-            key-positions = <10 11>;
+            key-positions = <11 12>;
+        };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <18 20>;
         };
     };
 
@@ -186,10 +191,10 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W     &kp E      &kp R            &kp T                                       &kp Y       &kp U  &kp I      &kp O       &kp P
-&kp A       &kp S     &kp D      &kp F            &kp G     &mkp MB1              &kp BSPC    &kp H       &kp J  &kp K      &kp L       &kp MINUS
-&kp Z       &kp X     &kp C      &kp V            &kp B     &mo 5                 &kp TAB     &kp N       &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
-&kp LSHIFT  &kp LALT  &kp LCTRL  &kth LSHFT CAPS  &kp LCMD  &msl LCTRL SPACE      &lth 2 RET  &lth 1 ESC                                &kp ESC
+&kp Q       &kp W     &kp E      &kp R            &kp T                                              &kp Y         &kp U  &kp I      &kp O       &kp P
+&kp A       &kp S     &kp D      &kp F            &kp G            &mkp MB1              &kp BSPC    &kp H         &kp J  &kp K      &kp L       &kp MINUS
+&kp Z       &kp X     &kp C      &kp V            &kp B            &mo 5                 &kp TAB     &kp N         &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
+&kp LSHIFT  &kp LALT  &kp LCTRL  &kth LSHFT CAPS  &kth LCMD LANG2  &msl LCTRL SPACE      &lth 2 RET  &lth 1 LANG1                                &kp ESC
             >;
         };
 
