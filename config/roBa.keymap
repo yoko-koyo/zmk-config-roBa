@@ -57,27 +57,22 @@
 
         esc {
             bindings = <&kp BSPC>;
-            key-positions = <19 20>;
-        };
-
-        bs {
-            bindings = <&kp BSPC>;
-            key-positions = <6 18>;
+            key-positions = <19 18>;
         };
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <7 19>;
+            key-positions = <19 20>;
         };
 
         lang2 {
             bindings = <&kp LANG2>;
-            key-positions = <12 13>;
+            key-positions = <13 18>;
         };
 
         lang1 {
             bindings = <&kp LANG1>;
-            key-positions = <19 18>;
+            key-positions = <19 12>;
         };
 
         l2 {
