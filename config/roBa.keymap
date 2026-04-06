@@ -51,13 +51,13 @@
 
         alt {
             bindings = <&kp LALT>;
-            key-positions = <12 13>;
+            key-positions = <12 11>;
             timeout-ms = <80>;
         };
 
         esc {
             bindings = <&kp BSPC>;
-            key-positions = <19 18>;
+            key-positions = <19 20>;
         };
 
         bs {
@@ -72,12 +72,12 @@
 
         lang2 {
             bindings = <&kp LANG2>;
-            key-positions = <12 11>;
+            key-positions = <12 13>;
         };
 
         lang1 {
             bindings = <&kp LANG1>;
-            key-positions = <19 20>;
+            key-positions = <19 18>;
         };
 
         l2 {
