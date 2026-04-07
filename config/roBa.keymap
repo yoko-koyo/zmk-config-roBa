@@ -79,6 +79,16 @@
             bindings = <&kp ESC>;
             key-positions = <18 20>;
         };
+
+        l2 {
+            bindings = <&kp LANG2>;
+            key-positions = <13 18>;
+        };
+
+        l1 {
+            bindings = <&kp LANG1>;
+            key-positions = <19 12>;
+        };
     };
 
     behaviors {
