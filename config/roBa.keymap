@@ -70,7 +70,7 @@
             key-positions = <19 18>;
         };
 
-        lang2 {
+        leyer2 {
             bindings = <&mo 2>;
             key-positions = <11 10>;
         };
