@@ -40,7 +40,7 @@
 
         boot {
             bindings = <&bootloader>;
-            key-positions = <27 15 16 28>;
+            key-positions = <9 8 7 6 41>;
         };
 
         ashift {
