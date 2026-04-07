@@ -55,7 +55,7 @@
             timeout-ms = <80>;
         };
 
-        esc {
+        bspc {
             bindings = <&kp BSPC>;
             key-positions = <19 18>;
         };
