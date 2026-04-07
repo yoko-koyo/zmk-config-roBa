@@ -62,12 +62,12 @@
 
         lang2 {
             bindings = <&kp LANG2>;
-            key-positions = <13 18 19>;
+            key-positions = <13 12>;
         };
 
         lang1 {
             bindings = <&kp LANG1>;
-            key-positions = <12 13>;
+            key-positions = <19 18>;
         };
 
         l2 {
