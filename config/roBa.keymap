@@ -140,6 +140,7 @@
             bindings = <&mo>, <&kp>;
 
             flavor = "hold-preferred";
+            quick-tap-ms = <150>;
         };
 
         ssh: ssh {
