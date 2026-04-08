@@ -102,7 +102,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LANG";
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
 
             // シングルタップで英語(LANG2/英数)、ダブルタップで日本語(LANG1/かな)
 
@@ -118,6 +118,8 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&td_lang>;
+
+            hold-trigger-on-release;
         };
 
         kth: kth {
