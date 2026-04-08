@@ -39,6 +39,8 @@
         bspc {
             bindings = <&kp BSPC>;
             key-positions = <19 20>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
         };
 
         esc {
@@ -48,7 +50,7 @@
 
         lang_toggle {
             bindings = <&kp LG(SPACE)>;
-            key-positions = <13 18>;
+            key-positions = <10 21>;
         };
 
         // --- カッコ類のコンボ配置 (提案2) ---
@@ -137,6 +139,7 @@
             bindings = <&mo>, <&kp>;
 
             flavor = "hold-preferred";
+            quick-tap-ms = <150>;
         };
 
         ssh: ssh {
