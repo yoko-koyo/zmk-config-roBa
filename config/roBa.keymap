@@ -148,6 +148,27 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        // LCTRLが押されている時にBSPCを叩くと、LALT+BSPCを送信する
+        bs_morph: backspace_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BS_MORPH";
+            #binding-cells = <0>;
+            bindings = <&kp BSPC>, <&kp LA(BSPC)>;
+            mods = <(MOD_LCTL)>; // 左CTRLが対象
+            // keep-mods = <(MOD_LCTL)>; // もしCTRLを維持したままALTも送りたい場合はコメントアウトを外す
+        };
+
+        // 既存の lth を流用し、タップ時の挙動を今作った bs_morph に差し替えたもの
+        lth_bs: lth_backspace {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LTH_BS";
+            #binding-cells = <2>;
+            tapping-term-ms = <160>;
+            bindings = <&mo>, <&bs_morph>; // タップ側を morph に変更
+            flavor = "hold-preferred";
+            quick-tap-ms = <110>;
+        };
     };
 
     keymap {
@@ -158,7 +179,7 @@
 &kp Q       &kp W     &kp E      &kp R      &kp T                                                &kp Y        &kp U  &kp I      &kp O       &kp P
 &kp A       &kp S     &kp D      &kp F      &kp G             &mkp MB1               &kp BSPC    &kp H        &kp J  &kp K      &kp L       &kth RSHFT MINUS
 &kp Z       &kp X     &kp C      &kp V      &kp B             &mo 5                  &kp TAB     &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp EQUAL
-&kp LSHIFT  &kp LALT  &kp LCTRL  &kp LCTRL  &cmd_lang LGUI 0  &ssh LSHIFT SPACE      &lth 2 RET  &lth 1 BSPC                                &kp TAB
+&kp LSHIFT  &kp LALT  &kp LCTRL  &kp LCTRL  &cmd_lang LGUI 0  &ssh LSHIFT SPACE      &lth 2 RET  &lth_bs 1 0                                &kp TAB
             >;
         };
 
