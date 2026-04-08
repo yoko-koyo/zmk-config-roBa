@@ -7,6 +7,7 @@
     arrows {
         layers = <2>;
         bindings = <&kp DEL>, <&kp BSPC>, <&kp LS(UP)>, <&kp LS(DOWN)>;
+
         wait-ms = <5>;
         tap-ms = <5>;
     };
@@ -17,6 +18,7 @@
         compatible = "zmk,combos";
 
         // --- システム・基本操作 ---
+
         boot {
             bindings = <&bootloader>;
             key-positions = <9 8 7 6 40>;
@@ -39,60 +41,56 @@
             key-positions = <19 20>;
         };
 
-        lang2 {
-            bindings = <&kp LANG2>;
-            key-positions = <13 12>;
-        };
-
-        lang1 {
-            bindings = <&kp LANG1>;
-            key-positions = <19 18>;
-        };
-
         esc {
             bindings = <&kp ESC>;
             key-positions = <18 20>;
         };
 
-        bspc1 {
-            bindings = <&kp BSPC>;
+        lang_toggle {
+            bindings = <&kp LG(SPACE)>;
             key-positions = <13 18>;
         };
 
         // --- カッコ類のコンボ配置 (提案2) ---
         // 左手上段(E R) -> [  | 右手上段(U I) -> ]
+
         combo_lbkt {
             timeout-ms = <30>;
-            key-positions = <2 3>; 
+            key-positions = <2 3>;
             bindings = <&kp LBKT>;
         };
+
         combo_rbkt {
             timeout-ms = <30>;
-            key-positions = <6 7>; 
+            key-positions = <6 7>;
             bindings = <&kp RBKT>;
         };
 
         // 左手ホーム(D F) -> (  | 右手ホーム(J K) -> )
+
         combo_lpar {
             timeout-ms = <30>;
-            key-positions = <12 13>; 
+            key-positions = <12 13>;
             bindings = <&kp LPAR>;
         };
+
         combo_rpar {
             timeout-ms = <30>;
-            key-positions = <16 17>; 
+            key-positions = <19 18>;
             bindings = <&kp RPAR>;
         };
 
         // 左手下段(C V) -> {  | 右手下段(M ,) -> }
+
         combo_lbrc {
             timeout-ms = <30>;
-            key-positions = <22 23>; 
+            key-positions = <24 25>;
             bindings = <&kp LBRC>;
         };
+
         combo_rbrc {
             timeout-ms = <30>;
-            key-positions = <27 28>; 
+            key-positions = <30 31>;
             bindings = <&kp RBRC>;
         };
     };
@@ -104,6 +102,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             bindings = <&kp>, <&kp>;
+
             flavor = "hold-preferred";
         };
 
@@ -113,6 +112,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             bindings = <&mo>, <&kp>;
+
             flavor = "hold-preferred";
         };
 
@@ -142,10 +142,10 @@
 
         ARROW {
             bindings = <
-&kp N1     &kp N2    &kp N3    &kp N4    &kp N5                        &kp N6     &kp N7    &kp N8  &kp N9     &kp N0
-&kp SLASH  &kp SEMI  &trans    &trans    &kp BSLH  &trans      &trans  &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT  &kth RSHFT EQUAL
-&trans     &trans    &trans    &trans    &trans    &trans      &trans  &kp GRAVE  &kp SQT   &trans  &trans     &trans
-&trans     &trans    &trans    &trans    &trans    &trans      &trans  &trans                                  &trans
+&kp N1     &kp N2    &kp N3  &kp N4  &kp N5                        &kp N6     &kp N7    &kp N8  &kp N9     &kp N0
+&kp SLASH  &kp SEMI  &trans  &trans  &kp BSLH  &trans      &trans  &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT  &kth RSHFT EQUAL
+&trans     &trans    &trans  &trans  &trans    &trans      &trans  &kp GRAVE  &kp SQT   &trans  &trans     &trans
+&trans     &trans    &trans  &trans  &trans    &trans      &trans  &trans                                  &trans
             >;
         };
 
