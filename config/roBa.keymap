@@ -53,7 +53,6 @@
 
         // --- カッコ類のコンボ配置 (提案2) ---
         // 左手上段(E R) -> [  | 右手上段(U I) -> ]
-
         combo_lbkt {
             timeout-ms = <30>;
             key-positions = <2 3>;
@@ -67,7 +66,6 @@
         };
 
         // 左手ホーム(D F) -> (  | 右手ホーム(J K) -> )
-
         combo_lpar {
             timeout-ms = <30>;
             key-positions = <12 13>;
@@ -81,7 +79,6 @@
         };
 
         // 左手下段(C V) -> {  | 右手下段(M ,) -> }
-
         combo_lbrc {
             timeout-ms = <30>;
             key-positions = <24 25>;
@@ -102,7 +99,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LANG";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
 
             // シングルタップで英語(LANG2/英数)、ダブルタップで日本語(LANG1/かな)
 
@@ -115,8 +112,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "CMD_LANG";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
+            tapping-term-ms = <140>;
+            flavor = "balanced";
             bindings = <&kp>, <&td_lang>;
 
             hold-trigger-on-release;
