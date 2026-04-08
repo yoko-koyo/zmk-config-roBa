@@ -3,41 +3,20 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-// git pull | ./flash_r.sh
-// &mt {
-//     flavor = "balanced";
-//     quick-tap-ms = <0>;
-// };
-
 &trackball {
-    // automouse-layer = <3>;
-    // scroll-layers = <4>;
-
     arrows {
         layers = <2>;
         bindings = <&kp DEL>, <&kp BSPC>, <&kp LS(UP)>, <&kp LS(DOWN)>;
-
         wait-ms = <5>;
         tap-ms = <5>;
     };
-
-    // arrows {
-    //     layers = <6>;
-    //     bindings =
-    //         <&kp LC(LEFT)>,
-    //         <&kp LC(RIGHT)>,
-    //         <&kp LC(UP)>,
-    //         <&kp LC(DOWN)>;
-    //     tick = <230>;
-    //     wait-ms = <5>;
-    //     tap-ms = <0>;
-    // };
 };
 
 / {
     combos {
         compatible = "zmk,combos";
 
+        // --- システム・基本操作 ---
         boot {
             bindings = <&bootloader>;
             key-positions = <9 8 7 6 40>;
@@ -79,6 +58,43 @@
             bindings = <&kp BSPC>;
             key-positions = <13 18>;
         };
+
+        // --- カッコ類のコンボ配置 (提案2) ---
+        // 左手上段(E R) -> [  | 右手上段(U I) -> ]
+        combo_lbkt {
+            timeout-ms = <30>;
+            key-positions = <2 3>; 
+            bindings = <&kp LBKT>;
+        };
+        combo_rbkt {
+            timeout-ms = <30>;
+            key-positions = <6 7>; 
+            bindings = <&kp RBKT>;
+        };
+
+        // 左手ホーム(D F) -> (  | 右手ホーム(J K) -> )
+        combo_lpar {
+            timeout-ms = <30>;
+            key-positions = <12 13>; 
+            bindings = <&kp LPAR>;
+        };
+        combo_rpar {
+            timeout-ms = <30>;
+            key-positions = <16 17>; 
+            bindings = <&kp RPAR>;
+        };
+
+        // 左手下段(C V) -> {  | 右手下段(M ,) -> }
+        combo_lbrc {
+            timeout-ms = <30>;
+            key-positions = <22 23>; 
+            bindings = <&kp LBRC>;
+        };
+        combo_rbrc {
+            timeout-ms = <30>;
+            key-positions = <27 28>; 
+            bindings = <&kp RBRC>;
+        };
     };
 
     behaviors {
@@ -88,7 +104,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             bindings = <&kp>, <&kp>;
-
             flavor = "hold-preferred";
         };
 
@@ -98,49 +113,17 @@
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             bindings = <&mo>, <&kp>;
-
             flavor = "hold-preferred";
         };
-
-        // 親指スペース・シフト用（ssh/hhs は tap-preferred）
 
         ssh: ssh {
             compatible = "zmk,behavior-hold-tap";
             label = "SSH";
             #binding-cells = <2>;
-
-            /* 1. 判定時間を少し伸ばして、迷った時のタップ優先度を上げる */
-
             tapping-term-ms = <195>;
-
-            /* 2. 連打（変換や決定）を確実に受け付ける */
-
             quick-tap-ms = <180>;
-
-            /* 3. ★重要★ アイドル時間を増やし、タイピング中のホールドを封印する */
-
             require-prior-idle-ms = <100>;
-
-            /* 4. ★重要★ 親指に最適なアルゴリズムに変更 */
-
             flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-
-        // 中指Shift専用：タイピング中の誤爆を徹底的に防ぐ
-
-        msl: middle_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MIDDLE_SHIFT";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            flavor = "tap-preferred";
-
-            // ここが重要：
-
-            global-quick-tap;           // 素早い入力をTapとして優先
-            require-prior-idle-ms = <140>; // 前の入力から150ms以内なら強制的にTap
             bindings = <&kp>, <&kp>;
         };
     };
@@ -160,7 +143,7 @@
         ARROW {
             bindings = <
 &kp N1     &kp N2    &kp N3    &kp N4    &kp N5                        &kp N6     &kp N7    &kp N8  &kp N9     &kp N0
-&kp SLASH  &kp SEMI  &kp LBKT  &kp RBKT  &kp BSLH  &trans      &trans  &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT  &kth RSHFT EQUAL
+&kp SLASH  &kp SEMI  &trans    &trans    &kp BSLH  &trans      &trans  &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT  &kth RSHFT EQUAL
 &trans     &trans    &trans    &trans    &trans    &trans      &trans  &kp GRAVE  &kp SQT   &trans  &trans     &trans
 &trans     &trans    &trans    &trans    &trans    &trans      &trans  &trans                                  &trans
             >;
@@ -202,6 +185,4 @@
             >;
         };
     };
-
-    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
