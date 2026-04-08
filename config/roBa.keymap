@@ -96,6 +96,26 @@
     };
 
     behaviors {
+        // 1. タップ回数で言語を切り替える設定
+        td_lang: tap_dance_language {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_LANG";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            // シングルタップで英語(LANG2/英数)、ダブルタップで日本語(LANG1/かな)
+            bindings = <&kp LANG2>, <&kp LANG1>;
+        };
+
+        // 2. 長押しでCommand、タップで上記のTap Danceを呼び出す設定
+        cmd_lang: custom_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CMD_LANG";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&td_lang>;
+        };
+
         kth: kth {
             compatible = "zmk,behavior-hold-tap";
             label = "KTH";
