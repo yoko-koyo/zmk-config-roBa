@@ -19,7 +19,7 @@
 
         c_boot {
             bindings = <&bootloader>;
-            key-positions = <9 8 7 6 40>;
+            key-positions = <18 19 20 21>;
         };
 
         cln {
@@ -35,6 +35,11 @@
         bk {
             bindings = <&kp GRAVE>;
             key-positions = <7 8>;
+        };
+
+        lang1 {
+            bindings = <&kp LANG1>;
+            key-positions = <10 21>;
         };
     };
 
@@ -127,7 +132,7 @@
         default_layer {
             bindings = <
 &kp Q       &kp W     &kp E      &kp R            &kp T                                                &kp Y         &kp U  &kp I      &kp O       &kp P
-&kp A       &kp S     &kp D      &kp F            &kp G           &kp LC(LEFT)          &kp LC(RIGHT)  &kp H         &kp J  &kp K      &kp L       &kp MINUS
+&kp A       &kp S     &kp D      &kp F            &kp G           &lt 5 LC(LEFT)        &kp LC(RIGHT)  &kp H         &kp J  &kp K      &kp L       &kp MINUS
 &kp Z       &kp Z     &kp C      &kp V            &kp B           &kp LC(DOWN)          &kp LC(UP)     &kp N         &kp M  &kp COMMA  &kp PERIOD  &hm RSHIFT EQUAL
 &kp LSHIFT  &kp LALT  &kp LCTRL  &hm LCTRL LANG1  &hm LGUI LANG2  &st LSHIFT SPACE      &lt_k 2 RET    &lt_k 1 BSPC                                &kp TAB
             >;
