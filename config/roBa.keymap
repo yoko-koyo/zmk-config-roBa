@@ -41,6 +41,11 @@
             bindings = <&kp LANG1>;
             key-positions = <10 21>;
         };
+
+        blue {
+            bindings = <&mo 5>;
+            key-positions = <42 21 33>;
+        };
     };
 
     behaviors {
