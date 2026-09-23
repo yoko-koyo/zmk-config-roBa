@@ -5,7 +5,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-DRIVE_NAME="NO NAME"
+DRIVE_NAME="${DRIVE_NAME:-XIAO-SENSE}"
 UF2_PATH="./build/seeeduino_xiao_ble_roBa_R/zephyr/zmk.uf2"
 
 echo "右手ダブルクリック待ち..."
