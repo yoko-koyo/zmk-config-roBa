@@ -1,4 +1,6 @@
 #include "roBa.dtsi"
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <behaviors/input_gestures_accel.dtsi>
 
 &default_transform {
     col-offset = <6>;
@@ -14,11 +16,33 @@
             ;
 };
 
+/* トラックボールのポインタ加速。カーソルを速く動かすほど移動量が
+   大きくなる。値は千分率(1000=等倍)。 */
+
+&pointer_accel {
+    input-type = <INPUT_EV_REL>;
+    track-remainders;            // 端数を蓄積して精度低下を防ぐ
+
+    min-factor = <1100>;         // ゆっくり動かした時の倍率
+    max-factor = <4000>;         // 速く動かした時は最大4倍まで加速
+    speed-threshold = <1300>;    // これ未満の速度では min-factor
+    speed-max = <1500>;          // これ以上の速度で最大倍率に到達
+    acceleration-exponent = <3>; // 1=線形 / 2=二次関数的 / 3=三次関数的カーブ
+};
+
 / {
     trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
+
+        /* スケーラー → 加速 → オートマウス(MOUSEレイヤー1, 20秒で解除) */
+        input-processors = <
+            &zip_x_scaler 1 2
+            &zip_y_scaler 1 2
+            &pointer_accel
+            &zip_temp_layer 1 20000
+        >;
     };
 };
 
@@ -57,5 +81,6 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        snipe-layers = <4>;
     };
 };

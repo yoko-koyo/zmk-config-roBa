@@ -130,13 +130,12 @@
         status = "disabled";
 
         input-processors = <
-            &zip_temp_layer 3 10000
             &zip_x_scaler 1 2
             &zip_y_scaler 1 2
         >;
 
         scroller {
-            layers = <4 2>;
+            layers = <5>;
             input-processors = <
                 &zip_xy_to_scroll_mapper
                 &zip_scroll_scaler 1 14

@@ -16,3 +16,7 @@ zmk/
 zmk-pmw3610-driver/
 
 build_local.sh
+zmk-pointing-acceleration/
+
+# macOS
+.DS_Store
